@@ -1,0 +1,46 @@
+.view {
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 660px;
+}
+
+.card {
+    font-family: Qualy;
+    margin-top: 75px;
+    padding-top: 20px;
+    margin-left: 335px;
+    padding-bottom: 0px;
+    width: 80%;
+}
+
+.img {
+    width:100px;
+    height:100px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(232, 236, 235, 0.18));
+    margin-top: 530px;
+    margin-left: 350px;
+}
+
+p{
+    font-size: 13px;
+    font-family: Qualy;
+}
+
+h6{
+    font-family: Qualy;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+hr{
+    color: black;
+}
+
+types{
+    font-size: 10px;
+    font-family: Qualy;
+}
