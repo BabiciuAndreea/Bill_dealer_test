@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-md-4 mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="postal_code" class="form-control form-control-sm" placeholder="Postal code"/>
+                                            <input type="text" id="zip_code" class="form-control form-control-sm" placeholder="Zip code"/>
                                         </div>
                                     </div>
                                 </div>
