@@ -10,15 +10,15 @@
 </head>
 <body>
 	<section class="py-5 my-5">
-		<div class="container comtainer_settings">
+		<div class="container">
 			<h1 class="mb-5">Account Settings</h1>
-			<div class="bg-white shadow rounded-lg d-block d-sm-flex settings_container">
+			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
 				<div class="profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="profile_pictures/blank_profile_picture.png" alt="Image" class="shadow">
+							<img src="img/user2.jpg" alt="Image" class="shadow">
 						</div>
-						<h4 class="text-center " style="color:white">Your name</h4>
+						<h4 class="text-center">Kiran Acharya</h4>
 					</div>
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
@@ -41,10 +41,6 @@
 							<i class="fa fa-bell text-center mr-1"></i> 
 							Notification
 						</a>
-                        <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
-							<i class="fa fa-bell text-center mr-1"></i> 
-							Edit Page
-						</a>
 					</div>
 				</div>
 				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
@@ -54,37 +50,37 @@
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>First Name</label>
-								  	<input type="text" class="form-control" value="First Name">
+								  	<input type="text" class="form-control" value="Kiran">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Last Name</label>
-								  	<input type="text" class="form-control" value="Last Name">
+								  	<input type="text" class="form-control" value="Acharya">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Email</label>
-								  	<input type="text" class="form-control" value="Youradress@somthing.com">
+								  	<input type="text" class="form-control" value="kiranacharya287@gmail.com">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Phone number</label>
-								  	<input type="text" class="form-control" >
+								  	<input type="text" class="form-control" value="+91 9876543215">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Company</label>
-								  	<input type="text" class="form-control" >
+								  	<input type="text" class="form-control" value="Kiran Workspace">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 								  	<label>Designation</label>
-								  	<input type="text" class="form-control" >
+								  	<input type="text" class="form-control" value="UI Developer">
 								</div>
 							</div>
 							<div class="col-md-12">
