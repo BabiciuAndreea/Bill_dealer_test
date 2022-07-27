@@ -9,31 +9,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="/css/login.scss" />
 </head>
 
 <body>
-<form action="" method="POST">
-    <div class="container-md">
-        <div class="row ">
-            <div class="image-top" style="background-image: url({{url('images/upper_image1.jpg')}});"></div>
+    <div class="container">
+        <div class="row mt-5">
+                <img src="{{url('images/upper_image_good2.jpg')}}" alt="" class="img-fluid px-0">
         </div>
         <div class="row background">
-            <div class="col-7 text-white text-center">
-                <h1 class="heading" >Bill <br>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-6 text-white text-center ml-5">
+                <h1 class="heading mt-5 ml-5" >Bill <br>
                     Dealer <br>
-                    values <br>
+                    values  <br>
                     technology</h1>
 
-                <h5 class="subtitle">
+                <h5 class="subtitle mt-5 ml-5">
                     Bill Dealer ensure the least likelihood of <br>human error, and to keep client data safe <br>and secure.
                 </h5>
                 <br>
-                <h6 class="note">
+                <h6 class="note mt-2 ml-5 mb-">
                     By using the latest in fintech.
                 </h6>
             </div>
-            <div class="col-5 text-white text-center">
+            <div class="col-sm-5 text-white text-center mt-4">
                 <div class="card text-black">
                     <div class="card-body text-start">
                         <form action="/action_page.php" class="was-validated">
@@ -55,7 +55,6 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <!-- Simple link -->
                                     <a href="">Forgot password?</a>
                                 </div>
                             </div>
@@ -64,17 +63,10 @@
                             </div>
                         </form>
                     </div>
-                    <div class="card-footer text-muted">
-                        <div class="text-center">
-                            <p>Not a member? <a href="" >Register</a></p>
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</form>
 </body>
 
 </html>
