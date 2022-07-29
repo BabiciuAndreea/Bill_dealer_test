@@ -1,73 +1,73 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <div class="container px-0">
+        <div class="row ">
+            <img src="{{url('images/upper_image_good2.jpg')}}" alt="" class="img-fluid px-0">
+        </div>
+        <div class="row background">
+            <div class="col-sm-1 px-0"></div>
+            <div class="col-sm-5 text-white text-center ml-5 px-0">
+                <h1 class="heading mt-5 ml-5" >Bill <br>
+                    Dealer <br>
+                    values  <br>
+                    technology</h1>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+                <h5 class="subtitle mt-5 ml-5">
+                    Bill Dealer ensure the least likelihood of <br>human error, and to keep client data safe <br>and secure.
+                </h5>
+                <br>
+                <h6 class="note mt-2 ml-5 mb-">
+                    By using the latest in fintech.
+                </h6>
+            </div>
+            <div class="col-sm-5 text-white text-center mt-4 px-0">
+                <div class="card card-design text-black">
+                    <div class="card-body text-start">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <div class="mb-3 mt-3 ">
+                                <label for="email" class="form-label">Email:</label>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder={{ __('Enter email') }}>
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label">Password:</label>
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder={{ __('Enter password') }}>
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                            <div class="row mb-4">
+                                <div class="col d-flex justify-content-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <label class="form-check-label text-muted" for="remember"> Remember me </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-3" name="login">{{ __('Login') }}</button>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
+            <div class="col-sm-1 px-0"></div>
         </div>
     </div>
-</div>
 @endsection

@@ -21,7 +21,8 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'string',
@@ -29,20 +30,19 @@ class CreateNewUser implements CreatesNewUsers
                 'max:255',
                 Rule::unique(User::class),
             ],
-            'adress' => ['required', 'string', 'max:1000'],
-            'postal' => ['required', 'string', 'max:10'],
-            'cui' => ['required', 'string', 'max:20'],
-            'caen' => ['required', 'string', 'max:300'],
+            'address' => ['required', 'string', 'max:1000'],
+            'phone' => ['required', 'string', 'max:10'],
+            'cnp' => ['required', 'string', 'max:13'],
             'password' => $this->passwordRules(),
         ])->validate();
 
         return User::create([
-            'name' => $input['name'],
+            'first_name' => $input['first_name'],
+            'last_name' => $input['last_name'],
             'email' => $input['email'],
-            'adress' => $input['adress'],
-            'postal' => $input['postal'],
-            'cui' => $input['cui'],
-            'caen' => $input['caen'],
+            'address' => $input['address'],
+            'phone' => $input['phone'],
+            'cnp' => $input['cnp'],
             'password' => Hash::make($input['password']),
         ]);
     }
