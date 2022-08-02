@@ -1,5 +1,6 @@
 <?php
 
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/hihu', function () {
+    Debugbar::info('Welcome to the web route format');
     return view('hihu');
 });

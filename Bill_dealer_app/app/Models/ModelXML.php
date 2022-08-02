@@ -1,17 +1,17 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
 
-try {
-	$conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
-	// set the PDO error mode to exception
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	echo "Connected successfully";
-} catch (PDOException $e) {
-	echo "Connection failed: " . $e->getMessage();
-}
+// try {
+// 	$conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+// 	// set the PDO error mode to exception
+// 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// 	echo "Connected successfully";
+// } catch (PDOException $e) {
+// 	echo "Connection failed: " . $e->getMessage();
+// }
 
 
 // $mysqli = new mysqli("localhost", "root", "bazaDeDateUrmeaza?");
@@ -21,40 +21,38 @@ try {
 // 	exit();
 // }
 
-$factura = array();
-$sql = "SELECT * FROM bazeDeDateUrmeaza?";
+// $factura = array();
+// $sql = "SELECT * FROM bazeDeDateUrmeaza?";
 
-if ($result = $mysqli->query($sql)) {
+// if ($result = $mysqli->query($sql)) {
 
-	$factura = $results->fetch_all(MYSQLI_ASSOC);
+// 	$factura = $results->fetch_all(MYSQLI_ASSOC);
 
-	if (count($factura)) {
-		$xmlFiles = createXMLFile($factura);
+// 	if (count($factura)) {
+// 		$xmlFiles = createXMLFile($factura);
 
-		echo "<br/><h3>XML file generate Successfully.<br/>Click <a href='" . $xmlFiles . "'>" . $xmlFiles . "</a> link to open</h3>";
-	} else {
-		echo "<br/> <h3> No record found</h3>";
-	}
+// 		echo "<br/><h3>XML file generate Successfully.<br/>Click <a href='" . $xmlFiles . "'>" . $xmlFiles . "</a> link to open</h3>";
+// 	} else {
+// 		echo "<br/> <h3> No record found</h3>";
+// 	}
 
-	$result->free();
-}
-$mysqli->close();
+// 	$result->free();
+// }
+// $mysqli->close();
 
 $CUSTOMER = 1;
 $SUPPLIER = 2;
 
-function createXMLFile($factura)
+function createXML($factura)
 {
-	$filePath = "incaNuStiu/DarMaGandesc/hapciu.xml";
+	//$filePath = "incaNuStiu/DarMaGandesc/hapciu.xml";
 	$CUSTOMER = 1;
 	$SUPPLIER = 2;
 
-
-
 	$mapClient = $clienti->map(function ($client, $key) {
 		return [
-			'id' => $furnizorul->id,
-			'endpoint_id' => $furnizorul->endpoint_id,
+			'id' => $client->id,
+			'endpoint_id' => $client->endpoint_id,
 		];
 	});
 
@@ -99,6 +97,7 @@ function createXMLFile($factura)
 
 	addLegalMonetaryTotal($dom, $rootElement, $factura);
 
+	echo $dom->saveXML();
 	//
 }
 
