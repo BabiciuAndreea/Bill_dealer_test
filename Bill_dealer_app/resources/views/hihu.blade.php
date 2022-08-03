@@ -13,7 +13,29 @@
 <body>
     <h2>Hi Hello </h2>
 
-    <input type="button" value="Press this Button" class="btn btn-primary" onclick="" />
+    <input type="button" value="Press this Button" class="btn btn-primary" onclick="init()" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function init() {
+            console.log("apel fct din buton")
+            $.ajax({
+            type: "POST",
+            url: 'http://127.0.0.1:8000/cerere',
+            data: { },
+            success: function(response)
+            {
+                console.log("cerere post facuta cu succes");
+                console.log(response);
+        }
+        });
+    }
+       $(document).ready(function() {
+    console.log("cerere jquerry");
+
+});
+    </script>
 </body>
+
 
 </html>

@@ -43,7 +43,7 @@
 $CUSTOMER = 1;
 $SUPPLIER = 2;
 
-function createXML($factura)
+function createXML()
 {
 	//$filePath = "incaNuStiu/DarMaGandesc/hapciu.xml";
 	$CUSTOMER = 1;

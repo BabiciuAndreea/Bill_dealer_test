@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-           // $table->rememberToken();
+            // $table->rememberToken();
             $table->string('address');
             $table->string('phone');
             $table->string('cnp')->unique();
-            $table->int('role');
+            $table->string('role');
         });
     }
 

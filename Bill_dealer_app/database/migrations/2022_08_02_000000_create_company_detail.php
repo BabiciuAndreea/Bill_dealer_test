@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('caen');
             $table->string('capital');
-            $table->int('tva');
+            $table->string('tva');
             $table->string('iban');
             $table->string('format_pdf');
         });
