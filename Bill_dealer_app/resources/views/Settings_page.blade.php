@@ -25,27 +25,6 @@
 						</div>
 						<h4 class="text-center " style="color:white">Your name</h4>
 					</div>
-<<<<<<< Updated upstream
-					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
-							<i class="fa fa-home text-center mr-1"></i> 
-							Account
-						</a>
-						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
-							<i class="fa fa-key text-center mr-1"></i> 
-							Password
-						</a>
-						<a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
-							<i class="fa fa-user text-center mr-1"></i> 
-							Security
-						</a>
-						<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
-							<i class="fa fa-tv text-center mr-1"></i> 
-							Application
-						</a>
-						<a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
-							<i class="fa fa-bell text-center mr-1"></i> 
-=======
 					<div class="text_nav nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="text_part nav-link active" id="account-tab"  data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true" style="color:white;">
 							<i class="text_btn fa fa-home text-center mr-1" style="color:white;"></i> 
@@ -65,7 +44,6 @@
 						</a>
 						<a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false"style="color:white;">
 							<i class="fa fa-bell text-center mr-1"style="color:white;"></i> 
->>>>>>> Stashed changes
 							Notification
 						</a>
                         <a class="nav-link" id="notification-tab" data-toggle="pill" href="#settings" role="tab" aria-controls="notification" aria-selected="false"style="color:white;">

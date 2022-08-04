@@ -1,0 +1,117 @@
+
+.btn {
+    color: white;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #5386e4;
+    color: white;
+}
+
+.image-top {
+    height: 150px;
+    width: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-design{
+    background-color: #2d3e4e;
+    border: none;
+}
+
+.space{
+    letter-spacing: 20px;
+}
+
+.form-label{
+    color: white;
+}
+
+.background{
+    background-color: #2d3e4e;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading{
+    text-align: left;
+    font-family: Qualy;
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    line-height: 45px;
+    color: #e8eceb;
+}
+
+.subtitle{
+    font-family: Qualy;
+    text-align: left;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #e8eceb;
+}
+
+.note{
+    color: rgba(232, 236, 235, 0.55);
+    font-size: 15px;
+    font-family: Qualy;
+    text-align: left;
+}
+
+.size{
+    font-size: 12px;
+}
+
+.card{
+    font-family: Qualy;
+    width: 100%;
+}
+
+.img {
+    width:100px;
+    height:100px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(45, 62, 78, 0.664));
+}
+
+p{
+    font-size: 13px;
+    font-family: Qualy;
+}
+
+h6{
+    font-family: Qualy;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.types{
+    font-size: 10px;
+    font-family: Qualy;
+}
+
+.bg-org{
+    background-color: #e09e50;
+}
+
+.bg-blue{
+    background-color: #2d3e4e;
+}
+
+.navbar-brand{
+    font-family: Qualy;
+    color: #2d3e4e;
+}
+
+.nav-item{
+    font-family: Qualy;
+}
+
+.logo{
+    width:50px;
+    height: 50px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(45, 62, 78, 0.664));
+}
