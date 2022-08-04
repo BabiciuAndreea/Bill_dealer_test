@@ -1,7 +1,18 @@
 
+:root
+{
+	--background-color:#e8eceb;
+	--text-color:#2d3e4e;
 
+}
+.dark-theme
+{
+	--background-color:#2d3e4e;
+	--text-color:#e8eceb;
+
+}
 body {
-	background: #e8eceb;
+	background:var(--background-color);
 	font-family: "Roboto", sans-serif;
 }
 
@@ -39,10 +50,101 @@ body {
 }
 .settings_container
 {
-    background-color: #2d3e4e;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
 }
 .profile-tab-nav
 {
     background: #2d3e4e;
-    border-radius: 8%;
+    height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
 }
+
+.d-flex
+{
+  	
+    position: relative;
+  top: 100%;
+  left: 50%;
+  width: 350px;
+  height: 40px;
+  border-radius: 40px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%);
+  background: #fff;
+  transition: all 0.3s ease;
+}
+label
+{
+	color: var(--text-color);
+}
+h3
+{
+	color: var(--text-color);
+}
+input[type="checkbox"]
+{
+
+	-webkit-appearance: none;
+	visibility: hidden;
+	display: none;
+}
+.check
+{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 20px;
+	background:#2d3e4e ;
+	cursor:pointer;
+	border-radius: 20px;
+	overflow: hidden;
+	transition: ease-in 0.5s;
+}
+input[type="checkbox"]:checked ~ .check
+{
+	background:#e8eceb ;
+}
+.check:before
+{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	background:#e8eceb ;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	transition: 0.5s;
+
+}
+input[type="checkbox"]:checked ~ .check:before
+{
+	transform: translateX(-50px);
+}
+.check:after
+{
+	content: '';
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background:#2d3e4e ;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	transition: 0.5s;
+
+}
+input[type="checkbox"]:checked ~ .check:after
+{
+	transform: translateX(0px);
+}
+

@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< Updated upstream
+=======
+
+Route::get('/company', function () {
+    return view('auth.company');
+});
+Route::get('/Settings', function () {
+    return view('Settings_page');
+});
+
+Route::get('/home', function () {
+    return view('home');
+})->middleware('auth');
+
+>>>>>>> Stashed changes
