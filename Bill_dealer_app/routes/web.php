@@ -23,6 +23,12 @@ Route::get('/company', function () {
 Route::get('/Settings', function () {
     return view('Settings_page');
 });
+<<<<<<< Updated upstream
+=======
+Route::get('/Info', function () {
+    return view('info_page');
+});
+>>>>>>> Stashed changes
 
 Route::get('/home', function () {
     return view('home');

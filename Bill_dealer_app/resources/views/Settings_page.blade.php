@@ -28,7 +28,11 @@
 					<div class="text_nav nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="text_part nav-link active" id="account-tab"  data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true" style="color:white;">
 							<i class="text_btn fa fa-home text-center mr-1" style="color:white;"></i> 
+<<<<<<< Updated upstream
 							Account
+=======
+							Patacean Dorina 
+>>>>>>> Stashed changes
 						</a>
 						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false"style="color:white;">
 							<i class="fa fa-key text-center mr-1 "style="color:white;"></i> 
@@ -223,13 +227,43 @@
 					
 					<div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="notification-tab">
 						<h3 class="mb-4">Settings</h3>
+<<<<<<< Updated upstream
 						
 						<label >
 
+=======
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Theme</label>
+								  	
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Font size</label>
+								  	
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Page zoom</label>
+								  	
+								</div>
+							</div>
+							
+						
+						<div class="dark_theme"	>		
+						<label >
+>>>>>>> Stashed changes
 						<input type="checkbox" id="check">
 						<label>Dark mode</label>
 						<span class="check"></span>
 					</label>
+<<<<<<< Updated upstream
+=======
+						</div>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -237,7 +271,11 @@
 	</section>
 
 	
+<<<<<<< Updated upstream
 	
+=======
+	<!--java script code for the dark theme-->
+>>>>>>> Stashed changes
 	<script>
 		var icon=document.getElementById("check");
 		check.onclick=function()
