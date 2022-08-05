@@ -10,6 +10,6 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        'company_name', 'cif', 'company_id', 'city', 'country', 'address', 'caen', 'capital', 'tva', 'iban', 'format_pdf'
+        'company_name', 'cif', 'nr_reg', 'city', 'country', 'address', 'caen', 'capital', 'tva', 'iban', 'phone', 'email', 'format_pdf'
     ];
 }

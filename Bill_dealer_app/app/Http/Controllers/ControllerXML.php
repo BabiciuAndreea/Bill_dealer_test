@@ -8,7 +8,7 @@ use App\Models\ModelClient\ModelClients;
 // use App\Models\ModelClients;
 use Illuminate\Support\Facades\DB;
 
-class ControllerXML
+class ControllerXML extends Controller
 {
 
     public function sayHi()

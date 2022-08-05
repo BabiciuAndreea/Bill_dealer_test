@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h2>View din care fac cererererere</h2>
+    <h2>View din </h2>
 </body>
 
 

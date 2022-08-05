@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CompanySeeder extends Seeder
+class InvoiceSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -20,20 +20,12 @@ class CompanySeeder extends Seeder
     {
 
         for ($count = 0; $count < 10; $count++) {
-            DB::table('company')->insert([
-                'company_name' => Str::random(10),
-                'cif' => Str::random(10),
-                'nr_reg' => Str::random(10),
-                'city' => Str::random(10),
-                'county' => Str::random(10),
-                'address' => Str::random(13),
-                'caen' => Str::random(10),
-                'capital' => Str::random(10),
-                'tva' => Str::random(10),
-                'iban' => Str::random(13),
-                'phone' => Str::random(10),
-                'email' => Str::random(13),
-                'format_pdf' => Str::random(10),
+            DB::table('invoice')->insert([
+
+                'data_emitere' =>  date("Y-m-d H:i:s"),
+                'data_scadenta' =>  date("Y-m-d H:i:s"),
+                'serie_factura' => Str::random(10),
+                'nr_factura' => rand(1000, 9999),
 
                 // 'updated_at' => date("Y-m-d H:i:s"),
                 // 'created_at' => date("Y-m-d H:i:s"),

@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ControllerTest;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Route;
+use PhpParser\Node\Expr\AssignOp\Concat;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +37,16 @@ Route::get('/cerere', function () {
 // });
 
 // Route::get('/cerere', [\App\Http\Controllers\ControllerXML::class, 'sayHi'])->name('cerere');
+// Route::get('/test', [ControllerTest::class, 'index']);
+
+Route::resource('test', ControllerTest::class);
+
+Route::prefix('/factura')->group(function () {
+    Route::get('/', [ControllerTest::class, 'index'])->name('factura.index');
+    Route::get('/{id}', [ControllerTest::class, 'show'])->name('factura.show');
+    Route::get('/create', [ControllerTest::class, 'create'])->name('factura.create');
+    Route::post('/', [ControllerTest::class, 'store'])->name('factura.store');
+    Route::get('/edit/{id}', [ControllerTest::class, 'edit'])->name('factura.edit');
+    Route::patch('/{id}', [ControllerTest::class, 'update'])->name('factura.update');
+    Route::delete('/{id}', [ControllerTest::class, 'destroy'])->name('factura.destroy');
+});
