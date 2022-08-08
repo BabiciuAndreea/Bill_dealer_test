@@ -3677,3 +3677,12 @@
 #28 D:\\Internship\\App_workspace - Copy\\Bill_dealer_app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\esources\\server.php(16): require_once('D:\\\\Internship\\\\A...')
 #29 {main}
 "} 
+[2022-08-08 11:26:42] local.ERROR: Command "sevre" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"sevre\" is not defined. at C:\\laragon\\www\\Bill DEaler\\Bill_dealer_test\\Bill_dealer_app\\vendor\\symfony\\console\\Application.php:692)
+[stacktrace]
+#0 C:\\laragon\\www\\Bill DEaler\\Bill_dealer_test\\Bill_dealer_app\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('sevre')
+#1 C:\\laragon\\www\\Bill DEaler\\Bill_dealer_test\\Bill_dealer_app\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\laragon\\www\\Bill DEaler\\Bill_dealer_test\\Bill_dealer_app\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\Bill DEaler\\Bill_dealer_test\\Bill_dealer_app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\Bill DEaler\\Bill_dealer_test\\Bill_dealer_app\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
