@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('comandas', function (Blueprint $table) {
             $table->id();
-            $table->string('tva_total');
-            $table->string('valoare_total');
-            $table->string('curs_valutar');
+            $table->integer('tva_total');
+            $table->float('valoare_total');
+            $table->float('curs_valutar');
         });
     }
 
