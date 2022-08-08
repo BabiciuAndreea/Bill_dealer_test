@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Factories\ClientFactory;
+use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,14 +24,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call([
-            SeederUserBill::class,
-            CompanySeeder::class,
-            ClientSeeder::class,
-            ProdusSeeder::class,
-            RelatieComandaProdusSeeder::class,
-            ComandaSeeder::class,
-            InvoiceSeeder::class
-        ]);
+        // $this->call([
+        //     SeederUserBill::class,
+        //     CompanySeeder::class,
+        //     ClientsSeeder::class,
+        //     ProdusSeeder::class,
+        //     RelatieComandaProdusSeeder::class,
+        //     ComandaSeeder::class,
+        //     InvoiceSeeder::class
+        // ]);
+
+        ClientFactory::factory(10)->create();
     }
 }

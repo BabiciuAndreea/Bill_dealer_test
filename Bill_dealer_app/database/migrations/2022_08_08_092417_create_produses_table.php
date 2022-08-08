@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('produs', function (Blueprint $table) {
+        Schema::create('produses', function (Blueprint $table) {
             $table->id();
             $table->string('denumire');
             $table->string('unitate_masura');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produs');
+        Schema::dropIfExists('produses');
     }
 };

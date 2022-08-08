@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ClientSeeder extends Seeder
+class ClientsSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -29,11 +29,6 @@ class ClientSeeder extends Seeder
                 'address' => Str::random(10),
                 'phone' => Str::random(10),
                 'email' => Str::random(10) . '@gamil.com'
-
-
-                // 'updated_at' => date("Y-m-d H:i:s"),
-                // 'created_at' => date("Y-m-d H:i:s"),
-
             ]);
         }
         // \App\Models\User::factory(10)->create();
