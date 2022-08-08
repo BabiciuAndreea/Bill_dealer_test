@@ -3,20 +3,14 @@
 {
 	--background-color:#e8eceb;
 	--text-color:#2d3e4e;
-<<<<<<< Updated upstream
-=======
 	--circle-image-color:#e8eceb;
->>>>>>> Stashed changes
 
 }
 .dark-theme
 {
 	--background-color:#2d3e4e;
 	--text-color:#e8eceb;
-<<<<<<< Updated upstream
-=======
 	--circle-image-color:#e09e50;
->>>>>>> Stashed changes
 
 }
 body {
@@ -54,11 +48,7 @@ body {
 	height: 100px;
 	width: 100px;
 	border-radius: 100%;
-<<<<<<< Updated upstream
-	border: 5px solid #fff;
-=======
 	border: 5px solid var(--circle-image-color);
->>>>>>> Stashed changes
 }
 .settings_container
 {
@@ -74,17 +64,10 @@ body {
     height: 100%;
   width: 160px;
   position: fixed;
-<<<<<<< Updated upstream
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-=======
   top: 0;
   left: 0;
   overflow-x: hidden;
   
->>>>>>> Stashed changes
 }
 
 .d-flex
@@ -116,11 +99,6 @@ input[type="checkbox"]
 	visibility: hidden;
 	display: none;
 }
-<<<<<<< Updated upstream
-.check
-{
-	position: relative;
-=======
 .dark_theme
 {
 	position: relative;
@@ -130,7 +108,6 @@ input[type="checkbox"]
 {
 	position: relative;
 	left: 30px;
->>>>>>> Stashed changes
 	display: block;
 	width: 40px;
 	height: 20px;
