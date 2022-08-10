@@ -11,7 +11,15 @@
 </head>
 
 <body>
-    <h2>View din </h2>
+    <h2>View din exemplu cu controler unde incerc sa afisez datele din db </h2>
+   
+    @foreach ( $posts as $post )
+    <table> <tr>
+        <td>{{ $post->id }}</td>
+        <td>{{ $post->tva_total }}</td>
+    </tr></table>
+   
+    @endforeach
 </body>
 
 

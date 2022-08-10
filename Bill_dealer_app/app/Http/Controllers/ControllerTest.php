@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comanda;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Psy\Readline\Hoa\Console;
 
 class ControllerTest extends Controller
 {
@@ -14,7 +17,36 @@ class ControllerTest extends Controller
      */
     public function index()
     {
+        $posts = Comanda::all();
+        dd($posts);
+
         return view('exempluCerere');
+
+
+        // $posts = DB::table('comandas')
+        //     ->get();
+        // return view(
+        //     'exempluCerere',
+        //     [
+        //         'posts' => $posts
+        //     ]
+        // );
+
+
+
+        // $users = DB::table('comandas')->get();
+
+        // // foreach ($posts as $post) {
+        // //     echo $post->id . ' ';
+        // //     echo $post->tva_total;
+        // //     echo '<br>';
+        // // }
+        // echo '<br>';
+        // foreach ($users as $user) {
+        //     echo $user->id . ' ';
+        //     echo $user->tva_total;
+        //     echo '<br>';
+        // }
     }
 
     /**
@@ -46,7 +78,11 @@ class ControllerTest extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Comanda::findOrFail($id);
+
+        return view('comanda.show', [
+            'post' => $post
+        ]);
     }
 
     /**

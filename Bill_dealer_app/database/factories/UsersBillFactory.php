@@ -23,7 +23,7 @@ class UsersBillFactory extends Factory
             'password' => $this->faker->password,
             'address' => $this->faker->streetAddress,
             'phone' => $this->faker->phoneNumber,
-            'cnp' => $this->faker->randomNumber(),
+            'cnp' => $this->faker->unique()->randomNumber(),
             'role' => $this->faker->numberBetween(1, 2)
         ];
     }
