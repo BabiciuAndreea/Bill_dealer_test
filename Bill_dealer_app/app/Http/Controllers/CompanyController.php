@@ -16,10 +16,7 @@ class CompanyController extends Controller
     public function index()
     {
         return view(
-            'indexCompany',
-            [
-                'post' => Company::all()
-            ]
+            'index'
         );
     }
 
@@ -30,7 +27,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('company/company');
+        return view('company/companyFormular');
     }
 
     /**

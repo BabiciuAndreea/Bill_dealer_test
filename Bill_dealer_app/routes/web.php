@@ -44,6 +44,7 @@ Route::get('/cerere/index', [ControllerTest::class, 'index']);
 // Route::get('/cerere', [\App\Http\Controllers\ControllerXML::class, 'sayHi'])->name('cerere');
 Route::get('/test', [ControllerTest::class, 'index']);
 
+//le pot sterge dupa ce fac o ruta si pt invoice
 Route::get('/cmp', function () {
     return view('company/companyFormular');
 })->name('cmp');

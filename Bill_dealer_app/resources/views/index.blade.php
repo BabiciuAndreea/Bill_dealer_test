@@ -11,12 +11,12 @@
 <body>
     <div class="container m-5"> 
 
-        <div class="row col-sm-2"> <a href="{{route('cmp')}}" type="button" class="btn btn-primary" role="button">Create company</a></div>
-        <div class="row col-sm-2"> <a href="{{route('cli')}}" type="button" class="btn btn-primary" role="button">Create client</a></div>
-        <div class="row col-sm-2"> <a href="{{route('cmd')}}" type="button" class="btn btn-primary" role="button">Create comanda</a></div>
+        <div class="row col-sm-2"> <a href="{{route('company.create')}}" type="button" class="btn btn-primary" role="button">Create company</a></div>
+        <div class="row col-sm-2"> <a href="{{route('client.create')}}" type="button" class="btn btn-primary" role="button">Create client</a></div>
+        <div class="row col-sm-2"> <a href="{{route('comanda.create')}}" type="button" class="btn btn-primary" role="button">Create comanda</a></div>
         <div class="row col-sm-2"> <a href="{{route('inv')}}" type="button" class="btn btn-primary" role="button">Create invoice</a></div>
-        <div class="row col-sm-2"> <a href="{{route('prod')}}" type="button" class="btn btn-primary" role="button">Create produs</a></div>
-        <div class="row col-sm-2"> <a href="{{route('user')}}" type="button" class="btn btn-primary" role="button">Create user</a></div>
+        <div class="row col-sm-2"> <a href="{{route('produs.create')}}" type="button" class="btn btn-primary" role="button">Create produs</a></div>
+        <div class="row col-sm-2"> <a href="{{ route('users_bill.create') }}" type="button" class="btn btn-primary" role="button">Create user</a></div>
       
     </div>
    

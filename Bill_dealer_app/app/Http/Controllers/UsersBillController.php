@@ -16,7 +16,12 @@ class UsersBillController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view(
+            'users_bill.usersIndex',
+            [
+                'users' => UsersBill::all()
+            ]
+        );
     }
 
     /**
@@ -26,7 +31,7 @@ class UsersBillController extends Controller
      */
     public function create()
     {
-        return view('usersFormular');
+        return view('users_bill.usersFormular');
     }
 
     /**
@@ -37,6 +42,8 @@ class UsersBillController extends Controller
      */
     public function store(Request $request)
     {
+        // dd('redirect to the store method');
+
         $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
@@ -58,7 +65,7 @@ class UsersBillController extends Controller
             'cnp' => $request->cnp,
             'role' => $request->role
         ]);
-        return redirect(route('users_bill.index'))->with('success', 'User added successfully');
+        return redirect(route('index'))->with('success', 'User added successfully');
     }
 
     /**
@@ -69,7 +76,12 @@ class UsersBillController extends Controller
      */
     public function show($id)
     {
-        //
+        return view(
+            'users_bill.usersShow',
+            [
+                'user' => UsersBill::findOrFail($id)
+            ]
+        );
     }
 
     /**
