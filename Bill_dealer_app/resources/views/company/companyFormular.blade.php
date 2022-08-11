@@ -13,7 +13,8 @@
                         </div>
                         <p class="text-muted"> Please fill the fields below.</p>
                         <HR/>
-                        <form action="/action_page.php" class="" method="POST">
+                        <form action="{{ route('company.store') }}" class="" method="POST" enctype="multipart/form-data" >
+                            @csrf
                             <div class="form-outline">
                                 <input type="text" id="company_name" class="form-control form-control-md" placeholder="Company name"/>
                             </div>
@@ -92,15 +93,14 @@
 
                             <div class="row mt-3">
                                 <div class="text-center">
-                                    <a href="{{ route('company.store') }}" class="type="submit" class="btn btn-primary mt-3" name="sign_in">Add company</a>
+                                    <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add company</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <div class="col-sm-3 px-0 bg-blue"></div>
         </div>
-        <div class="col-sm-3 px-0 bg-blue"></div>
     </div>
-</div>
 @endsection

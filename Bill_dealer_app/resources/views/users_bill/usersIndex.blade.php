@@ -34,6 +34,17 @@
         </div>
     </div>
 
+    @if (session()->has('message'))
+        <div class="mx-auto w-4/5 pb-10">
+            <div class="bg-red-500 text-white font-bold ronded-t px-4 py-2">
+                Warning
+            </div>
+            <div class="borde boreder-t-1 boreder-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+                {{ session()->get('message') }}
+            </div>
+        </div>
+    @endif
+
     @foreach($users as $user)
         <div class="w-4/5 mx-auto pb-10">
             <div class="bg-white pt-10 rounded-lg drop-shadow-2xl sm:basis-3/4 basis-full sm:mr-8 pb-10 sm:pb-0">
@@ -47,7 +58,19 @@
                     <p class="text-gray-900 text-lg py-8 w-full break-words">
                         {{ $user->last_name }}
                     </p>
-
+                    <div class="row">
+                        <div class="col col-sm-2">
+                            <a href="{{ route('users_bill.edit',1) }}" type="button" class="btn btn-primary" role="button">Edit user</a>
+                        </div>
+                        <div class="col col-sm-2">
+                            <form action="{{ route('users_bill.destroy',2) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type ="submit" class="btn btn-primary" role="button">Delete</button>
+                            </form>
+                            {{-- <a href="{{ route('users_bill.destroy',1) }}" type="button" class="btn btn-primary" role="button">Delete user</a> --}}
+                        </div>
+                    </div>
                     <span class="text-gray-500 text-sm sm:text-base">
                     Made by:
                         <a href=""

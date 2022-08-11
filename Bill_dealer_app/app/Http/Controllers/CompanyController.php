@@ -38,7 +38,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        // dd($request);
         $request->validate([
             'company_name' => 'required',
             'cif' => 'required|unique:companies',
@@ -55,7 +55,7 @@ class CompanyController extends Controller
             // 'format_pdf' => 'required'
         ]);
 
-        Company::create([
+        Company::insert([
             'company_name' => $request->company_name,
             'cif' => $request->cif,
             'nr_reg' => $request->nr_reg,

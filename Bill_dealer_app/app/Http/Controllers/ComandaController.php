@@ -25,7 +25,7 @@ class ComandaController extends Controller
      */
     public function create()
     {
-        //
+        echo ("Creating comanda...");
     }
 
     /**

@@ -3,8 +3,10 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ControllerTest;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ComandaController;
 use App\Http\Controllers\UsersBillController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProdusController;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\AssignOp\Concat;
@@ -21,7 +23,7 @@ use PhpParser\Node\Expr\AssignOp\Concat;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/hihu', function () {
@@ -78,9 +80,10 @@ Route::prefix('/factura')->group(function () {
 });
 
 Route::prefix('/comanda')->group(function () {
+    Route::get('/create', [ComandaController::class, 'create'])->name('comanda.create');
     Route::get('/', [ComandaController::class, 'index'])->name('comanda.index');
     Route::get('/{id}', [ComandaController::class, 'show'])->name('comanda.show');
-    Route::get('/create', [ComandaController::class, 'create'])->name('comanda.create');
+
     Route::post('/', [ComandaController::class, 'store'])->name('comanda.store');
     Route::get('/edit/{id}', [ComandaController::class, 'edit'])->name('comanda.edit');
     Route::patch('/{id}', [ComandaController::class, 'update'])->name('comanda.update');
@@ -88,9 +91,9 @@ Route::prefix('/comanda')->group(function () {
 });
 
 Route::prefix('/client')->group(function () {
+    Route::get('/create', [ClientController::class, 'create'])->name('client.create');
     Route::get('/', [ClientController::class, 'index'])->name('client.index');
     Route::get('/{id}', [ClientController::class, 'show'])->name('client.show');
-    Route::get('/create', [ClientController::class, 'create'])->name('client.create');
     Route::post('/', [ClientController::class, 'store'])->name('client.store');
     Route::get('/edit/{id}', [ClientController::class, 'edit'])->name('client.edit');
     Route::patch('/{id}', [ClientController::class, 'update'])->name('client.update');
@@ -108,9 +111,9 @@ Route::prefix('/company')->group(function () {
 });
 
 Route::prefix('/produs')->group(function () {
+    Route::get('/create', [ProdusController::class, 'create'])->name('produs.create');
     Route::get('/', [ProdusController::class, 'index'])->name('produs.index');
     Route::get('/{id}', [ProdusController::class, 'show'])->name('produs.show');
-    Route::get('/create', [ProdusController::class, 'create'])->name('produs.create');
     Route::post('/', [ProdusController::class, 'store'])->name('produs.store');
     Route::get('/edit/{id}', [ProdusController::class, 'edit'])->name('produs.edit');
     Route::patch('/{id}', [ProdusController::class, 'update'])->name('produs.update');

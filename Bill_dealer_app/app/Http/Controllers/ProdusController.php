@@ -25,7 +25,7 @@ class ProdusController extends Controller
      */
     public function create()
     {
-        //
+        echo ("Creating Produs...");
     }
 
     /**

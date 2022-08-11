@@ -25,7 +25,7 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        //
+        echo ("Creating Invoice...");
     }
 
     /**

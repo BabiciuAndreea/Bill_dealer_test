@@ -92,7 +92,9 @@ class UsersBillController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('users_bill.usersEdit', [
+            'user' => UsersBill::where('id', $id)->first()
+        ]);
     }
 
     /**
@@ -104,7 +106,7 @@ class UsersBillController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd('Test');
     }
 
     /**
@@ -115,6 +117,8 @@ class UsersBillController extends Controller
      */
     public function destroy($id)
     {
-        //
+        UsersBill::destroy($id);
+
+        return redirect(route('users_bill.index'))->with('message', 'Deleted');
     }
 }
