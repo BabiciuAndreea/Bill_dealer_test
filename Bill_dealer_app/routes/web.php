@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Settings;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Settings', function () {
+    return view('Settings_page');
+})->name('settings');
+
+Route::get('/Info', function () {
+    return view('info_page');
+});
+
+Route::get('/Register', function () {
+    return view('auth.register');
+});
+
 Route::get('/home', function () {
-    return view('home');
-})->middleware('auth');
+    if(Auth::check()){
+        if(Auth::user()->role == 'admin'){
+            return view('users.admin');
+        }else{
+            return view('users.user');
+        }
+    }else{
+        return view('auth.login');
+    }
+})->name('home');
+
+
+Route::get('/Settings1', function () {
+    return view('Settings_page');
+});
