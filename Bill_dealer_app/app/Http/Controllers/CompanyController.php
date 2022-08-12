@@ -55,7 +55,7 @@ class CompanyController extends Controller
             // 'format_pdf' => 'required'
         ]);
 
-        Company::insert([
+        Company::create([
             'company_name' => $request->company_name,
             'cif' => $request->cif,
             'nr_reg' => $request->nr_reg,

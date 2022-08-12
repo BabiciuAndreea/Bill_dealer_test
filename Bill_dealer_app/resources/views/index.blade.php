@@ -43,9 +43,9 @@
             <div class="col col-sm-2"> 
                 <a href="{{ route('users_bill.create') }}" type="button" class="btn btn-primary" role="button">Create user</a>
             </div>
-            <div class="col col-sm-2">
-                <a href="{{ route('users_bill.edit',1) }}" type="button" class="btn btn-primary" role="button">Edit user</a>
-            </div>
+            {{-- <div class="col col-sm-2">
+                <a href="{{ route('users_bill.edit', $user->id ) }}" type="button" class="btn btn-primary" role="button">Edit user</a>
+            </div> --}}
         </div>
       
     </div>

@@ -52,7 +52,7 @@ class UsersBillController extends Controller
             'address' => 'required',
             'phone' => 'required',
             'cnp' => 'required|unique:users_bills',
-            'role' => 'required',
+            //'role' => 'required',
         ]); //
 
         UsersBill::create([
@@ -94,6 +94,7 @@ class UsersBillController extends Controller
     {
         return view('users_bill.usersEdit', [
             'user' => UsersBill::where('id', $id)->first()
+            // 'user' => UsersBill::findOrFail($id)
         ]);
     }
 
@@ -107,6 +108,17 @@ class UsersBillController extends Controller
     public function update(Request $request, $id)
     {
         dd('Test');
+        UsersBill::where('id', $id)->update([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => $request->password,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'cnp' => $request->cnp,
+            'role' => $request->role
+        ]);
+        return redirect(route('index'))->with('success', 'User edited successfully');
     }
 
     /**
