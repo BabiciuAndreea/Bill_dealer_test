@@ -18,7 +18,7 @@
             <button class="btn_search btn btn-outline-success" type="submit">Search</button>
         </form>
         <div class="container ">
-            <div class=" srounded-lg d-block d-sm-flex settings_container">
+            <div class=" rounded-lg d-block d-sm-flex settings_container">
                 <div class="profile-tab-nav border-right profile_tab">
                     <div class="p-4">
                         <div class="img-circle text-center mb-3">

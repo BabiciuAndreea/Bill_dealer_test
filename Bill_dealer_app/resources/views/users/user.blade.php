@@ -179,7 +179,7 @@
                         <a href="#"
                             class="d-flex px-4 align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ 'profile_pictures/blank_profile_picture.png' }}" alt="hugenerd" width="30"
+                            <img src="{{ 'storage/'. Auth::user()->avatar }}" alt="hugenerd" width="30"
                                 height="30" class="rounded-circle">
                             <span class="tab d-none d-sm-inline mx-1">{{ Auth::user()->first_name }}
                                 {{ Auth::user()->last_name }}</span>

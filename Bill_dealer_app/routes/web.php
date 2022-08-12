@@ -43,7 +43,4 @@ Route::get('/home', function () {
     }
 })->name('home');
 
-
-Route::get('/Settings1', function () {
-    return view('Settings_page');
-});
+Route::get('add', [AddEmployeeControlle::class, 'add'])->name('add');

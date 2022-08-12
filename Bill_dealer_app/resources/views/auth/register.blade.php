@@ -12,13 +12,13 @@
             <div class="col-sm-6 px-0">
                 <div class="card text-black">
                     <div class="card-body text-start pb-0">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-11">
                                     <h6>ADD EMPLOYEE</h6>
                                 </div>
-                                <div class="col-1"><button type="button" class="btn-close" aria-label="Close"></button>
+                                <div class="col-1"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 </div>
                             </div>
                             <p class="text-muted"> Please fill the fields below.</p>
@@ -128,8 +128,16 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="form-group row">
+                                <label for="avatar" class="col-md-4 col-form-label text-md-right"> Profile picture </label>
+                                <div class="col-md-6">
+                                    <input id="avatar" type="file" name="avatar">
+                                </div>
+                            </div>
+
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-1 mb-2" name="sign_in">Add
+                                <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add
                                     employee</button>
                             </div>
                         </form>
