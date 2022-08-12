@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Controller extends BaseController
 {
@@ -24,4 +25,12 @@ class Controller extends BaseController
         DB::table('users')->where('id',$request->idUpdate)->update($userUpdate);
         return redirect()->back()->with('userUpdate','.');
     }
+
+
+
+/* Process the logout request */
+public function logout(Request $request) {
+        Auth::logout();
+        return view('welcome');
+}
 }
