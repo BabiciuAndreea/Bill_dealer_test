@@ -1,8 +1,16 @@
 <?php
 
+use App\Http\Controllers\AddCompanyController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\EditCompanyController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Settings;
+use App\Http\Controllers\ViewsController;
+use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -15,32 +23,24 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ViewsController::class, 'welcome']);
 
-Route::get('/Settings', function () {
-    return view('Settings_page');
-})->name('settings');
+Route::get('settings', [ViewsController::class, 'settings'])->name('settings');
 
-Route::get('/Info', function () {
-    return view('info_page');
-});
+Route::get('info', [ViewsController::class, 'info']);
 
-Route::get('/Register', function () {
-    return view('auth.register');
-});
+Route::get('home', [RoleController::class, 'setRole'])->name('home');
 
-Route::get('/home', function () {
-    if(Auth::check()){
-        if(Auth::user()->role == 'admin'){
-            return view('users.admin');
-        }else{
-            return view('users.user');
-        }
-    }else{
-        return view('auth.login');
-    }
-})->name('home');
+Route::get('addEmployee', [EmployeeController::class, 'index'])->name('addEmployee');
 
-Route::get('add', [AddEmployeeControlle::class, 'add'])->name('add');
+Route::get('Company_add_view', [AddCompanyController::class, 'index'])->name('company');
+
+Route::POST('Company_add', [AddCompanyController::class, 'store'])->name('addCompany');
+
+Route::get('Company_edit_view', [EditCompanyController::class, 'index'])->name('edit_company_view');
+
+Route::resource('products',ProductController::class);
+
+Route::resource('employees',EmployeeController::class);
+
+Route::resource('companies', EditCompanyController::class);

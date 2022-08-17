@@ -1,6 +1,4 @@
-@include('layouts.app')
-
-<body>
+<link href="{{ asset('css/employee.css') }}" rel="stylesheet">
         <div class="container-fluid py-0 px-0 mx-0">
             <div class=" rounded-lg d-block d-sm-flex settings_container">
                 <div class="profile-tab-nav border-right profile-tab my-0">
@@ -173,18 +171,25 @@
                                     </ul>
                                 </div>
                             </li>
-    
+                            
                             <li class="nav-item">
-                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" data-bs-toggle="dropdown" data-toggle="pill" 
-                                aria-controls="notification" aria-selected="false" href="#settings" role="tab">
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}" role="tab">
+                                    <i class="bi bi-box"></i> Products
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                aria-controls="notification" aria-selected="false" href="{{ route('addEmployee') }}" role="tab">
                                     <i class="bi bi-people"></i> Employee
                                 </a>
                             </li>
     
                             <li class="nav-item">
-                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" data-bs-toggle="dropdown" data-toggle="pill" 
-                                aria-controls="notification" aria-selected="false" href="#password" role="tab">
-                                    <i class="bi bi-people"></i> Company
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                aria-controls="notification" aria-selected="false" href="{{ route('company') }}" role="tab">
+                                    <i class="bi bi-building"></i> Company
                                 </a>
                             </li>
                         </ul>
@@ -195,7 +200,9 @@
                                 <a href="#"
                                     class="d-flex px-4 align-items-center text-white text-decoration-none dropdown-toggle"
                                     id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ 'storage/' . Auth::user()->avatar }}" alt="hugenerd" width="30"
+                                    <img 
+                                            src="{{'storage/' . Auth::user()->avatar}}"
+                                     alt="hugenerd" width="30"
                                         height="30" class="rounded-circle">
                                     <span class="tab d-none d-sm-inline mx-1">{{ Auth::user()->first_name }}
                                         {{ Auth::user()->last_name }}</span>
@@ -212,236 +219,4 @@
                         </form>
                     </div>
                 </div>
-
-
-
-                <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="account" role="tabpanel"
-                        aria-labelledby="account-tab">
-                        <h3 class="mb-4">Account Settings</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>First Name</label>
-                                    <input type="text" class="form-control" value="First Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Last Name</label>
-                                    <input type="text" class="form-control" value="Last Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="text" class="form-control" value="Youradress@somthing.com">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Phone number</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Company</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Designation</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Bio</label>
-                                    <textarea class="form-control" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore vero enim error similique quia numquam ullam corporis officia odio repellendus aperiam consequatur laudantium porro voluptatibus, itaque laboriosam veritatis voluptatum distinctio!</textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Update</button>
-                            <button class="btn btn-light">Cancel</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-                        <h3 class="mb-4">Password Settings</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Old password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>New password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Confirm new password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Update</button>
-                            <button class="btn btn-light">Cancel</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
-                        <h3 class="mb-4">Security Settings</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Login</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Two-factor auth</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="recovery">
-                                        <label class="form-check-label" for="recovery">
-                                            Recovery
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Update</button>
-                            <button class="btn btn-light">Cancel</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
-                        <h3 class="mb-4">Application Settings</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="app-check">
-                                        <label class="form-check-label" for="app-check">
-                                            App check
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="defaultCheck2">
-                                        <label class="form-check-label" for="defaultCheck2">
-                                            Lorem ipsum dolor sit.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Update</button>
-                            <button class="btn btn-light">Cancel</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
-                        <h3 class="mb-4">Notification Settings</h3>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="notification1">
-                                <label class="form-check-label" for="notification1">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusantium
-                                    accusamus, neque cupiditate quis
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="notification2">
-                                <label class="form-check-label" for="notification2">
-                                    hic nesciunt repellat perferendis voluptatum totam porro eligendi.
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="notification3">
-                                <label class="form-check-label" for="notification3">
-                                    commodi fugiat molestiae tempora corporis. Sed dignissimos suscipit
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Update</button>
-                            <button class="btn btn-light">Cancel</button>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="notification-tab">
-                        <h3 class="mb-4">Settings</h3>
-                        <label>
-
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Theme</label>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Font size</label>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Page zoom</label>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="dark_theme">
-                                    <label>
-                                        >>>>>>> Stashed changes
-                                        <input type="checkbox" id="check">
-                                        <label>Dark mode</label>
-                                        <span class="check"></span>
-                                    </label>
-                                   </div>
-                                        
-                                </div>
-                            </div>
-                    </div>
-				</div>
-
-
-
-			</div>
-		</div>
-
-
-   
-        <script>
-            var icon = document.getElementById("check");
-            check.onclick = function() {
-                document.body.classList.toggle("dark-theme");
-            }
-        </script>
-</body>
-
-</html>
+                
