@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
+class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -102,8 +102,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
+            'PragmaRX\\Google2FA\\' => 19,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
+            'ParagonIE\\ConstantTime\\' => 23,
         ),
         'N' => 
         array (
@@ -123,6 +125,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'Laravel\\Fortify\\' => 16,
         ),
         'I' => 
         array (
@@ -156,6 +159,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
             'DeepCopy\\' => 9,
             'Database\\Seeders\\' => 17,
             'Database\\Factories\\' => 19,
+            'DASPRiD\\Enum\\' => 13,
         ),
         'C' => 
         array (
@@ -165,6 +169,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'BaconQrCode\\' => 12,
         ),
         'A' => 
         array (
@@ -180,8 +185,8 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -341,8 +346,8 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -360,6 +365,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         array (
             0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
         ),
+        'PragmaRX\\Google2FA\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pragmarx/google2fa/src',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -367,6 +376,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'ParagonIE\\ConstantTime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
         'NunoMaduro\\Collision\\' => 
         array (
@@ -407,6 +420,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Laravel\\Fortify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/fortify/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -484,6 +501,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
             0 => __DIR__ . '/../..' . '/database/factories',
             1 => __DIR__ . '/..' . '/laravel/pint/database/factories',
         ),
+        'DASPRiD\\Enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dasprid/enum/src',
+        ),
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
@@ -495,6 +516,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Brick\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
+        'BaconQrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
         ),
         'App\\' => 
         array (
@@ -514,9 +539,21 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
     );
 
     public static $classMap = array (
+        'App\\Actions\\Fortify\\CreateNewUser' => __DIR__ . '/../..' . '/app/Actions/Fortify/CreateNewUser.php',
+        'App\\Actions\\Fortify\\PasswordValidationRules' => __DIR__ . '/../..' . '/app/Actions/Fortify/PasswordValidationRules.php',
+        'App\\Actions\\Fortify\\ResetUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/ResetUserPassword.php',
+        'App\\Actions\\Fortify\\UpdateUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserPassword.php',
+        'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AddCompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddCompanyController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\EditCompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/EditCompanyController.php',
+        'App\\Http\\Controllers\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmployeeController.php',
+        'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
+        'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
+        'App\\Http\\Controllers\\Settings' => __DIR__ . '/../..' . '/app/Http/Controllers/Settings.php',
+        'App\\Http\\Controllers\\ViewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ViewsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -526,13 +563,78 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Company' => __DIR__ . '/../..' . '/app/Models/Company.php',
+        'App\\Models\\Employee' => __DIR__ . '/../..' . '/app/Models/Employee.php',
+        'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
+        'App\\Models\\Setting' => __DIR__ . '/../..' . '/app/Models/Setting.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\FortifyServiceProvider' => __DIR__ . '/../..' . '/app/Providers/FortifyServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'BaconQrCode\\Common\\BitArray' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/BitArray.php',
+        'BaconQrCode\\Common\\BitMatrix' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/BitMatrix.php',
+        'BaconQrCode\\Common\\BitUtils' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/BitUtils.php',
+        'BaconQrCode\\Common\\CharacterSetEci' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/CharacterSetEci.php',
+        'BaconQrCode\\Common\\EcBlock' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/EcBlock.php',
+        'BaconQrCode\\Common\\EcBlocks' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/EcBlocks.php',
+        'BaconQrCode\\Common\\ErrorCorrectionLevel' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/ErrorCorrectionLevel.php',
+        'BaconQrCode\\Common\\FormatInformation' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/FormatInformation.php',
+        'BaconQrCode\\Common\\Mode' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/Mode.php',
+        'BaconQrCode\\Common\\ReedSolomonCodec' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/ReedSolomonCodec.php',
+        'BaconQrCode\\Common\\Version' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/Version.php',
+        'BaconQrCode\\Encoder\\BlockPair' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Encoder/BlockPair.php',
+        'BaconQrCode\\Encoder\\ByteMatrix' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Encoder/ByteMatrix.php',
+        'BaconQrCode\\Encoder\\Encoder' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Encoder/Encoder.php',
+        'BaconQrCode\\Encoder\\MaskUtil' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Encoder/MaskUtil.php',
+        'BaconQrCode\\Encoder\\MatrixUtil' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Encoder/MatrixUtil.php',
+        'BaconQrCode\\Encoder\\QrCode' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Encoder/QrCode.php',
+        'BaconQrCode\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Exception/ExceptionInterface.php',
+        'BaconQrCode\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Exception/InvalidArgumentException.php',
+        'BaconQrCode\\Exception\\OutOfBoundsException' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Exception/OutOfBoundsException.php',
+        'BaconQrCode\\Exception\\RuntimeException' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Exception/RuntimeException.php',
+        'BaconQrCode\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Exception/UnexpectedValueException.php',
+        'BaconQrCode\\Exception\\WriterException' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Exception/WriterException.php',
+        'BaconQrCode\\Renderer\\Color\\Alpha' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Color/Alpha.php',
+        'BaconQrCode\\Renderer\\Color\\Cmyk' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Color/Cmyk.php',
+        'BaconQrCode\\Renderer\\Color\\ColorInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Color/ColorInterface.php',
+        'BaconQrCode\\Renderer\\Color\\Gray' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Color/Gray.php',
+        'BaconQrCode\\Renderer\\Color\\Rgb' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Color/Rgb.php',
+        'BaconQrCode\\Renderer\\Eye\\CompositeEye' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Eye/CompositeEye.php',
+        'BaconQrCode\\Renderer\\Eye\\EyeInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Eye/EyeInterface.php',
+        'BaconQrCode\\Renderer\\Eye\\ModuleEye' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Eye/ModuleEye.php',
+        'BaconQrCode\\Renderer\\Eye\\SimpleCircleEye' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Eye/SimpleCircleEye.php',
+        'BaconQrCode\\Renderer\\Eye\\SquareEye' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Eye/SquareEye.php',
+        'BaconQrCode\\Renderer\\ImageRenderer' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/ImageRenderer.php',
+        'BaconQrCode\\Renderer\\Image\\EpsImageBackEnd' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Image/EpsImageBackEnd.php',
+        'BaconQrCode\\Renderer\\Image\\ImageBackEndInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Image/ImageBackEndInterface.php',
+        'BaconQrCode\\Renderer\\Image\\ImagickImageBackEnd' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Image/ImagickImageBackEnd.php',
+        'BaconQrCode\\Renderer\\Image\\SvgImageBackEnd' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Image/SvgImageBackEnd.php',
+        'BaconQrCode\\Renderer\\Image\\TransformationMatrix' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Image/TransformationMatrix.php',
+        'BaconQrCode\\Renderer\\Module\\DotsModule' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Module/DotsModule.php',
+        'BaconQrCode\\Renderer\\Module\\EdgeIterator\\Edge' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Module/EdgeIterator/Edge.php',
+        'BaconQrCode\\Renderer\\Module\\EdgeIterator\\EdgeIterator' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Module/EdgeIterator/EdgeIterator.php',
+        'BaconQrCode\\Renderer\\Module\\ModuleInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Module/ModuleInterface.php',
+        'BaconQrCode\\Renderer\\Module\\RoundnessModule' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Module/RoundnessModule.php',
+        'BaconQrCode\\Renderer\\Module\\SquareModule' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Module/SquareModule.php',
+        'BaconQrCode\\Renderer\\Path\\Close' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/Close.php',
+        'BaconQrCode\\Renderer\\Path\\Curve' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/Curve.php',
+        'BaconQrCode\\Renderer\\Path\\EllipticArc' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/EllipticArc.php',
+        'BaconQrCode\\Renderer\\Path\\Line' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/Line.php',
+        'BaconQrCode\\Renderer\\Path\\Move' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/Move.php',
+        'BaconQrCode\\Renderer\\Path\\OperationInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/OperationInterface.php',
+        'BaconQrCode\\Renderer\\Path\\Path' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/Path/Path.php',
+        'BaconQrCode\\Renderer\\PlainTextRenderer' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/PlainTextRenderer.php',
+        'BaconQrCode\\Renderer\\RendererInterface' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererInterface.php',
+        'BaconQrCode\\Renderer\\RendererStyle\\EyeFill' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/EyeFill.php',
+        'BaconQrCode\\Renderer\\RendererStyle\\Fill' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/Fill.php',
+        'BaconQrCode\\Renderer\\RendererStyle\\Gradient' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/Gradient.php',
+        'BaconQrCode\\Renderer\\RendererStyle\\GradientType' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/GradientType.php',
+        'BaconQrCode\\Renderer\\RendererStyle\\RendererStyle' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/RendererStyle.php',
+        'BaconQrCode\\Writer' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Writer.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -638,6 +740,16 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+        'DASPRiD\\Enum\\AbstractEnum' => __DIR__ . '/..' . '/dasprid/enum/src/AbstractEnum.php',
+        'DASPRiD\\Enum\\EnumMap' => __DIR__ . '/..' . '/dasprid/enum/src/EnumMap.php',
+        'DASPRiD\\Enum\\Exception\\CloneNotSupportedException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/CloneNotSupportedException.php',
+        'DASPRiD\\Enum\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/ExceptionInterface.php',
+        'DASPRiD\\Enum\\Exception\\ExpectationException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/ExpectationException.php',
+        'DASPRiD\\Enum\\Exception\\IllegalArgumentException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/IllegalArgumentException.php',
+        'DASPRiD\\Enum\\Exception\\MismatchException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/MismatchException.php',
+        'DASPRiD\\Enum\\Exception\\SerializeNotSupportedException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/SerializeNotSupportedException.php',
+        'DASPRiD\\Enum\\Exception\\UnserializeNotSupportedException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/UnserializeNotSupportedException.php',
+        'DASPRiD\\Enum\\NullValue' => __DIR__ . '/..' . '/dasprid/enum/src/NullValue.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
@@ -1711,6 +1823,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Contracts\\Broadcasting\\Broadcaster' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Broadcasting/Broadcaster.php',
         'Illuminate\\Contracts\\Broadcasting\\Factory' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Broadcasting/Factory.php',
         'Illuminate\\Contracts\\Broadcasting\\HasBroadcastChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Broadcasting/HasBroadcastChannel.php',
+        'Illuminate\\Contracts\\Broadcasting\\ShouldBeUnique' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Broadcasting/ShouldBeUnique.php',
         'Illuminate\\Contracts\\Broadcasting\\ShouldBroadcast' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Broadcasting/ShouldBroadcast.php',
         'Illuminate\\Contracts\\Broadcasting\\ShouldBroadcastNow' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Broadcasting/ShouldBroadcastNow.php',
         'Illuminate\\Contracts\\Bus\\Dispatcher' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Bus/Dispatcher.php',
@@ -1844,6 +1957,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Database\\Connectors\\PostgresConnector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php',
         'Illuminate\\Database\\Connectors\\SQLiteConnector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php',
         'Illuminate\\Database\\Connectors\\SqlServerConnector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Connectors/SqlServerConnector.php',
+        'Illuminate\\Database\\Console\\DatabaseInspectionCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/DatabaseInspectionCommand.php',
         'Illuminate\\Database\\Console\\DbCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/DbCommand.php',
         'Illuminate\\Database\\Console\\DumpCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/DumpCommand.php',
         'Illuminate\\Database\\Console\\Factories\\FactoryMakeCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Factories/FactoryMakeCommand.php',
@@ -1857,10 +1971,13 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Database\\Console\\Migrations\\RollbackCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php',
         'Illuminate\\Database\\Console\\Migrations\\StatusCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Migrations/StatusCommand.php',
         'Illuminate\\Database\\Console\\Migrations\\TableGuesser' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Migrations/TableGuesser.php',
+        'Illuminate\\Database\\Console\\MonitorCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/MonitorCommand.php',
         'Illuminate\\Database\\Console\\PruneCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/PruneCommand.php',
         'Illuminate\\Database\\Console\\Seeds\\SeedCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php',
         'Illuminate\\Database\\Console\\Seeds\\SeederMakeCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Seeds/SeederMakeCommand.php',
         'Illuminate\\Database\\Console\\Seeds\\WithoutModelEvents' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/Seeds/WithoutModelEvents.php',
+        'Illuminate\\Database\\Console\\ShowCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/ShowCommand.php',
+        'Illuminate\\Database\\Console\\TableCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/TableCommand.php',
         'Illuminate\\Database\\Console\\WipeCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Console/WipeCommand.php',
         'Illuminate\\Database\\DBAL\\TimestampType' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/DBAL/TimestampType.php',
         'Illuminate\\Database\\DatabaseManager' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/DatabaseManager.php',
@@ -1931,6 +2048,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Database\\Eloquent\\SoftDeletes' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/SoftDeletes.php',
         'Illuminate\\Database\\Eloquent\\SoftDeletingScope' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/SoftDeletingScope.php',
         'Illuminate\\Database\\Events\\ConnectionEvent' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/ConnectionEvent.php',
+        'Illuminate\\Database\\Events\\DatabaseBusy' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/DatabaseBusy.php',
         'Illuminate\\Database\\Events\\DatabaseRefreshed' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/DatabaseRefreshed.php',
         'Illuminate\\Database\\Events\\MigrationEnded' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/MigrationEnded.php',
         'Illuminate\\Database\\Events\\MigrationEvent' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/MigrationEvent.php',
@@ -2050,6 +2168,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Foundation\\Console\\ConfigCacheCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/ConfigCacheCommand.php',
         'Illuminate\\Foundation\\Console\\ConfigClearCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/ConfigClearCommand.php',
         'Illuminate\\Foundation\\Console\\ConsoleMakeCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/ConsoleMakeCommand.php',
+        'Illuminate\\Foundation\\Console\\DocsCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/DocsCommand.php',
         'Illuminate\\Foundation\\Console\\DownCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/DownCommand.php',
         'Illuminate\\Foundation\\Console\\EnvironmentCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/EnvironmentCommand.php',
         'Illuminate\\Foundation\\Console\\EventCacheCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/EventCacheCommand.php',
@@ -2460,6 +2579,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Support\\Facades\\URL' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Facades/URL.php',
         'Illuminate\\Support\\Facades\\Validator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Facades/Validator.php',
         'Illuminate\\Support\\Facades\\View' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Facades/View.php',
+        'Illuminate\\Support\\Facades\\Vite' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Facades/Vite.php',
         'Illuminate\\Support\\Fluent' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Fluent.php',
         'Illuminate\\Support\\HigherOrderCollectionProxy' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/HigherOrderCollectionProxy.php',
         'Illuminate\\Support\\HigherOrderTapProxy' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/HigherOrderTapProxy.php',
@@ -2548,6 +2668,8 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\Validation\\Rules\\Enum' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Enum.php',
         'Illuminate\\Validation\\Rules\\ExcludeIf' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/ExcludeIf.php',
         'Illuminate\\Validation\\Rules\\Exists' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Exists.php',
+        'Illuminate\\Validation\\Rules\\File' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/File.php',
+        'Illuminate\\Validation\\Rules\\ImageFile' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/ImageFile.php',
         'Illuminate\\Validation\\Rules\\In' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/In.php',
         'Illuminate\\Validation\\Rules\\NotIn' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/NotIn.php',
         'Illuminate\\Validation\\Rules\\Password' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Password.php',
@@ -2608,6 +2730,92 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Laravel\\Fortify\\Actions\\AttemptToAuthenticate' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/AttemptToAuthenticate.php',
+        'Laravel\\Fortify\\Actions\\CompletePasswordReset' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/CompletePasswordReset.php',
+        'Laravel\\Fortify\\Actions\\ConfirmPassword' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/ConfirmPassword.php',
+        'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/ConfirmTwoFactorAuthentication.php',
+        'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/DisableTwoFactorAuthentication.php',
+        'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/EnableTwoFactorAuthentication.php',
+        'Laravel\\Fortify\\Actions\\EnsureLoginIsNotThrottled' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/EnsureLoginIsNotThrottled.php',
+        'Laravel\\Fortify\\Actions\\GenerateNewRecoveryCodes' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/GenerateNewRecoveryCodes.php',
+        'Laravel\\Fortify\\Actions\\PrepareAuthenticatedSession' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/PrepareAuthenticatedSession.php',
+        'Laravel\\Fortify\\Actions\\RedirectIfTwoFactorAuthenticatable' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/RedirectIfTwoFactorAuthenticatable.php',
+        'Laravel\\Fortify\\Contracts\\ConfirmPasswordViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/ConfirmPasswordViewResponse.php',
+        'Laravel\\Fortify\\Contracts\\CreatesNewUsers' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/CreatesNewUsers.php',
+        'Laravel\\Fortify\\Contracts\\FailedPasswordConfirmationResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/FailedPasswordConfirmationResponse.php',
+        'Laravel\\Fortify\\Contracts\\FailedPasswordResetLinkRequestResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/FailedPasswordResetLinkRequestResponse.php',
+        'Laravel\\Fortify\\Contracts\\FailedPasswordResetResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/FailedPasswordResetResponse.php',
+        'Laravel\\Fortify\\Contracts\\FailedTwoFactorLoginResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/FailedTwoFactorLoginResponse.php',
+        'Laravel\\Fortify\\Contracts\\LockoutResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/LockoutResponse.php',
+        'Laravel\\Fortify\\Contracts\\LoginResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/LoginResponse.php',
+        'Laravel\\Fortify\\Contracts\\LoginViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/LoginViewResponse.php',
+        'Laravel\\Fortify\\Contracts\\LogoutResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/LogoutResponse.php',
+        'Laravel\\Fortify\\Contracts\\PasswordConfirmedResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/PasswordConfirmedResponse.php',
+        'Laravel\\Fortify\\Contracts\\PasswordResetResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/PasswordResetResponse.php',
+        'Laravel\\Fortify\\Contracts\\PasswordUpdateResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/PasswordUpdateResponse.php',
+        'Laravel\\Fortify\\Contracts\\RegisterResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/RegisterResponse.php',
+        'Laravel\\Fortify\\Contracts\\RegisterViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/RegisterViewResponse.php',
+        'Laravel\\Fortify\\Contracts\\RequestPasswordResetLinkViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/RequestPasswordResetLinkViewResponse.php',
+        'Laravel\\Fortify\\Contracts\\ResetPasswordViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/ResetPasswordViewResponse.php',
+        'Laravel\\Fortify\\Contracts\\ResetsUserPasswords' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/ResetsUserPasswords.php',
+        'Laravel\\Fortify\\Contracts\\SuccessfulPasswordResetLinkRequestResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/SuccessfulPasswordResetLinkRequestResponse.php',
+        'Laravel\\Fortify\\Contracts\\TwoFactorAuthenticationProvider' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/TwoFactorAuthenticationProvider.php',
+        'Laravel\\Fortify\\Contracts\\TwoFactorChallengeViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/TwoFactorChallengeViewResponse.php',
+        'Laravel\\Fortify\\Contracts\\TwoFactorLoginResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/TwoFactorLoginResponse.php',
+        'Laravel\\Fortify\\Contracts\\UpdatesUserPasswords' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/UpdatesUserPasswords.php',
+        'Laravel\\Fortify\\Contracts\\UpdatesUserProfileInformation' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/UpdatesUserProfileInformation.php',
+        'Laravel\\Fortify\\Contracts\\VerifyEmailResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/VerifyEmailResponse.php',
+        'Laravel\\Fortify\\Contracts\\VerifyEmailViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Contracts/VerifyEmailViewResponse.php',
+        'Laravel\\Fortify\\Events\\RecoveryCodeReplaced' => __DIR__ . '/..' . '/laravel/fortify/src/Events/RecoveryCodeReplaced.php',
+        'Laravel\\Fortify\\Events\\RecoveryCodesGenerated' => __DIR__ . '/..' . '/laravel/fortify/src/Events/RecoveryCodesGenerated.php',
+        'Laravel\\Fortify\\Events\\TwoFactorAuthenticationChallenged' => __DIR__ . '/..' . '/laravel/fortify/src/Events/TwoFactorAuthenticationChallenged.php',
+        'Laravel\\Fortify\\Events\\TwoFactorAuthenticationConfirmed' => __DIR__ . '/..' . '/laravel/fortify/src/Events/TwoFactorAuthenticationConfirmed.php',
+        'Laravel\\Fortify\\Events\\TwoFactorAuthenticationDisabled' => __DIR__ . '/..' . '/laravel/fortify/src/Events/TwoFactorAuthenticationDisabled.php',
+        'Laravel\\Fortify\\Events\\TwoFactorAuthenticationEnabled' => __DIR__ . '/..' . '/laravel/fortify/src/Events/TwoFactorAuthenticationEnabled.php',
+        'Laravel\\Fortify\\Events\\TwoFactorAuthenticationEvent' => __DIR__ . '/..' . '/laravel/fortify/src/Events/TwoFactorAuthenticationEvent.php',
+        'Laravel\\Fortify\\Features' => __DIR__ . '/..' . '/laravel/fortify/src/Features.php',
+        'Laravel\\Fortify\\Fortify' => __DIR__ . '/..' . '/laravel/fortify/src/Fortify.php',
+        'Laravel\\Fortify\\FortifyServiceProvider' => __DIR__ . '/..' . '/laravel/fortify/src/FortifyServiceProvider.php',
+        'Laravel\\Fortify\\Http\\Controllers\\AuthenticatedSessionController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\ConfirmablePasswordController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/ConfirmablePasswordController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\ConfirmedPasswordStatusController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/ConfirmedPasswordStatusController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\ConfirmedTwoFactorAuthenticationController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/ConfirmedTwoFactorAuthenticationController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\EmailVerificationNotificationController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/EmailVerificationNotificationController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\EmailVerificationPromptController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/EmailVerificationPromptController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\NewPasswordController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/NewPasswordController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\PasswordController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/PasswordController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\PasswordResetLinkController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/PasswordResetLinkController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\ProfileInformationController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/ProfileInformationController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/RecoveryCodeController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\RegisteredUserController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/RegisteredUserController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/TwoFactorAuthenticatedSessionController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/TwoFactorAuthenticationController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\TwoFactorQrCodeController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/TwoFactorQrCodeController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/TwoFactorSecretKeyController.php',
+        'Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Controllers/VerifyEmailController.php',
+        'Laravel\\Fortify\\Http\\Requests\\LoginRequest' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Requests/LoginRequest.php',
+        'Laravel\\Fortify\\Http\\Requests\\TwoFactorLoginRequest' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Requests/TwoFactorLoginRequest.php',
+        'Laravel\\Fortify\\Http\\Requests\\VerifyEmailRequest' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Requests/VerifyEmailRequest.php',
+        'Laravel\\Fortify\\Http\\Responses\\FailedPasswordConfirmationResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/FailedPasswordConfirmationResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\FailedPasswordResetLinkRequestResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/FailedPasswordResetLinkRequestResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\FailedPasswordResetResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/FailedPasswordResetResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\FailedTwoFactorLoginResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/FailedTwoFactorLoginResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\LockoutResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/LockoutResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\LoginResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/LoginResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\LogoutResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/LogoutResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\PasswordConfirmedResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/PasswordConfirmedResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\PasswordResetResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/PasswordResetResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\PasswordUpdateResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/PasswordUpdateResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\RegisterResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/RegisterResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\SimpleViewResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/SimpleViewResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\SuccessfulPasswordResetLinkRequestResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/SuccessfulPasswordResetLinkRequestResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\TwoFactorLoginResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/TwoFactorLoginResponse.php',
+        'Laravel\\Fortify\\Http\\Responses\\VerifyEmailResponse' => __DIR__ . '/..' . '/laravel/fortify/src/Http/Responses/VerifyEmailResponse.php',
+        'Laravel\\Fortify\\LoginRateLimiter' => __DIR__ . '/..' . '/laravel/fortify/src/LoginRateLimiter.php',
+        'Laravel\\Fortify\\RecoveryCode' => __DIR__ . '/..' . '/laravel/fortify/src/RecoveryCode.php',
+        'Laravel\\Fortify\\Rules\\Password' => __DIR__ . '/..' . '/laravel/fortify/src/Rules/Password.php',
+        'Laravel\\Fortify\\TwoFactorAuthenticatable' => __DIR__ . '/..' . '/laravel/fortify/src/TwoFactorAuthenticatable.php',
+        'Laravel\\Fortify\\TwoFactorAuthenticationProvider' => __DIR__ . '/..' . '/laravel/fortify/src/TwoFactorAuthenticationProvider.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
@@ -3088,6 +3296,7 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'Monolog\\Formatter\\FluentdFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/FluentdFormatter.php',
         'Monolog\\Formatter\\FormatterInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php',
         'Monolog\\Formatter\\GelfMessageFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/GelfMessageFormatter.php',
+        'Monolog\\Formatter\\GoogleCloudLoggingFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/GoogleCloudLoggingFormatter.php',
         'Monolog\\Formatter\\HtmlFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/HtmlFormatter.php',
         'Monolog\\Formatter\\JsonFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/JsonFormatter.php',
         'Monolog\\Formatter\\LineFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/LineFormatter.php',
@@ -3627,6 +3836,17 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'PHPUnit\\Util\\Xml\\SuccessfulSchemaDetectionResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/SuccessfulSchemaDetectionResult.php',
         'PHPUnit\\Util\\Xml\\ValidationResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/ValidationResult.php',
         'PHPUnit\\Util\\Xml\\Validator' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/Validator.php',
+        'ParagonIE\\ConstantTime\\Base32' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Base32.php',
+        'ParagonIE\\ConstantTime\\Base32Hex' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Base32Hex.php',
+        'ParagonIE\\ConstantTime\\Base64' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Base64.php',
+        'ParagonIE\\ConstantTime\\Base64DotSlash' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Base64DotSlash.php',
+        'ParagonIE\\ConstantTime\\Base64DotSlashOrdered' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Base64DotSlashOrdered.php',
+        'ParagonIE\\ConstantTime\\Base64UrlSafe' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Base64UrlSafe.php',
+        'ParagonIE\\ConstantTime\\Binary' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Binary.php',
+        'ParagonIE\\ConstantTime\\EncoderInterface' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/EncoderInterface.php',
+        'ParagonIE\\ConstantTime\\Encoding' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Encoding.php',
+        'ParagonIE\\ConstantTime\\Hex' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/Hex.php',
+        'ParagonIE\\ConstantTime\\RFC4648' => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src/RFC4648.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',
         'PharIo\\Manifest\\Author' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Author.php',
@@ -3952,6 +4172,20 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
         'PhpParser\\PrettyPrinterAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
         'PhpParser\\PrettyPrinter\\Standard' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+        'PragmaRX\\Google2FA\\Exceptions\\Contracts\\Google2FA' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/Contracts/Google2FA.php',
+        'PragmaRX\\Google2FA\\Exceptions\\Contracts\\IncompatibleWithGoogleAuthenticator' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/Contracts/IncompatibleWithGoogleAuthenticator.php',
+        'PragmaRX\\Google2FA\\Exceptions\\Contracts\\InvalidAlgorithm' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/Contracts/InvalidAlgorithm.php',
+        'PragmaRX\\Google2FA\\Exceptions\\Contracts\\InvalidCharacters' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/Contracts/InvalidCharacters.php',
+        'PragmaRX\\Google2FA\\Exceptions\\Contracts\\SecretKeyTooShort' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/Contracts/SecretKeyTooShort.php',
+        'PragmaRX\\Google2FA\\Exceptions\\Google2FAException' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/Google2FAException.php',
+        'PragmaRX\\Google2FA\\Exceptions\\IncompatibleWithGoogleAuthenticatorException' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/IncompatibleWithGoogleAuthenticatorException.php',
+        'PragmaRX\\Google2FA\\Exceptions\\InvalidAlgorithmException' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/InvalidAlgorithmException.php',
+        'PragmaRX\\Google2FA\\Exceptions\\InvalidCharactersException' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/InvalidCharactersException.php',
+        'PragmaRX\\Google2FA\\Exceptions\\SecretKeyTooShortException' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Exceptions/SecretKeyTooShortException.php',
+        'PragmaRX\\Google2FA\\Google2FA' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Google2FA.php',
+        'PragmaRX\\Google2FA\\Support\\Base32' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Support/Base32.php',
+        'PragmaRX\\Google2FA\\Support\\Constants' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Support/Constants.php',
+        'PragmaRX\\Google2FA\\Support\\QRCode' => __DIR__ . '/..' . '/pragmarx/google2fa/src/Support/QRCode.php',
         'Prophecy\\Argument' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument.php',
         'Prophecy\\Argument\\ArgumentsWildcard' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
         'Prophecy\\Argument\\Token\\AnyValueToken' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',
@@ -5775,10 +6009,10 @@ class ComposerStaticInit03f0de8d417576f5c203f625e1a57675
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit03f0de8d417576f5c203f625e1a57675::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit03f0de8d417576f5c203f625e1a57675::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit03f0de8d417576f5c203f625e1a57675::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit03f0de8d417576f5c203f625e1a57675::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f::$classMap;
 
         }, null, ClassLoader::class);
     }
