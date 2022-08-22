@@ -178,6 +178,12 @@
                                     <i class="bi bi-box"></i> Products
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}" role="tab">
+                                    <i class="bi bi-box"></i> Invoices
+                                </a>
+                            </li>
 
                             <li class="nav-item">
                                 <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 

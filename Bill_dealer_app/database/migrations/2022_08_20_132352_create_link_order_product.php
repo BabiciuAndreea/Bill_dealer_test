@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('cnp');
-            $table->string('role')->default('user');
+        Schema::create('link_order_product', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_comanda');
+            $table->integer('id_produs');
+            $table->string('cantitate');
+            $table->string('tva');
+            $table->string('valoare');
         });
     }
 
@@ -30,7 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-        });
+        Schema::dropIfExists('link_order_product');
     }
 };
