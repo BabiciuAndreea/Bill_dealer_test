@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-5 px-5">
                                         <span class="header"> <b> Issuing: </b></span>
-                                        <li><a class="dropdown-item" href="#">Invoice</a></li>
+                                        <li><a class="dropdown-item" href="#">Invoices</a></li>
                                         <li><a class="dropdown-item" href="#">Receipt</a></li>
                                         <li><a class="dropdown-item" href="#">Canceled invoice</a></li>
                                         <li><a class="dropdown-item" href="#">Proform invoice</a></li>

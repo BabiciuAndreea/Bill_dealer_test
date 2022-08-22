@@ -57,3 +57,7 @@ Route::resource('invoices', InvoiceController::class);
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
+
+Route::POST('editpro',[Settings::class,'edit'])->name('update');
+
+Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
