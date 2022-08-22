@@ -13,6 +13,8 @@ use App\Http\Controllers\Settings;
 use App\Http\Controllers\ViewsController;
 use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\dashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,3 +59,5 @@ Route::resource('invoices', InvoiceController::class);
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
+
+Route::get('dashboard', [dashboardController::class, 'view'])->name('dashboard');

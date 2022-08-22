@@ -13,11 +13,13 @@
                 </div>
                 <ul class="nav nav-pills flex-column mb-sm-auto mt-5 pl-2 mb-0 align-items-center align-items-sm-start"
                     id="menu">
-                    <li class="nav-item">
-                        <button type="button" class="tab btn-lg px-4 nav-item" data-bs-toggle="dropdown">
-                            <i class="bi bi-house"></i> Dashboard
-                        </button>
-                    </li>
+
+                    {{-- <li class="nav-item">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
+                        aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}" role="tab">
+                            <i class="bi bi-box"></i> Dasboard
+                        </a>
+                    </li> --}}
 
                     <li class="">
                         <div class="dropdown dropend">
@@ -40,7 +42,7 @@
                                         <span class="header"> <b> Collections: </b></span>
                                         <li><a class="dropdown-item" href="#">Cash(receipt, OP and others)</a>
                                         </li>
-                                        
+
                                         <br>
                                         <span class="header"> <b> Expenses and payments: </b></span>
                                         <li><a class="dropdown-item" href="#">Expediture</a></li>
@@ -78,7 +80,7 @@
                                         <li><a class="dropdown-item" href="#">Clients</a></li>
 
                                     </div>
-                                    <div class="col-4"> 
+                                    <div class="col-4">
                                         <span class="header"> <b> Advanced reports: </b></span>
                                         <li><a class="dropdown-item" href="#">Unpaid invoices</a></li>
                                         <li><a class="dropdown-item" href="#">Product sales</a></li>
@@ -91,7 +93,7 @@
                                         <span class="header"> <b> Checkout registry: </b></span>
                                         <li><a class="dropdown-item" href="#">Show checkout registry</a></li>
                                         <li><a class="dropdown-item" href="#">Checkout operations</a></li>
-                                    
+
                                     </div>
                                     <div class="col-4 ">
                                         <span class="header"> <b> Expenses and payments: </b></span>
@@ -154,7 +156,7 @@
                                         <li><a class="dropdown-item" href="#">Products</a></li>
                                         <li><a class="dropdown-item" href="#">Expenditure category</a></li>
                                         <li><a class="dropdown-item" href="#">Products category</a></li>
-                                        
+
                                         <br>
                                         <span class="header"> <b> Monitorizing: </b></span>
                                         <li><a class="dropdown-item" href="#">Monitorizing partners</a></li>
@@ -163,19 +165,19 @@
                                         <span class="header"> <b> Partners: </b></span>
                                         <li><a class="dropdown-item" href="#">Clients</a></li>
                                         <li><a class="dropdown-item" href="#">Providers</a></li>
-                                        <li><a class="dropdown-item" href="#">Connections</a></li>                     
+                                        <li><a class="dropdown-item" href="#">Connections</a></li>
                                     </div>
                             </ul>
                         </div>
                     </li>
 
                     {{-- <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                         aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}" role="tab">
                             <i class="bi bi-box"></i> Products
                         </a>
                     </li> --}}
-                    
+
                 </ul>
                 <hr>
                 <form method="POST" action="{{ route('logout') }}">
@@ -190,7 +192,7 @@
                             {{ Auth::user()->last_name }}</span>
                     </a>
                     <ul class="dropdown-menu account text-small shadow" aria-labelledby="dropdownUser1">
-                       
+
                         <li><a class="dropdown-item" href="{{ route('settings') }}">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
