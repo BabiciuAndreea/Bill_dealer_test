@@ -20,6 +20,22 @@ class InvoiceController extends Controller
         return view('invoice.index', compact('invoices'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+    function fetch_data(Request $request)
+    {
+        if ($request->ajax()) {
+            $sort_by = $request->get('sortby');
+            $sort_type = $request->get('sorttype');
+            $query = $request->get('query');
+            $query = str_replace(" ", "%", $query);
+            $data = Invoice::table('post')
+                ->where('id', 'like', '%' . $query . '%')
+                ->orWhere('post_title', 'like', '%' . $query . '%')
+                ->orWhere('post_description', 'like', '%' . $query . '%')
+                ->orderBy($sort_by, $sort_type)
+                ->paginate(5);
+            return view('pagination_data', compact('data'))->render();
+        }
+    }
 
     /**
      * Show the form for creating a new resource.

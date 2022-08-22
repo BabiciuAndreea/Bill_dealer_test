@@ -57,3 +57,6 @@ Route::resource('invoices', InvoiceController::class);
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
+
+
+Route::get('invoice/fetch_data', 'InvoiceController@fetch_data');
