@@ -14,7 +14,11 @@
 
 <body>
 
+
+    @include('layouts.menu')
+
     @include('layouts.menu');
+
 
     <div class="content">
       <div class="container-fluid">

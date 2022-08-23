@@ -6,11 +6,27 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Hash;
+
 
 class Settings extends Controller
 {
     //
+    public function profileUpdate(Request $request){
+        //validation rules
+
+        $request->validate([
+            'first_name' =>'required|min:4|string|max:255',
+            'email'=>'required|email|string|max:255'
+        ]);
+        $user =Auth::user();
+        $user->first_name = $request['first_name'];
+        $user->email = $request['email'];
+        $user->save();
+        return back()->with('message','Profile Updated');
+    }
+
     public function edit(Request $request) {
         if(Auth::user())
         {
@@ -40,5 +56,6 @@ class Settings extends Controller
           else
               return redirect()->back()->with('error','Old password does not match');
       }
+
 
 }

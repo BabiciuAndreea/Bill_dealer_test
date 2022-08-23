@@ -13,6 +13,13 @@
                 </div>
                 <ul class="nav nav-pills flex-column mb-sm-auto mt-5 pl-2 mb-0 align-items-center align-items-sm-start"
                     id="menu">
+            
+              <li class="nav-item">
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
+                                aria-controls="notification" aria-selected="false" href="{{ route('user_dash') }}" role="tab">
+                                    <i class="bi bi-box"></i> Dashboard
+                                </a>
+                            </li>
 
                     {{-- <li class="nav-item">
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
@@ -20,6 +27,7 @@
                             <i class="bi bi-box"></i> Dasboard
                         </a>
                     </li> --}}
+
 
                     <li class="">
                         <div class="dropdown dropend">
@@ -31,7 +39,11 @@
                                 <div class="row">
                                     <div class="col-5 px-5">
                                         <span class="header"> <b> Issuing: </b></span>
+
+                                        <li><a class="dropdown-item" href="#">Invoice</a></li>
+
                                         <li><a class="dropdown-item" href="#">Invoices</a></li>
+
                                         <li><a class="dropdown-item" href="#">Receipt</a></li>
                                         <li><a class="dropdown-item" href="#">Canceled invoice</a></li>
                                         <li><a class="dropdown-item" href="#">Proform invoice</a></li>
