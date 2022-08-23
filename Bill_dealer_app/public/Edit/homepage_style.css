@@ -1,0 +1,67 @@
+.drop-menu
+{
+    position: relative;
+    right: 120px;
+}
+.nav_settings
+{
+    line-height: 12px;
+     width: 50px;
+     margin-top: 10px;
+     margin-right: 20px;
+     position:absolute;
+     top: 0px;;
+     right:0;
+     
+}
+.dots
+{
+    color: #2d3e4e;
+}
+.home_navbar
+{
+
+    background: #2d3e4e;
+    height: 70px;
+    z-index: 100;
+}
+.home_navbar a
+{
+    color: #2d3e4e;
+}
+img
+{
+    border-radius: 100;
+}
+
+.home_container
+{
+    text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+.profile-tab-nav
+{
+    background: #2d3e4e;
+    height: 100%;
+  width: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  
+}
+
+.img-circle img {
+	height: 38px;
+	width: 38px;
+	border-radius: 100%;
+	border: 2px solid #2d3e4e;
+     margin-top: 10px;
+     margin-right: 20px;
+     position:absolute;
+     top: -5px;;
+     right: 70px;;
+}
