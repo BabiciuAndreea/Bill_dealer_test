@@ -95,6 +95,7 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
+<<<<<<< Updated upstream
                                 <div class="col justify-content-center">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="form2Example31"
@@ -103,6 +104,9 @@
                                                 href="#!">Terms and Conditions </a></label>
                                     </div>
                                 </div>
+=======
+                               
+>>>>>>> Stashed changes
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add
                                         company</button>

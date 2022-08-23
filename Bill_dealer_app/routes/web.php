@@ -4,6 +4,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Settings;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< Updated upstream
+=======
+use App\Http\Controllers\Pdfcoverter;
+use App\Http\Controllers\PdfController;
+>>>>>>> Stashed changes
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +36,7 @@ Route::get('/Register', function () {
     return view('auth.register');
 });
 
+<<<<<<< Updated upstream
 Route::get('/home', function () {
     if(Auth::check()){
         if(Auth::user()->role == 'admin'){
@@ -49,3 +55,9 @@ Route::get('/Settings1', function () {
 });
 
 Route::POST('editpro',[Settings::class,'profileUpdate'])->name('update');
+=======
+Route::POST('editpro',[Settings::class,'edit'])->name('update');
+
+Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
+Route::post('downloadPDF',[PdfController::class,'downloadPDF'])->name('downloadPDF');
+>>>>>>> Stashed changes

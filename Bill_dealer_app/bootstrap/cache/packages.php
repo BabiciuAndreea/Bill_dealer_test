@@ -1,4 +1,26 @@
 <?php return array (
+<<<<<<< Updated upstream
+=======
+  'barryvdh/laravel-dompdf' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Pdf' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
+      'PDF' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
+    ),
+  ),
+  'kyslik/column-sortable' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Kyslik\\ColumnSortable\\ColumnSortableServiceProvider',
+    ),
+  ),
+>>>>>>> Stashed changes
   'laravel/fortify' => 
   array (
     'providers' => 

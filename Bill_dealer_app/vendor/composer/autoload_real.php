@@ -22,9 +22,13 @@ class ComposerAutoloaderInit0cd47825066368472e716c51e7ccb964
             return self::$loader;
         }
 
+<<<<<<< Updated upstream
         require __DIR__ . '/platform_check.php';
 
         spl_autoload_register(array('ComposerAutoloaderInit0cd47825066368472e716c51e7ccb964', 'loadClassLoader'), true, true);
+=======
+        spl_autoload_register(array('ComposerAutoloaderInitf2f10940161a3c75e9e4fcb20a1f345f', 'loadClassLoader'), true, true);
+>>>>>>> Stashed changes
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInit0cd47825066368472e716c51e7ccb964', 'loadClassLoader'));
 

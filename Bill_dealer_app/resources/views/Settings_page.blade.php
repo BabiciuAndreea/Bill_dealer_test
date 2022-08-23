@@ -42,7 +42,7 @@
 						</a>
 						<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false"style="color:white;">
 							<i class="fa fa-tv text-center mr-1"style="color:white;"></i> 
-							Application
+							Company 
 						</a>
 						<a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false"style="color:white;">
 							<i class="fa fa-bell text-center mr-1"style="color:white;"></i> 
@@ -165,27 +165,35 @@
 						</div>
 					</div>
 					<div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
-						<h3 class="mb-4">Application Settings</h3>
+						<h3 class="mb-4">Company Setting </h3>
+						<form action="{{ route('downloadPDF') }}" method="post">
+                            @csrf
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="app-check">
-										<label class="form-check-label" for="app-check">
-										App check
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
-										<label class="form-check-label" for="defaultCheck2">
-										Lorem ipsum dolor sit.
-										</label>
-									</div>
+								  	<label>Company name</label>
+								  	<input type="password" class="form-control" name="old_password">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Logo</label>
+								  	<input type="password" class="form-control" name="new_password">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Adress</label>
+								  	<input type="password" class="form-control" name="confirm_password">
 								</div>
 							</div>
 						</div>
 						<div>
-							<button class="btn btn-primary">Update</button>
+							<button class="btn btn-primary"type="submit">Update</button>
+                        </form>
+                        
 							<button class="btn btn-light">Cancel</button>
 						</div>
 					</div>

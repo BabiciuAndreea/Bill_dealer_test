@@ -23,6 +23,7 @@
     19 => 'Illuminate\\Translation\\TranslationServiceProvider',
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
+<<<<<<< Updated upstream
     22 => 'Laravel\\Fortify\\FortifyServiceProvider',
     23 => 'Laravel\\Sail\\SailServiceProvider',
     24 => 'Laravel\\Sanctum\\SanctumServiceProvider',
@@ -36,6 +37,24 @@
     32 => 'App\\Providers\\FortifyServiceProvider',
     33 => 'App\\Providers\\EventServiceProvider',
     34 => 'App\\Providers\\RouteServiceProvider',
+=======
+    22 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    23 => 'Kyslik\\ColumnSortable\\ColumnSortableServiceProvider',
+    24 => 'Laravel\\Fortify\\FortifyServiceProvider',
+    25 => 'Laravel\\Sail\\SailServiceProvider',
+    26 => 'Laravel\\Sanctum\\SanctumServiceProvider',
+    27 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    28 => 'Carbon\\Laravel\\ServiceProvider',
+    29 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    30 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    31 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    32 => 'App\\Providers\\AppServiceProvider',
+    33 => 'App\\Providers\\AuthServiceProvider',
+    34 => 'App\\Providers\\FortifyServiceProvider',
+    35 => 'App\\Providers\\EventServiceProvider',
+    36 => 'App\\Providers\\RouteServiceProvider',
+    37 => 'Barryvdh\\DomPDF\\ServiceProvider',
+>>>>>>> Stashed changes
   ),
   'eager' => 
   array (
@@ -49,6 +68,7 @@
     7 => 'Illuminate\\Pagination\\PaginationServiceProvider',
     8 => 'Illuminate\\Session\\SessionServiceProvider',
     9 => 'Illuminate\\View\\ViewServiceProvider',
+<<<<<<< Updated upstream
     10 => 'Laravel\\Fortify\\FortifyServiceProvider',
     11 => 'Laravel\\Sanctum\\SanctumServiceProvider',
     12 => 'Carbon\\Laravel\\ServiceProvider',
@@ -60,6 +80,22 @@
     18 => 'App\\Providers\\FortifyServiceProvider',
     19 => 'App\\Providers\\EventServiceProvider',
     20 => 'App\\Providers\\RouteServiceProvider',
+=======
+    10 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    11 => 'Kyslik\\ColumnSortable\\ColumnSortableServiceProvider',
+    12 => 'Laravel\\Fortify\\FortifyServiceProvider',
+    13 => 'Laravel\\Sanctum\\SanctumServiceProvider',
+    14 => 'Carbon\\Laravel\\ServiceProvider',
+    15 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    16 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    17 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    18 => 'App\\Providers\\AppServiceProvider',
+    19 => 'App\\Providers\\AuthServiceProvider',
+    20 => 'App\\Providers\\FortifyServiceProvider',
+    21 => 'App\\Providers\\EventServiceProvider',
+    22 => 'App\\Providers\\RouteServiceProvider',
+    23 => 'Barryvdh\\DomPDF\\ServiceProvider',
+>>>>>>> Stashed changes
   ),
   'deferred' => 
   array (
