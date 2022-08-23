@@ -21,13 +21,7 @@
                                 </a>
                             </li>
 
-                    {{-- <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                        aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}" role="tab">
-                            <i class="bi bi-box"></i> Dasboard
-                        </a>
-                    </li> --}}
-
+                 
 
                     <li class="">
                         <div class="dropdown dropend">
