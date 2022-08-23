@@ -81,12 +81,7 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <div class="col justify-content-center">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                                        <label class="form-check-label text-muted" for="form2Example31"> Agree with <a href="#!">Terms and Conditions </a></label>
-                                    </div>
-                                </div>
+
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add company</button>
                                 </div>

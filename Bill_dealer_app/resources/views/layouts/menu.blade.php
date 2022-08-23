@@ -15,11 +15,12 @@
                         <ul class="nav nav-pills flex-column mb-sm-auto mt-5 pl-2 mb-0 align-items-center align-items-sm-start"
                             id="menu">
                             <li class="nav-item">
-                                <button type="button" class="tab btn-lg px-4 nav-item" data-bs-toggle="dropdown">
-                                    <i class="bi bi-house"></i> Dashboard
-                                </button>
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
+                                aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}" role="tab">
+                                    <i class="bi bi-box"></i> Dashboard
+                                </a>
                             </li>
-    
+
                             <li class="">
                                 <div class="dropdown dropend">
                                     <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
@@ -41,12 +42,12 @@
                                                 <span class="header"> <b> Collections: </b></span>
                                                 <li><a class="dropdown-item" href="#">Cash(receipt, OP and others)</a>
                                                 </li>
-    
+
                                                 <br>
                                                 <span class="header"> <b> Expenses and payments: </b></span>
                                                 <li><a class="dropdown-item" href="#">Expediture</a></li>
                                                 <li><a class="dropdown-item" href="#">Supplier invoice payment</a></li>
-    
+
                                                 <br>
                                                 <span class="header"> <b> Recurring documents: </b></span>
                                                 <li><a class="dropdown-item" href="#">Invoices</a></li>
@@ -55,7 +56,7 @@
                                     </ul>
                                 </div>
                             </li>
-    
+
                             <li class="nav-item">
                                 <div class="dropdown dropend">
                                     <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
@@ -72,12 +73,12 @@
                                                 <li><a class="dropdown-item" href="#">Notice</a></li>
                                                 <li><a class="dropdown-item" href="#">Voucher</a></li>
                                                 <li><a class="dropdown-item" href="#">Recurring documents</a></li>
-    
+
                                                 <br>
                                                 <span class="header"> <b> Graphics: </b></span>
                                                 <li><a class="dropdown-item" href="#">Invoices</a></li>
                                                 <li><a class="dropdown-item" href="#">Clients</a></li>
-    
+
                                             </div>
                                             <div class="col-4">
                                                 <span class="header"> <b> Advanced reports: </b></span>
@@ -88,12 +89,12 @@
                                                 <li><a class="dropdown-item" href="#">Client data sheet</a></li>
                                                 <li><a class="dropdown-item" href="#">TVA report</a></li>
                                                 <li><a class="dropdown-item" href="#">Sales per agent</a></li>
-    
+
                                                 <br>
                                                 <span class="header"> <b> Checkout registry: </b></span>
                                                 <li><a class="dropdown-item" href="#">Show checkout registry</a></li>
                                                 <li><a class="dropdown-item" href="#">Checkout operations</a></li>
-    
+
                                             </div>
                                             <div class="col-4 ">
                                                 <span class="header"> <b> Expenses and payments: </b></span>
@@ -101,7 +102,7 @@
                                                 <li><a class="dropdown-item" href="#">Payments</a></li>
                                                 <li><a class="dropdown-item" href="#">Payment status</a></li>
                                                 <li><a class="dropdown-item" href="#">Expediture by category</a></li>
-    
+
                                                 <br>
                                                 <span class="header"> <b> Extracts and register: </b></span>
                                                 <li><a class="dropdown-item" href="#">Account statement</a></li>
@@ -112,7 +113,7 @@
                                     </ul>
                                 </div>
                             </li>
-    
+
                             <li class="nav-item">
                                 <div class="dropdown dropend">
                                     <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
@@ -143,7 +144,7 @@
                                     </ul>
                                 </div>
                             </li>
-    
+
                             <li class="nav-item">
                                 <div class="dropdown dropend">
                                     <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
@@ -157,7 +158,7 @@
                                                 <li><a class="dropdown-item" href="#">Products</a></li>
                                                 <li><a class="dropdown-item" href="#">Expenditure category</a></li>
                                                 <li><a class="dropdown-item" href="#">Products category</a></li>
-    
+
                                                 <br>
                                                 <span class="header"> <b> Monitorizing: </b></span>
                                                 <li><a class="dropdown-item" href="#">Monitorizing partners</a></li>
@@ -171,23 +172,29 @@
                                     </ul>
                                 </div>
                             </li>
-                            
+
                             <li class="nav-item">
-                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                                 aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}" role="tab">
                                     <i class="bi bi-box"></i> Products
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
+                                aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}" role="tab">
+                                    <i class="bi bi-box"></i> Invoices
+                                </a>
+                            </li>
 
                             <li class="nav-item">
-                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                                 aria-controls="notification" aria-selected="false" href="{{ route('addEmployee') }}" role="tab">
                                     <i class="bi bi-people"></i> Employee
                                 </a>
                             </li>
-    
+
                             <li class="nav-item">
-                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" 
+                                <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                                 aria-controls="notification" aria-selected="false" href="{{ route('company') }}" role="tab">
                                     <i class="bi bi-building"></i> Company
                                 </a>
@@ -200,7 +207,7 @@
                                 <a href="#"
                                     class="d-flex px-4 align-items-center text-white text-decoration-none dropdown-toggle"
                                     id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img 
+                                    <img
                                             src="{{'storage/' . Auth::user()->avatar}}"
                                      alt="hugenerd" width="30"
                                         height="30" class="rounded-circle">
@@ -219,4 +226,3 @@
                         </form>
                     </div>
                 </div>
-                

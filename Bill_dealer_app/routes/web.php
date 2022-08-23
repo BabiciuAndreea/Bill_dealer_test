@@ -6,12 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\EditCompanyController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Settings;
 use App\Http\Controllers\ViewsController;
 use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\userDashController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +28,8 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [ViewsController::class, 'welcome']);
+
+// Route::view('/register', 'register');
 
 Route::get('settings', [ViewsController::class, 'settings'])->name('settings');
 
@@ -39,8 +45,22 @@ Route::POST('Company_add', [AddCompanyController::class, 'store'])->name('addCom
 
 Route::get('Company_edit_view', [EditCompanyController::class, 'index'])->name('edit_company_view');
 
-Route::resource('products',ProductController::class);
+Route::get('invoice', [InvoiceController::class, 'index'])->name('invoice.index');
 
-Route::resource('employees',EmployeeController::class);
+Route::get('invoice/store', [InvoiceController::class, 'store'])->name('invoice.store');
+
+Route::get('invoice/destroy', [InvoiceController::class, 'destroy'])->name('invoice.destroy');
+
+Route::get('invoice/edit', [InvoiceController::class, 'edit'])->name('invoice.edit');
+
+Route::resource('products', ProductController::class);
+
+Route::resource('invoices', InvoiceController::class);
+
+Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
+
+Route::get('dashboard', [dashboardController::class, 'view'])->name('dashboard');
+
+Route::get('user_dashboard', [userDashController::class, 'view'])->name('user_dash');

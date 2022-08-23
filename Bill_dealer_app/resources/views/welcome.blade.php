@@ -9,3 +9,6 @@
         <img src="{{ url('images/Bill_dealer_welcome.png') }}" alt="" class="img-fluid px-0">
     </div>
 @endsection
+
+
+
