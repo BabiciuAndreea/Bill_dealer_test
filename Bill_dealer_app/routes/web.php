@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\userDashController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,4 +64,11 @@ Route::resource('companies', EditCompanyController::class);
 
 Route::get('dashboard', [dashboardController::class, 'view'])->name('dashboard');
 
+
 Route::get('user_dashboard', [userDashController::class, 'view'])->name('user_dash');
+
+Route::POST('editpro',[Settings::class,'edit'])->name('update');
+
+Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
+
+

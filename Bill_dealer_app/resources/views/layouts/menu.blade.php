@@ -31,7 +31,11 @@
                                         <div class="row">
                                             <div class="col-5 px-5">
                                                 <span class="header"> <b> Issuing: </b></span>
+
                                                 <li><a class="dropdown-item" href="#">Invoice</a></li>
+
+                                                <li><a class="dropdown-item" href="#">Invoices</a></li>
+
                                                 <li><a class="dropdown-item" href="#">Receipt</a></li>
                                                 <li><a class="dropdown-item" href="#">Canceled invoice</a></li>
                                                 <li><a class="dropdown-item" href="#">Proform invoice</a></li>
@@ -67,7 +71,11 @@
                                         <div class="row mx-3">
                                             <div class="col-4 ">
                                                 <span class="header"> <b> Issued documents: </b></span>
+
                                                 <li><a class="dropdown-item" href="#">Invoice</a></li>
+
+                                                <li><a class="dropdown-item" href="#">Invoicesss</a></li>
+
                                                 <li><a class="dropdown-item" href="#">Check-in</a></li>
                                                 <li><a class="dropdown-item" href="#">Proforma</a></li>
                                                 <li><a class="dropdown-item" href="#">Notice</a></li>

@@ -1,6 +1,5 @@
 @include('layouts.app')
 
-
 <head>
 
   <!-- Google Font: Source Sans Pro -->
@@ -15,7 +14,11 @@
 
 <body>
 
+
     @include('layouts.menu')
+
+    @include('layouts.menu');
+
 
     <div class="content">
       <div class="container-fluid">
