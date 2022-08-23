@@ -17,7 +17,7 @@
 
     @include('layouts.menu')
 
-    @include('layouts.menu');
+  
 
 
     <div class="content">
