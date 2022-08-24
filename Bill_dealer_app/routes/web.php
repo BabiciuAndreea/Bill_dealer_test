@@ -7,6 +7,7 @@ use App\Http\Controllers\EditCompanyController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Settings;
@@ -58,17 +59,16 @@ Route::resource('products', ProductController::class);
 
 Route::resource('invoices', InvoiceController::class);
 
+Route::resource('client', ClientController::class);
+
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
 
 Route::get('dashboard', [dashboardController::class, 'view'])->name('dashboard');
 
-
 Route::get('user_dashboard', [userDashController::class, 'view'])->name('user_dash');
 
-Route::POST('editpro',[Settings::class,'edit'])->name('update');
+Route::POST('editpro', [Settings::class, 'edit'])->name('update');
 
-Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
-
-
+Route::POST('editpass', [Settings::class, 'update_password'])->name('updatepass');

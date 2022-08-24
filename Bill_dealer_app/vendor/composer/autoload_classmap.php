@@ -23,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\Settings' => $baseDir . '/app/Http/Controllers/Settings.php',
     'App\\Http\\Controllers\\ViewsController' => $baseDir . '/app/Http/Controllers/ViewsController.php',
     'App\\Http\\Controllers\\dashboardController' => $baseDir . '/app/Http/Controllers/dashboardController.php',
+    'App\\Http\\Controllers\\userDashController' => $baseDir . '/app/Http/Controllers/userDashController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

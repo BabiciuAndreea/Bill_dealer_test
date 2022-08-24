@@ -5,7 +5,3 @@
 
     @include('dashboard.index')
 </body>
-
-    @include('layouts.menu')
-</body>
-

@@ -6,7 +6,3 @@
     @include('layouts.user_menu')
 
 </body>
-
-    @include('layouts.user_menu')
-</body>
-
