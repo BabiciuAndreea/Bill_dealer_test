@@ -10,7 +10,7 @@ class RoleController extends Controller
     public function setRole(){
         if(Auth::check()){
             if(Auth::user()->role == 'admin'){
-                return view('users.admin');
+                return view('dashboard.index');
             }else{
                 return view('users.user');
             }

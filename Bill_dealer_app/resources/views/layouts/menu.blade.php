@@ -4,7 +4,7 @@
                 <div class="profile-tab-nav border-right profile-tab my-0">
                     <div class="d-flex flex-column background align-items-center align-items-sm-start px-1 pt-2 text-white min-vh-100">
                         <div class="row p-0 py-2">
-                            <div class="col"> <a href="/home"
+                            <div class="col"> <a href="/dashboard"
                                     class="d-flex align-items-center pb-1 mb-md-0 mx-3 px-0 me-md-auto text-white text-decoration-none">
                                     <img src="{{ 'images/Logo_aplicatie_facturi.png' }}" class="rounded-circle logo mb-1 shadow1">
                                 </a> </div>
@@ -31,7 +31,7 @@
                                         <div class="row">
                                             <div class="col-5 px-5">
                                                 <span class="header"> <b> Issuing: </b></span>
-                                                <li><a class="dropdown-item" href="#">Invoices</a></li>
+                                                <li><a class="dropdown-item" href="#">Invoice</a></li>
                                                 <li><a class="dropdown-item" href="#">Receipt</a></li>
                                                 <li><a class="dropdown-item" href="#">Canceled invoice</a></li>
                                                 <li><a class="dropdown-item" href="#">Proform invoice</a></li>
@@ -67,7 +67,7 @@
                                         <div class="row mx-3">
                                             <div class="col-4 ">
                                                 <span class="header"> <b> Issued documents: </b></span>
-                                                <li><a class="dropdown-item" href="#">Invoicesss</a></li>
+                                                <li><a class="dropdown-item" href="#">Invoice</a></li>
                                                 <li><a class="dropdown-item" href="#">Check-in</a></li>
                                                 <li><a class="dropdown-item" href="#">Proforma</a></li>
                                                 <li><a class="dropdown-item" href="#">Notice</a></li>
