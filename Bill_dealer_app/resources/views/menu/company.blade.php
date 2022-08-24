@@ -105,17 +105,7 @@
                                                     payer?</label>
                                             </div>
                                         </div>
-                                        <div class="col-8 px-0 mx-0">
-                                            <div class="col-8 justify-content-center ms-0">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="form2Example31" checked />
-                                                    <label class="form-check-label text-muted label_size"
-                                                        for="form2Example31"> Agree with <a href="#!">Terms and
-                                                            Conditions </a></label>
-                                                </div>
-                                            </div>
-                                        </div>
+
 
                                     </div>
 
