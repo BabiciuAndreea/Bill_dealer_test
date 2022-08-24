@@ -7,6 +7,7 @@ use App\Http\Controllers\EditCompanyController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Settings;
@@ -56,6 +57,8 @@ Route::get('invoice/edit', [InvoiceController::class, 'edit'])->name('invoice.ed
 Route::resource('products', ProductController::class);
 
 Route::resource('invoices', InvoiceController::class);
+
+Route::resource('client', ClientController::class);
 
 Route::resource('employees', EmployeeController::class);
 
