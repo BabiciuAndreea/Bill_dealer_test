@@ -42,22 +42,23 @@ Route::POST('Company_add', [AddCompanyController::class, 'store'])->name('addCom
 
 Route::get('Company_edit_view', [EditCompanyController::class, 'index'])->name('edit_company_view');
 
-Route::get('invoice', [InvoiceController::class, 'index'])->name('invoice.index');
+// Route::get('invoice', [InvoiceController::class, 'index'])->name('invoice.index');
 
-Route::get('invoice/store', [InvoiceController::class, 'store'])->name('invoice.store');
+// Route::get('invoice/store', [InvoiceController::class, 'store'])->name('invoice.store');
 
-Route::get('invoice/destroy', [InvoiceController::class, 'destroy'])->name('invoice.destroy');
+// Route::get('invoice/destroy', [InvoiceController::class, 'destroy'])->name('invoice.destroy');
 
-Route::get('invoice/edit', [InvoiceController::class, 'edit'])->name('invoice.edit');
+// Route::get('invoice/edit', [InvoiceController::class, 'edit'])->name('invoice.edit');
+// Route::put('invoice/update', [InvoiceController::class, 'update'])->name('invoice.update');
 
 Route::resource('products', ProductController::class);
 
-Route::resource('invoices', InvoiceController::class);
+Route::resource('invoice', InvoiceController::class);
 
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
 
-Route::POST('editpro',[Settings::class,'edit'])->name('update');
+Route::POST('editpro', [Settings::class, 'edit'])->name('update');
 
-Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
+Route::POST('editpass', [Settings::class, 'update_password'])->name('updatepass');
