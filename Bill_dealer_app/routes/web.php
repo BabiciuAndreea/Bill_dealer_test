@@ -67,3 +67,4 @@ Route::resource('companies', EditCompanyController::class);
 Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
 Route::get('user_dashboard', [userDashController::class, 'view'])->name('userdash');
+//pt verificare
