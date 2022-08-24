@@ -564,6 +564,7 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'App\\Http\\Controllers\\Settings' => __DIR__ . '/../..' . '/app/Http/Controllers/Settings.php',
         'App\\Http\\Controllers\\ViewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ViewsController.php',
         'App\\Http\\Controllers\\dashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/dashboardController.php',
+        'App\\Http\\Controllers\\userDashController' => __DIR__ . '/../..' . '/app/Http/Controllers/userDashController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

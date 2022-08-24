@@ -5,16 +5,16 @@
     @include('layouts.menu');
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
-        <div class="tab-pane fade show active px-5 py-0 my-0 bigger" id="invoice" role="tabpanel"
+        <div class="tab-pane fade show active px-5 py-0 my-0 bigger" id="client" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="pull-left">
-                        <h3>Invoices</h3>
+                        <h3>Clients</h3>
                     </div>
                     <div class="pull-right">
                         <a href="#addProductModal" class="btn add-button my-3" data-toggle="modal"> <i
-                                class="bi bi-person-plus"></i> <span class="py-1 px-1">Add invoice</span></a>
+                                class="bi bi-person-plus"></i> <span class="py-1 px-1">Add client</span></a>
                     </div>
                 </div>
             </div>
@@ -29,31 +29,33 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Data emitere</th>
-                        <th>Data scadenta</th>
-                        <th>Serie factura</th>
-                        <th>Numar factura</th>
-                        <th>Id client</th>
-                        <th>Id comanda</th>
-                        <th>Status</th>
+                        <th>Client name</th>
+                        <th>CIF</th>
+                        <th>Nr reg</th>
+                        <th>City</th>
+                        <th>County</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
                         <th class="px-5">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($invoices as $invoice)
+                    @foreach ($clients as $client)
                         <tr>
-                            <td>{{ $invoice->id }}</td>
-                            <td>{{ $invoice->data_emitere }}</td>
-                            <td>{{ $invoice->data_scadenta }}</td>
-                            <td>{{ $invoice->serie_factura }}</td>
-                            <td>{{ $invoice->nr_factura }}</td>
-                            <td>{{ $invoice->id_client }}</td>
-                            <td>{{ $invoice->id_comanda }}</td>
-                            <td>{{ $invoice->status }}</td>
+                            <td>{{ $client->id }}</td>
+                            <td>{{ $client->client_name }}</td>
+                            <td>{{ $client->cif }}</td>
+                            <td>{{ $client->nr_reg }}</td>
+                            <td>{{ $client->city }}</td>
+                            <td>{{ $client->county }}</td>
+                            <td>{{ $client->address }}</td>
+                            <td>{{ $client->phone }}</td>
+                            <td>{{ $client->email }}</td>
                             <td>
-                                <form action="{{ route('invoice.destroy', $invoice->id) }}" method="POST">
+                                <form action="{{ route('client.destroy', $client->id) }}" method="POST">
                                     <a class="btn-sm edit-buttons"
-                                        href="{{ route('invoice.edit', $invoice->id) }}">Edit</a>
+                                        href="{{ route('client.edit', $client->id) }}">Edit</a>
 
                                     @csrf
                                     @method('DELETE')
@@ -66,16 +68,16 @@
                 </tbody>
             </table>
 
-            {!! $invoices->links('vendor.pagination.custom') !!}
+            {!! $clients->links('vendor.pagination.custom') !!}
 
             <div id="addProductModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
-                        <form method="POST" action="{{ route('invoice.store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('client.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-11">
-                                    <h6 class="text-start">ADD Invoice</h6>
+                                    <h6 class="text-start">ADD Client</h6>
                                 </div>
                                 <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
                                         aria-hidden="true">×</button>
@@ -84,10 +86,10 @@
                             <p class="text-muted text-start"> Please fill the fields below.</p>
                             <div class="form-outline">
                                 <input id="name" type="text"
-                                    class="form-control @error('name') is-invalid @enderror" name="data_emitere"
-                                    required autocomplete="data_emitere" autofocus placeholder="data_emitere">
+                                    class="form-control @error('name') is-invalid @enderror" name="client_name" required
+                                    autocomplete="client_name" autofocus placeholder="client_name">
 
-                                @error('data_emitere')
+                                @error('client_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -95,12 +97,11 @@
                             </div>
                             <br>
                             <div class="form-outline">
-                                <input id="data_scadenta" type="text"
-                                    class="form-control @error('data_scadenta') is-invalid @enderror"
-                                    name="data_scadenta" required autocomplete="data_scadenta" autofocus
-                                    placeholder="data_scadenta">
+                                <input id="cif" type="text"
+                                    class="form-control @error('cif') is-invalid @enderror" name="cif" required
+                                    autocomplete="cif" autofocus placeholder="cif">
 
-                                @error('data_scadenta')
+                                @error('cif')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -108,12 +109,11 @@
                             </div>
                             <br>
                             <div class="form-outline">
-                                <input id="serie_factura" type="text"
-                                    class="form-control @error('serie_factura') is-invalid @enderror"
-                                    name="serie_factura" required autocomplete="serie_factura"
-                                    placeholder="serie_factura">
+                                <input id="nr_reg" type="text"
+                                    class="form-control @error('nr_reg') is-invalid @enderror" name="nr_reg" required
+                                    autocomplete="nr_reg" placeholder="nr_reg">
 
-                                @error('serie_factura')
+                                @error('nr_reg')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -123,9 +123,9 @@
 
 
                             <div class="form-outline">
-                                <input id="nr_factura" type="text"
-                                    class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura"
-                                    required autocomplete="nr_factura" placeholder="nr_factura">
+                                <input id="city" type="text"
+                                    class="form-control @error('city') is-invalid @enderror" name="city" required
+                                    autocomplete="city" placeholder="city">
 
                                 @error('paquantityssword')
                                     <span class="invalid-feedback" role="alert">
@@ -137,19 +137,25 @@
                             <br>
 
                             <div class="form-outline">
-                                <input id="id_client" type="text" class="form-control" name="id_client" required
-                                    autocomplete="id_client" placeholder="id_client">
+                                <input id="county" type="text" class="form-control" name="county" required
+                                    autocomplete="county" placeholder="county">
                             </div>
                             <br>
                             <div class="form-outline">
-                                <input id="id_comanda" type="text" class="form-control" name="id_comanda" required
-                                    autocomplete="id_comanda" placeholder="id_comanda">
+                                <input id="address" type="text" class="form-control" name="address" required
+                                    autocomplete="address" placeholder="address">
                             </div>
                             <br>
                             <div class="form-outline">
-                                <input id="status" type="text" class="form-control" name="status" required
-                                    autocomplete="status" placeholder="status">
+                                <input id="phone" type="text" class="form-control" name="phone" required
+                                    autocomplete="phone" placeholder="phone">
                             </div>
+                            <br>
+                            <div class="form-outline">
+                                <input id="email" type="text" class="form-control" name="email" required
+                                    autocomplete="email" placeholder="email">
+                            </div>
+
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add</button>
