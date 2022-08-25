@@ -68,5 +68,5 @@ Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
 
 Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
-Route::get('user_dashboard', [userDashController::class, 'view'])->name('userdash');
+Route::get('user_dashboard', [userDashController::class, 'index'])->name('userdash');
 Route::post('downloadPDF',[PdfController::class,'downloadPDF'])->name('downloadPDF');
