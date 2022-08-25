@@ -16,7 +16,7 @@ use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\userDashController;
-
+use App\Http\Controllers\PdfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,8 +63,10 @@ Route::resource('client', ClientController::class);
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
+Route::POST('editpro',[Settings::class,'profileUpdate'])->name('update');
+Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
 
 Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
 Route::get('user_dashboard', [userDashController::class, 'view'])->name('userdash');
-//pt verificare
+Route::post('downloadPDF',[PdfController::class,'downloadPDF'])->name('downloadPDF');
