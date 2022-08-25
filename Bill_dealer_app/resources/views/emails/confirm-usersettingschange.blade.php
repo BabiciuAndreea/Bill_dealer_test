@@ -7,6 +7,6 @@
     <title>User settings chnage</title>
 </head>
 <body>
-    <h1>profile updated</h1>
+    <h1>profile </h1>
 </body>
 </html>

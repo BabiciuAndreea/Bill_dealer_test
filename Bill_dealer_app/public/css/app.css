@@ -176,8 +176,39 @@ h6{
     width: 180px;
 }
 
+.edit-background {
+    background-color: white;
+}
+
+.label_size{
+    font-size: 11px;
+}
+
+.add-button{
+    background-color: #e09f50b0;
+}
+
+.edit-button{
+    background-color: #2d3e4edf;
+    color: white;
+}
+
+.edit-button:hover{
+    background-color: #2d3e4edf;
+    color: white;
+}
+
+.bigger{
+    width: 185%;
+}
+
+.page-link:hover{
+    background-color: white;
+    color: white;
+}
 
 
-
-
-
+.page-item{
+    background-color: #2d3e4e;
+    color: #E8ECEB;
+}

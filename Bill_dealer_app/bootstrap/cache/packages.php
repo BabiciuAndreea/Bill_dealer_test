@@ -1,6 +1,4 @@
 <?php return array (
-<<<<<<< Updated upstream
-=======
   'barryvdh/laravel-dompdf' => 
   array (
     'providers' => 
@@ -20,7 +18,6 @@
       0 => 'Kyslik\\ColumnSortable\\ColumnSortableServiceProvider',
     ),
   ),
->>>>>>> Stashed changes
   'laravel/fortify' => 
   array (
     'providers' => 
