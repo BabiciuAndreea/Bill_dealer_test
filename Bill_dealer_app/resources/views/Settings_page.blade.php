@@ -23,7 +23,7 @@
 				<div class="profile-tab-nav border-right profile_tab">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="profile_pictures/blank_profile_picture.png" alt="Image" class="shadow">
+							<img src="{{ 'storage/' . Auth::user()->avatar }}" alt="Image" class="shadow">
 						</div>
 						<h4 class="text-center " style="color:white">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</h4>
 					</div>
