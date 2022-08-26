@@ -27,6 +27,7 @@ class User extends Authenticatable
 'phone',
 'cnp',
 'avatar',
+'role',
 
     ];
 
