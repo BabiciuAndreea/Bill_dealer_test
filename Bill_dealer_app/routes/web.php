@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\userDashController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\RegisterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +30,7 @@ use App\Http\Controllers\PdfController;
 |
 */
 
-Route::get('/', [ViewsController::class, 'welcome']);
+Route::get('/', [ViewsController::class, 'welcome'])->name('welcome');
 
 // Route::view('/register', 'register');
 
@@ -63,13 +65,17 @@ Route::resource('client', ClientController::class);
 Route::resource('employees', EmployeeController::class);
 
 Route::resource('companies', EditCompanyController::class);
+
 Route::POST('editpro',[Settings::class,'profileUpdate'])->name('update');
+
 Route::POST('editpass',[Settings::class,'update_password'])->name('updatepass');
 
 Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
 Route::get('user_dashboard', [userDashController::class, 'index'])->name('userdash');
+
 Route::post('downloadPDF',[PdfController::class,'downloadPDF'])->name('downloadPDF');
 
 Route::get('excel',[ProductController::class,'exportExcel'])->name('excel');
 
+Route::post('Register', [RegisterController::class, 'store'])->name('Register');
