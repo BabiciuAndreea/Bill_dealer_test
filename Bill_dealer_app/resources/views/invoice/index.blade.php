@@ -5,7 +5,7 @@
     @include('layouts.menu');
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
-        <div class="tab-pane fade show active px-5 py-0 my-0 bigger" id="invoice" role="tabpanel"
+        <div class="tab-pane fade show active px-5 py-0 my-0" id="invoice" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="row">
                 <div class="col-lg-12">
@@ -25,17 +25,17 @@
                 </div>
             @endif
 
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover w-100">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Data emitere</th>
-                        <th>Data scadenta</th>
-                        <th>Serie factura</th>
-                        <th>Numar factura</th>
-                        <th>Id client</th>
-                        <th>Id comanda</th>
-                        <th>Status</th>
+                        <th class="px-1">ID</th>
+                        <th class="px-4">Issue date</th>
+                        <th class="px-4">Due date</th>
+                        <th class="px-4">Invoice serie</th>
+                        <th class="px-4">Invoice number</th>
+                        <th class="px-4">Client</th>
+                        <th class="px-4">Order</th>
+                        <th class="px-4">Status</th>
                         <th class="px-5">Actions</th>
                     </tr>
                 </thead>
@@ -51,9 +51,9 @@
                             <td>{{ $invoice->id_comanda }}</td>
                             <td>{{ $invoice->status }}</td>
                             <td>
-                                <form action="{{ route('invoice.destroy', $invoice->id) }}" method="POST">
+                                <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
                                     <a class="btn-sm edit-buttons"
-                                        href="{{ route('invoice.edit', $invoice->id) }}">Edit</a>
+                                        href="{{ route('invoices.edit', $invoice->id) }}">Edit</a>
 
                                     @csrf
                                     @method('DELETE')
@@ -71,11 +71,11 @@
             <div id="addProductModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
-                        <form method="POST" action="{{ route('invoice.store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('invoices.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-11">
-                                    <h6 class="text-start">ADD Invoice</h6>
+                                    <h6 class="text-start">Add Invoice</h6>
                                 </div>
                                 <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
                                         aria-hidden="true">×</button>
@@ -85,7 +85,7 @@
                             <div class="form-outline">
                                 <input id="name" type="text"
                                     class="form-control @error('name') is-invalid @enderror" name="data_emitere"
-                                    required autocomplete="data_emitere" autofocus placeholder="data_emitere">
+                                    required autocomplete="data_emitere" autofocus placeholder="Issue date">
 
                                 @error('data_emitere')
                                     <span class="invalid-feedback" role="alert">
@@ -98,7 +98,7 @@
                                 <input id="data_scadenta" type="text"
                                     class="form-control @error('data_scadenta') is-invalid @enderror"
                                     name="data_scadenta" required autocomplete="data_scadenta" autofocus
-                                    placeholder="data_scadenta">
+                                    placeholder="Due date">
 
                                 @error('data_scadenta')
                                     <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
                                 <input id="serie_factura" type="text"
                                     class="form-control @error('serie_factura') is-invalid @enderror"
                                     name="serie_factura" required autocomplete="serie_factura"
-                                    placeholder="serie_factura">
+                                    placeholder="Invoice serie">
 
                                 @error('serie_factura')
                                     <span class="invalid-feedback" role="alert">
@@ -125,7 +125,7 @@
                             <div class="form-outline">
                                 <input id="nr_factura" type="text"
                                     class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura"
-                                    required autocomplete="nr_factura" placeholder="nr_factura">
+                                    required autocomplete="nr_factura" placeholder="Invoice number">
 
                                 @error('paquantityssword')
                                     <span class="invalid-feedback" role="alert">
@@ -138,17 +138,17 @@
 
                             <div class="form-outline">
                                 <input id="id_client" type="text" class="form-control" name="id_client" required
-                                    autocomplete="id_client" placeholder="id_client">
+                                    autocomplete="id_client" placeholder="Client">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="id_comanda" type="text" class="form-control" name="id_comanda" required
-                                    autocomplete="id_comanda" placeholder="id_comanda">
+                                    autocomplete="id_comanda" placeholder="Order">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="status" type="text" class="form-control" name="status" required
-                                    autocomplete="status" placeholder="status">
+                                    autocomplete="status" placeholder="Status">
                             </div>
 
                             <div class="text-center">

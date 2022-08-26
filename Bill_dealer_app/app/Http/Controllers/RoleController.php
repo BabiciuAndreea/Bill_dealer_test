@@ -16,7 +16,8 @@ class RoleController extends Controller
             if(Auth::user()->role == 'admin'){
                 return view('dashboard.index',compact('products'));
             }else{
-                return view('users.user');
+                return view('dashboard.user',compact('products'));
+
             }
         }else{
             return view('auth.login');

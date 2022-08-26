@@ -20,7 +20,7 @@
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}"
                             role="tab">
-                            <i class="bi bi-box"></i> Dashboard
+                            <i class="bi bi-graph-up-arrow"></i> Dashboard
                         </a>
                     </li>
 
@@ -187,14 +187,14 @@
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}"
                             role="tab">
-                            <i class="bi bi-box"></i> Invoices
+                            <i class="bi bi-envelope-paper"></i> Invoices
                         </a>
                     </li>
                     <li class="nav-item">
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('client.index') }}"
                             role="tab">
-                            <i class="bi bi-box"></i> Client
+                            <i class="bi bi-person"></i> Clients
                         </a>
                     </li>
 
@@ -202,7 +202,7 @@
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('addEmployee') }}"
                             role="tab">
-                            <i class="bi bi-people"></i> Employee
+                            <i class="bi bi-people"></i> Employees
                         </a>
                     </li>
 
