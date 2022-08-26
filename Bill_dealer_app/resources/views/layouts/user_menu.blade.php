@@ -20,7 +20,7 @@
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('userdash') }}"
                             role="tab">
-                            <i class="bi bi-box"></i> Dashboard
+                            <i class="bi bi-graph-up-arrow"></i> Dashboard
                         </a>
                     </li>
 
