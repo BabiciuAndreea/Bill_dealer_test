@@ -5,7 +5,7 @@
     @include('layouts.menu');
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
-        <div class="tab-pane fade show active px-5 py-0 my-0 bigger" id="client" role="tabpanel"
+        <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="row">
                 <div class="col-lg-12">
@@ -25,18 +25,18 @@
                 </div>
             @endif
 
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover w-100">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Client name</th>
-                        <th>CIF</th>
-                        <th>Trade register</th>
-                        <th>City</th>
-                        <th>County</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Email</th>
+                        <th class="px-1">ID</th>
+                        <th class="px-4">Client name</th>
+                        <th class="px-4">CIF</th>
+                        <th class="px-4">Trade register</th>
+                        <th class="px-4">City</th>
+                        <th class="px-4">County</th>
+                        <th class="px-4">Address</th>
+                        <th class="px-4">Phone</th>
+                        <th class="px-4">Email</th>
                         <th class="px-5">Actions</th>
                     </tr>
                 </thead>

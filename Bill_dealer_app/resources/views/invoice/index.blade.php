@@ -5,7 +5,7 @@
     @include('layouts.menu');
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
-        <div class="tab-pane fade show active px-5 py-0 my-0 bigger" id="invoice" role="tabpanel"
+        <div class="tab-pane fade show active px-5 py-0 my-0" id="invoice" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="row">
                 <div class="col-lg-12">
@@ -25,17 +25,17 @@
                 </div>
             @endif
 
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover w-100">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Issue date</th>
-                        <th>Due date</th>
-                        <th>Invoice serie</th>
-                        <th>Invoice number</th>
-                        <th>Client</th>
-                        <th>Order</th>
-                        <th>Status</th>
+                        <th class="px-1">ID</th>
+                        <th class="px-4">Issue date</th>
+                        <th class="px-4">Due date</th>
+                        <th class="px-4">Invoice serie</th>
+                        <th class="px-4">Invoice number</th>
+                        <th class="px-4">Client</th>
+                        <th class="px-4">Order</th>
+                        <th class="px-4">Status</th>
                         <th class="px-5">Actions</th>
                     </tr>
                 </thead>
@@ -51,9 +51,9 @@
                             <td>{{ $invoice->id_comanda }}</td>
                             <td>{{ $invoice->status }}</td>
                             <td>
-                                <form action="{{ route('invoice.destroy', $invoice->id) }}" method="POST">
+                                <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
                                     <a class="btn-sm edit-buttons"
-                                        href="{{ route('invoice.edit', $invoice->id) }}">Edit</a>
+                                        href="{{ route('invoices.edit', $invoice->id) }}">Edit</a>
 
                                     @csrf
                                     @method('DELETE')
@@ -71,7 +71,7 @@
             <div id="addProductModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
-                        <form method="POST" action="{{ route('invoice.store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('invoices.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-11">

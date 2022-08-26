@@ -48,11 +48,11 @@ Route::get('Company_edit_view', [EditCompanyController::class, 'index'])->name('
 
 Route::get('invoice', [InvoiceController::class, 'index'])->name('invoice.index');
 
-Route::get('invoice/store', [InvoiceController::class, 'store'])->name('invoice.store');
+// Route::get('invoice/store', [InvoiceController::class, 'store'])->name('invoice.store');
 
-Route::get('invoice/destroy', [InvoiceController::class, 'destroy'])->name('invoice.destroy');
+// Route::get('invoice/destroy', [InvoiceController::class, 'destroy'])->name('invoice.destroy');
 
-Route::get('invoice/edit', [InvoiceController::class, 'edit'])->name('invoice.edit');
+// Route::get('invoice/edit', [InvoiceController::class, 'edit'])->name('invoice.edit');
 
 Route::resource('products', ProductController::class);
 

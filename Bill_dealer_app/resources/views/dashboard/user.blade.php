@@ -28,7 +28,7 @@
 
     <div class = "content">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row mx-1  mt-5 w-100">
                 <div class="col-lg-7">
                     <div class="card">
                         <div class="card-header border-0">
@@ -72,10 +72,10 @@
                         <div class="card-header border-0">
                             <h3 class="card-title">Products</h3>
                             <div class="card-tools">
-                                <a href="#" class="btn btn-tool btn-sm">
+                                <a href="#" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-download"></i>
                                 </a>
-                                <a href="#" class="btn btn-tool btn-sm">
+                                <a href="#" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-bars"></i>
                                 </a>
                             </div>
@@ -95,7 +95,6 @@
                                 @foreach ($products as $product)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('dist/img/photo2.png') }}" width="50" height="50" alt="Product 1" class="img-circle img-size-32 mr-2">
                                         {{ $product->name }}
                                     </td>
                                     <td>{{ $product->price }}</td>

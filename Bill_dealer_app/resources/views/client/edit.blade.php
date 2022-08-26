@@ -7,8 +7,8 @@
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
             aria-labelledby="employee-tab">
-            <div class="row mt-5">
-                <div class="col-lg-12 my-5">
+            <div class="row mt-2">
+                <div class="col-lg-12 my-2">
                     <div class="pull-left">
                         <h3>Edit Client</h3>
                     </div>
