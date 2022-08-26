@@ -18,6 +18,7 @@ use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\userDashController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Setting;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,8 +75,10 @@ Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard'
 
 Route::get('user_dashboard', [userDashController::class, 'index'])->name('userdash');
 
-Route::post('downloadPDF',[PdfController::class,'downloadPDF'])->name('downloadPDF');
+
 
 Route::get('excel',[ProductController::class,'exportExcel'])->name('excel');
 
 Route::post('Register', [RegisterController::class, 'store'])->name('Register');
+Route::post('downloadPDF',[Settings::class,'downloadPDF'])->name('downloadPDF');
+Route::post('pdf_down',[PdfController::class,'downloadPDF'])->name('pdf_down');

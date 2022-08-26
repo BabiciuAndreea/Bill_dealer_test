@@ -52,4 +52,15 @@ class Settings extends Controller
           return redirect()->route('settings');
 
     }
+    public function downloadPDF(Request $request) {
+        if(Auth::user())
+
+        {
+           $customer=User::find(Auth::user()->id);
+           
+        }
+        $customer->pdf_template=$request->input('flexRadioDefault'); 
+        $customer->save();  
+        return redirect()->route('settings');
+}
 }

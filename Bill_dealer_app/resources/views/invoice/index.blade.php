@@ -150,9 +150,11 @@
                                 <input id="status" type="text" class="form-control" name="status" required
                                     autocomplete="status" placeholder="Status">
                             </div>
+                            
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add</button>
+                                
                             </div>
                         </form>
                     </div>

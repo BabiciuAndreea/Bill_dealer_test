@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
-
+use PDF;
 class InvoiceController extends Controller
 {
     /**
@@ -50,9 +50,30 @@ class InvoiceController extends Controller
         ]);
 
         Invoice::create($request->all());
+        $current_user=auth()->user();
+        if($current_user->pdf_template==1)
+        {
+            $show=null;
+        $pdf = Pdf::loadView('Pdf_template.pdf', compact('show'));
+        
+        return $pdf->download('Invoice.pdf');
+        }
+        else  if($current_user->pdf_template==2)
+        {
+        $show=null;
+        $pdf = Pdf::loadView('Pdf_template.pdf2', compact('show'));
+        
+        return $pdf->download('Invoice2.pdf');
+        }
+        else
+        {
+            $show=null;
+        $pdf = Pdf::loadView('Pdf_template.pdf3', compact('show'));
+        
+        return $pdf->download('Invoice3.pdf');
+        }
 
-        return redirect()->route('invoice.index')
-            ->with('success', 'Invoice created successfully.');
+        
     }
 
     /**

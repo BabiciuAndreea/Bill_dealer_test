@@ -193,6 +193,24 @@
 								</div>
 							</div>
 						</div>
+                             <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                   PDF  Template nr 1
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    PDF Template nr 2
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="3">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                PDF Template nr 3
+                                </label>
+                                </div>
 						<div>
 							<button class="btn btn-primary"type="submit">Update</button>
                         </form>
