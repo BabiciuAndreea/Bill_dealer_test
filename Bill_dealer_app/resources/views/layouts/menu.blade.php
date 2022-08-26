@@ -20,7 +20,7 @@
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}"
                             role="tab">
-                            <i class="bi bi-graph-up-arrow"></i> Dashboard
+                            <i class="bi bi-box"></i> Dashboard
                         </a>
                     </li>
 
@@ -187,14 +187,14 @@
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}"
                             role="tab">
-                            <i class="bi bi-receipt"></i> Invoices
+                            <i class="bi bi-box"></i> Invoices
                         </a>
                     </li>
                     <li class="nav-item">
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('client.index') }}"
                             role="tab">
-                            <i class="bi bi-person"></i> Client
+                            <i class="bi bi-box"></i> Client
                         </a>
                     </li>
 

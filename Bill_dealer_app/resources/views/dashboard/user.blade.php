@@ -13,8 +13,9 @@
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <!-- <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}"> -->
-    <link href="{{ asset('css/employee.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+	<!-- css creat de Dana -->
+    <link href="{{ asset('css/employee.css') }}" rel="stylesheet"> 
 
 </head>
 
@@ -217,7 +218,7 @@
     <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
 
 
-
+	<!-- de unde ia pentru primele doua grafice, pentru vizitatori si sales-->
     <script src="{{ asset('dist/js/pages/dashboard3.js') }}"></script>
 
     @section('scripts')

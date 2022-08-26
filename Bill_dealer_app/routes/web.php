@@ -70,3 +70,6 @@ Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard'
 
 Route::get('user_dashboard', [userDashController::class, 'index'])->name('userdash');
 Route::post('downloadPDF',[PdfController::class,'downloadPDF'])->name('downloadPDF');
+
+Route::get('excel',[ProductController::class,'exportExcel'])->name('excel');
+
