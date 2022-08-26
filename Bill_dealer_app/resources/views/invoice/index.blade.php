@@ -29,12 +29,12 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Data emitere</th>
-                        <th>Data scadenta</th>
-                        <th>Serie factura</th>
-                        <th>Numar factura</th>
-                        <th>Id client</th>
-                        <th>Id comanda</th>
+                        <th>Issue date</th>
+                        <th>Due date</th>
+                        <th>Invoice serie</th>
+                        <th>Invoice number</th>
+                        <th>Client</th>
+                        <th>Order</th>
                         <th>Status</th>
                         <th class="px-5">Actions</th>
                     </tr>
@@ -75,7 +75,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-11">
-                                    <h6 class="text-start">ADD Invoice</h6>
+                                    <h6 class="text-start">Add Invoice</h6>
                                 </div>
                                 <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
                                         aria-hidden="true">×</button>
@@ -85,7 +85,7 @@
                             <div class="form-outline">
                                 <input id="name" type="text"
                                     class="form-control @error('name') is-invalid @enderror" name="data_emitere"
-                                    required autocomplete="data_emitere" autofocus placeholder="data_emitere">
+                                    required autocomplete="data_emitere" autofocus placeholder="Issue date">
 
                                 @error('data_emitere')
                                     <span class="invalid-feedback" role="alert">
@@ -98,7 +98,7 @@
                                 <input id="data_scadenta" type="text"
                                     class="form-control @error('data_scadenta') is-invalid @enderror"
                                     name="data_scadenta" required autocomplete="data_scadenta" autofocus
-                                    placeholder="data_scadenta">
+                                    placeholder="Due date">
 
                                 @error('data_scadenta')
                                     <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
                                 <input id="serie_factura" type="text"
                                     class="form-control @error('serie_factura') is-invalid @enderror"
                                     name="serie_factura" required autocomplete="serie_factura"
-                                    placeholder="serie_factura">
+                                    placeholder="Invoice serie">
 
                                 @error('serie_factura')
                                     <span class="invalid-feedback" role="alert">
@@ -125,7 +125,7 @@
                             <div class="form-outline">
                                 <input id="nr_factura" type="text"
                                     class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura"
-                                    required autocomplete="nr_factura" placeholder="nr_factura">
+                                    required autocomplete="nr_factura" placeholder="Invoice number">
 
                                 @error('paquantityssword')
                                     <span class="invalid-feedback" role="alert">
@@ -138,17 +138,17 @@
 
                             <div class="form-outline">
                                 <input id="id_client" type="text" class="form-control" name="id_client" required
-                                    autocomplete="id_client" placeholder="id_client">
+                                    autocomplete="id_client" placeholder="Client">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="id_comanda" type="text" class="form-control" name="id_comanda" required
-                                    autocomplete="id_comanda" placeholder="id_comanda">
+                                    autocomplete="id_comanda" placeholder="Order">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="status" type="text" class="form-control" name="status" required
-                                    autocomplete="status" placeholder="status">
+                                    autocomplete="status" placeholder="Status">
                             </div>
 
                             <div class="text-center">

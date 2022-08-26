@@ -31,7 +31,7 @@
                         <th>ID</th>
                         <th>Client name</th>
                         <th>CIF</th>
-                        <th>Nr reg</th>
+                        <th>Trade register</th>
                         <th>City</th>
                         <th>County</th>
                         <th>Address</th>
@@ -77,7 +77,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-11">
-                                    <h6 class="text-start">ADD Client</h6>
+                                    <h6 class="text-start">Add Client</h6>
                                 </div>
                                 <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
                                         aria-hidden="true">×</button>
@@ -87,7 +87,7 @@
                             <div class="form-outline">
                                 <input id="name" type="text"
                                     class="form-control @error('name') is-invalid @enderror" name="client_name" required
-                                    autocomplete="client_name" autofocus placeholder="client_name">
+                                    autocomplete="client_name" autofocus placeholder="Client name">
 
                                 @error('client_name')
                                     <span class="invalid-feedback" role="alert">
@@ -99,7 +99,7 @@
                             <div class="form-outline">
                                 <input id="cif" type="text"
                                     class="form-control @error('cif') is-invalid @enderror" name="cif" required
-                                    autocomplete="cif" autofocus placeholder="cif">
+                                    autocomplete="cif" autofocus placeholder="Cif">
 
                                 @error('cif')
                                     <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
                             <div class="form-outline">
                                 <input id="nr_reg" type="text"
                                     class="form-control @error('nr_reg') is-invalid @enderror" name="nr_reg" required
-                                    autocomplete="nr_reg" placeholder="nr_reg">
+                                    autocomplete="nr_reg" placeholder="Trade register">
 
                                 @error('nr_reg')
                                     <span class="invalid-feedback" role="alert">
@@ -125,7 +125,7 @@
                             <div class="form-outline">
                                 <input id="city" type="text"
                                     class="form-control @error('city') is-invalid @enderror" name="city" required
-                                    autocomplete="city" placeholder="city">
+                                    autocomplete="city" placeholder="City">
 
                                 @error('paquantityssword')
                                     <span class="invalid-feedback" role="alert">
@@ -138,22 +138,22 @@
 
                             <div class="form-outline">
                                 <input id="county" type="text" class="form-control" name="county" required
-                                    autocomplete="county" placeholder="county">
+                                    autocomplete="county" placeholder="County">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="address" type="text" class="form-control" name="address" required
-                                    autocomplete="address" placeholder="address">
+                                    autocomplete="address" placeholder="Address">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="phone" type="text" class="form-control" name="phone" required
-                                    autocomplete="phone" placeholder="phone">
+                                    autocomplete="phone" placeholder="Phone">
                             </div>
                             <br>
                             <div class="form-outline">
                                 <input id="email" type="text" class="form-control" name="email" required
-                                    autocomplete="email" placeholder="email">
+                                    autocomplete="email" placeholder="Email">
                             </div>
 
 

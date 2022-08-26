@@ -87,7 +87,8 @@ class EmployeeController extends Controller
     public function update(Request $request, User $employee)
     {
 
-        $employee->update($request->all());
+        $employee->update(
+            $request->all());
 
         return redirect()->route('addEmployee');
     }
