@@ -61,12 +61,10 @@ Status: Paid
 
 
             </td>
-            <td align="center">
-                <img src="/path/to/logo.png" alt="Logo" width="64" class="logo"/>
-            </td>
+            
             <td align="right" style="width: 40%;">
 
-                <h3>CompanyName</h3>
+                <h3>{{}}</h3>
                 <pre>
                     Street 26
                     123456 City
