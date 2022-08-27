@@ -75,8 +75,8 @@
                                 <a href="#" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-download"></i>
                                 </a>
-                                <a href="#" class="btn btn-secondary btn-sm">
-                                    <i class="fas fa-bars"></i>
+                                <a href="{{ route('excel') }}" target="_blank" class="btn btn-secondary btn-sm" >
+                                <i class="fa-regular fa-file-excel"></i>
                                 </a>
                             </div>
                         </div>
