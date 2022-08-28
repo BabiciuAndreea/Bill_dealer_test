@@ -2,7 +2,7 @@
 
 <body>
 
-    @include('layouts.menu');
+    @include('layouts.menu')
 
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"

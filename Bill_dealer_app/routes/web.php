@@ -80,5 +80,12 @@ Route::get('user_dashboard', [userDashController::class, 'index'])->name('userda
 Route::get('excel',[ProductController::class,'exportExcel'])->name('excel');
 
 Route::post('Register', [RegisterController::class, 'store'])->name('Register');
+
 Route::post('downloadPDF',[Settings::class,'downloadPDF'])->name('downloadPDF');
 Route::post('pdf_down',[PdfController::class,'downloadPDF'])->name('pdf_down');
+
+
+Route::post('downloadPDF',[Settings::class,'downloadPDF'])->name('downloadPDF');
+Route::post('pdf_down',[PdfController::class,'downloadPDF'])->name('pdf_down');
+
+

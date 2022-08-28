@@ -1,7 +1,7 @@
 @include('layouts.app')
 
 <body>
-    @include('layouts.menu');
+    @include('layouts.menu')
 
     <div class="tab-content mt-5 " id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="employee" role="tabpanel" aria-labelledby="employee-tab">

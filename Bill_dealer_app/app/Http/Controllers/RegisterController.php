@@ -81,7 +81,7 @@ class RegisterController extends Controller
     
             $employee->save();
     
-            return redirect()->route('welcome');
+            return redirect()->route('Login');
         }
     }
 }

@@ -13,6 +13,6 @@ class Company extends Model
     protected $table = 'csettings';
 
     protected $fillable = [
-        'company_name', 'cif', 'nr_reg', 'city', 'county', 'address', 'caen', 'capital', 'tva', 'iban', 'phone', 'email',
+        'company_name', 'cif', 'nr_reg', 'city', 'county', 'address', 'caen', 'capital', 'tva', 'iban', 'phone', 'email', 'bank', 'logo',
     ];   
 }

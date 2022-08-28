@@ -1,25 +1,29 @@
 @include('layouts.app')
 
 <body>
-    @include('layouts.menu');
+    @include('layouts.menu')
 
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
             aria-labelledby="employee-tab">
-            <div class="container edit-background mx-5 mt-2">
+            <div class="container edit-background mx-5">
                 <div class="row">
                     <div class="col-2 pr-0 bg-org">
                     </div>
                     <div class="col-8 px-0">
                         <div class="card text-black">
                             <div class="card-body text-start">
-                                <div class="row edit-background">
-                                    <h6 class="text-muted mt-0"><b>EDIT COMPANY</b></h6>
-                                    <a href="{{ route('company') }}" class="btn add-button"> <i
+                                <div class="row edit-background mx-5">
+                                    <div class="col">
+                                        <a href="{{ route('companies.index') }}" class="btn edit-button"><i
+                                            class="bi bi-pencil"></i><span class="px-1">Edit</span></a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{ route('company') }}" class="btn add-button"> <i
                                             class="bi bi-person-plus"></i> <span class=" px-1">Add
                                         </span></a>
-                                    <a href="{{ route('edit_company_view') }}" class="btn edit-button"><i
-                                            class="bi bi-pencil"></i><span class="px-1">Edit</span></a>
+                                    </div>
+            
                                 </div>
 
                                 <HR />
@@ -96,6 +100,10 @@
                                         </div>
                                         <BR>
 
+                                            <input type="text" name="bank" class="form-control form-control-md"
+                                        value="{{ $company->bank}}"  placeholder="Bank name" />
+                                        </br>
+
                                         <input type="text" name="iban" class="form-control form-control-md"
                                         value="{{ $company->iban}}"  placeholder="IBAN" />
 
@@ -125,6 +133,13 @@
 
                                         </div>
 
+                                        <div class="form-group row mt-2 ms-3">
+                                            <label for="logo" class="col-md-2 col-form-label text-md-right"> LOGO
+                                            </label>
+                                            <div class="col-md-6">
+                                                <input id="logo" type="file" name="logo">
+                                            </div>
+                                        </div>
                                         @csrf
                                         @method('PUT')
 

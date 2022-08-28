@@ -2,7 +2,7 @@
 
 <body>
 
-    @include('layouts.menu');
+    @include('layouts.menu')
 
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
@@ -14,13 +14,17 @@
                     <div class="col-8 px-0">
                         <div class="card text-black">
                             <div class="card-body text-start">
-                                <div class="row edit-background">
-                                    <h6 class="text-muted mt-0"><b>ADD COMPANY</b></h6>
-                                    <a href="{{ route('company') }}" class="btn add-button"> <i
+                                <div class="row edit-background mx-5">
+                                    <div class="col">
+                                        <a href="{{ route('companies.index') }}" class="btn edit-button"><i
+                                            class="bi bi-pencil"></i><span class="px-1">Edit</span></a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{ route('company') }}" class="btn add-button"> <i
                                             class="bi bi-person-plus"></i> <span class=" px-1">Add
                                         </span></a>
-                                    <a href="{{ route('companies.index') }}" class="btn edit-button"><i
-                                            class="bi bi-pencil"></i><span class="px-1">Edit</span></a>
+                                    </div>
+            
                                 </div>
 
                                 <HR />
@@ -78,10 +82,16 @@
                                     </div>
                                     <BR>
 
-                                    <input type="text" name="iban" class="form-control form-control-md"
+                                        <input type="text" name="bank" class="form-control form-control-sm"
+                                        placeholder="Bank name" />
+
+                                    <br>
+
+                                    <input type="text" name="iban" class="form-control form-control-sm"
                                         placeholder="IBAN" />
 
                                     <br>
+
                                     <div class="row">
                                         <div class="col">
 
@@ -96,19 +106,25 @@
 
                                         </div>
                                     </div>
-                                    <div class="row mt-3 ms-1">
-                                        <div class="col-4 px-0">
-                                            <div class="checkbox checkbox-success">
-                                                <input class="form-check-input" name="tva" id="test"
-                                                    type="checkbox" value="test">
-                                                <label class="form-check-label text-muted" for="test">VAT
-                                                    payer?</label>
-                                            </div>
-                                        </div>
+                                    <div class="row mt-3 text-center">
 
+                                        <div class="checkbox checkbox-success">
+                                            <input class="form-check-input" name="tva" id="test"
+                                                type="checkbox" value="test">
+                                            <label class="form-check-label text-muted" for="test">VAT
+                                                payer?</label>
+                                        </div>
 
                                     </div>
 
+
+                                    <div class="form-group row mt-2 ms-3">
+                                        <label for="logo" class="col-md-2 col-form-label text-md-right"> LOGO
+                                        </label>
+                                        <div class="col-md-6">
+                                            <input id="logo" type="file" name="logo">
+                                        </div>
+                                    </div>
                                     <div class="row mt-3">
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary mt-0">Add
