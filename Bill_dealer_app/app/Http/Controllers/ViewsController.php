@@ -37,4 +37,8 @@ class ViewsController extends Controller
     public function contact_edit($id){
         return view('contact.edit', compact('id'));
     }
+
+    public function order(){
+        return view('order.index');
+    }
 }

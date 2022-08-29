@@ -50,28 +50,29 @@ class InvoiceController extends Controller
         ]);
 
         Invoice::create($request->all());
-        $current_user=auth()->user();
-        if($current_user->pdf_template==1)
-        {
-            $show=null;
-        $pdf = Pdf::loadView('Pdf_template.pdf', compact('show'));
+        return redirect()->route('invoices.index');
+        // $current_user=auth()->user();
+        // if($current_user->pdf_template==1)
+        // {
+        //     $show=null;
+        // $pdf = Pdf::loadView('Pdf_template.pdf', compact('show'));
         
-        return $pdf->download('Invoice.pdf');
-        }
-        else  if($current_user->pdf_template==2)
-        {
-        $show=null;
-        $pdf = Pdf::loadView('Pdf_template.pdf2', compact('show'));
+        // return $pdf->download('Invoice.pdf');
+        // }
+        // else  if($current_user->pdf_template==2)
+        // {
+        // $show=null;
+        // $pdf = Pdf::loadView('Pdf_template.pdf2', compact('show'));
         
-        return $pdf->download('Invoice2.pdf');
-        }
-        else
-        {
-            $show=null;
-        $pdf = Pdf::loadView('Pdf_template.pdf3', compact('show'));
+        // return $pdf->download('Invoice2.pdf');
+        // }
+        // else
+        // {
+        //     $show=null;
+        // $pdf = Pdf::loadView('Pdf_template.pdf3', compact('show'));
         
-        return $pdf->download('Invoice3.pdf');
-        }
+        // return $pdf->download('Invoice3.pdf');
+        // }
 
         
     }

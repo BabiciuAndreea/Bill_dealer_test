@@ -16,6 +16,7 @@ use App\Http\Controllers\ViewsController;
 use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\userDashController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\RegisterController;
@@ -111,3 +112,5 @@ Route::get('{id}/contact_edit', [ConatactPersonController::class, 'edit'])->name
 Route::post('{id}/contact_add', [ConatactPersonController::class, 'store'])->name('contact.store');
 
 Route::post('{id}/contact_update', [ConatactPersonController::class, 'update'])->name('contact.update');
+
+Route::get('order', [OrderController::class, 'show'])->name('order');
