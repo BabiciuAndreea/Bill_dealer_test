@@ -70,7 +70,7 @@
                         <div class="card-header border-0">
                             <h3 class="card-title">Products</h3>
                             <div class="card-tools">
-                                <a href="#" class="btn btn-secondary btn-sm">
+                                <a href="{{ route('produs_pdf') }}" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-download"></i>
                                 </a>
                                 <a href="{{ route('excel') }}" target="_blank" class="btn btn-secondary btn-sm" >
@@ -120,6 +120,11 @@
                                 <h3 class="card-title">Sales</h3>
                                 <a href="javascript:void(0);">View Report</a>
                             </div>
+                            <a href="#" class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="btn btn-secondary btn-sm" >
+                                <i class="fa-regular fa-file-excel"></i></a>
                         </div>
                         <div class="card-body">
                             <div class="d-flex">

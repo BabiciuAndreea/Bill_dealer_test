@@ -155,7 +155,6 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
             'Fruitcake\\Cors\\' => 15,
             'FontLib\\' => 8,
             'Faker\\' => 6,
-            'Facade\\IgnitionContracts\\' => 25,
         ),
         'E' => 
         array (
@@ -504,10 +503,6 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         array (
             0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
         ),
-        'Facade\\IgnitionContracts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/facade/ignition-contracts/src',
-        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -614,6 +609,8 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'App\\Http\\Controllers\\AddCompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddCompanyController.php',
         'App\\Http\\Controllers\\BNRController' => __DIR__ . '/../..' . '/app/Http/Controllers/BNRController.php',
         'App\\Http\\Controllers\\ClientController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientController.php',
+        'App\\Http\\Controllers\\CompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/CompanyController.php',
+        'App\\Http\\Controllers\\ConatactPersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConatactPersonController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EditCompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/EditCompanyController.php',
         'App\\Http\\Controllers\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmployeeController.php',
@@ -639,6 +636,7 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
         'App\\Models\\Company' => __DIR__ . '/../..' . '/app/Models/Company.php',
         'App\\Models\\Company_seetings' => __DIR__ . '/../..' . '/app/Models/Company_seetings.php',
+        'App\\Models\\ContactPerson' => __DIR__ . '/../..' . '/app/Models/ContactPerson.php',
         'App\\Models\\Dashboard' => __DIR__ . '/../..' . '/app/Models/Dashboard.php',
         'App\\Models\\Employee' => __DIR__ . '/../..' . '/app/Models/Employee.php',
         'App\\Models\\Invoice' => __DIR__ . '/../..' . '/app/Models/Invoice.php',
@@ -1114,12 +1112,6 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
-        'Facade\\IgnitionContracts\\BaseSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/BaseSolution.php',
-        'Facade\\IgnitionContracts\\HasSolutionsForThrowable' => __DIR__ . '/..' . '/facade/ignition-contracts/src/HasSolutionsForThrowable.php',
-        'Facade\\IgnitionContracts\\ProvidesSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/ProvidesSolution.php',
-        'Facade\\IgnitionContracts\\RunnableSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/RunnableSolution.php',
-        'Facade\\IgnitionContracts\\Solution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/Solution.php',
-        'Facade\\IgnitionContracts\\SolutionProviderRepository' => __DIR__ . '/..' . '/facade/ignition-contracts/src/SolutionProviderRepository.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Inn.php',
@@ -5867,6 +5859,7 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'SebastianBergmann\\Type\\RuntimeException' => __DIR__ . '/..' . '/sebastian/type/src/exception/RuntimeException.php',
         'SebastianBergmann\\Type\\SimpleType' => __DIR__ . '/..' . '/sebastian/type/src/type/SimpleType.php',
         'SebastianBergmann\\Type\\StaticType' => __DIR__ . '/..' . '/sebastian/type/src/type/StaticType.php',
+        'SebastianBergmann\\Type\\TrueType' => __DIR__ . '/..' . '/sebastian/type/src/type/TrueType.php',
         'SebastianBergmann\\Type\\Type' => __DIR__ . '/..' . '/sebastian/type/src/type/Type.php',
         'SebastianBergmann\\Type\\TypeName' => __DIR__ . '/..' . '/sebastian/type/src/TypeName.php',
         'SebastianBergmann\\Type\\UnionType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnionType.php',
@@ -5944,6 +5937,7 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'Spatie\\LaravelIgnition\\ContextProviders\\LaravelContextProviderDetector' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/ContextProviders/LaravelContextProviderDetector.php',
         'Spatie\\LaravelIgnition\\ContextProviders\\LaravelLivewireRequestContextProvider' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/ContextProviders/LaravelLivewireRequestContextProvider.php',
         'Spatie\\LaravelIgnition\\ContextProviders\\LaravelRequestContextProvider' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/ContextProviders/LaravelRequestContextProvider.php',
+        'Spatie\\LaravelIgnition\\Exceptions\\CannotExecuteSolutionForNonLocalEnvironment' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Exceptions/CannotExecuteSolutionForNonLocalEnvironment.php',
         'Spatie\\LaravelIgnition\\Exceptions\\CannotExecuteSolutionForNonLocalIp' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Exceptions/CannotExecuteSolutionForNonLocalIp.php',
         'Spatie\\LaravelIgnition\\Exceptions\\InvalidConfig' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Exceptions/InvalidConfig.php',
         'Spatie\\LaravelIgnition\\Exceptions\\ViewException' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Exceptions/ViewException.php',

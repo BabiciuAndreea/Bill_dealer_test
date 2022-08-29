@@ -6,10 +6,10 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
-
-
 use App\Exports\ProductsExport;
 
+
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 
@@ -104,4 +104,14 @@ class ProductController extends Controller
         return Excel::download(new ProductsExport, 'products.xlsx');
 
     }
+
+    public function createPdf (){
+        $products = Product::all();
+
+        // $show=null;
+        $pdf = PDF::loadview('products.pdf_products', compact('products'));
+        return $pdf->download('products.pdf');
+
+    }
 }
+
