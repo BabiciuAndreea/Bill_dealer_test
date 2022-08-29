@@ -15,4 +15,9 @@ class ContactPerson extends Model
     protected $fillable = [
         'name', 'phone', 'email', 'department'
     ];
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

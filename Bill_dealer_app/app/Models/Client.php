@@ -15,4 +15,9 @@ class Client extends Model
     protected $fillable = [
         'client_name', 'cif', 'nr_reg', 'city', 'county', 'id_comanda', 'address', 'phone', 'email'
     ];
+
+    public function contact()
+    {
+        return $this->hasMany(ContactPerson::class);
+    }
 }
