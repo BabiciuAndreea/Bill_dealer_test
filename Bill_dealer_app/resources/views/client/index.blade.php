@@ -37,6 +37,7 @@
                         <th class="px-4">Address</th>
                         <th class="px-4">Phone</th>
                         <th class="px-4">Email</th>
+                        <th class="px-4">Contact person</th>
                         <th class="px-5">Actions</th>
                     </tr>
                 </thead>
@@ -52,6 +53,13 @@
                             <td>{{ $client->address }}</td>
                             <td>{{ $client->phone }}</td>
                             <td>{{ $client->email }}</td>
+                            <td>
+                                <a href="#addContactModal" data-toggle="modal"> <i
+                                class="bi bi-person-plus mx-2"></i></a>
+
+                                <a href="{{ route('contacts_view') }}"> <i
+                                    class="bi bi-list"></i></a>
+                            </td>
                             <td>
                                 <form action="{{ route('client.destroy', $client->id) }}" method="POST">
                                     <a class="btn-sm edit-buttons"
@@ -165,6 +173,65 @@
                 </div>
             </div>
 
+
+
+            <div id="addContactModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content px-5 py-5">
+                        <form method="POST" action="{{ route('client.store') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row">
+                                <div class="col-11">
+                                    <h6 class="text-start">Add Contact</h6>
+                                </div>
+                                <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">×</button>
+                                </div>
+                            </div>
+                            <p class="text-muted text-start"> Please fill the fields below.</p>
+                            <div class="form-outline">
+                                <input id="name" type="text"
+                                    class="form-control @error('name') is-invalid @enderror" name="name" required
+                                    autocomplete="name" autofocus placeholder="Contact name">
+
+                                @error('client_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <br>
+                            <div class="form-outline">
+                                <input id="phone" type="text"
+                                    class="form-control @error('cif') is-invalid @enderror" name="phone" required
+                                    autocomplete="phone" autofocus placeholder="Phone number">
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <br>
+                            <div class="form-outline">
+                                <input id="email" type="text" class="form-control" name="email" required
+                                    autocomplete="email" placeholder="Email">
+                            </div>
+                            <br>
+
+                            <div class="form-outline">
+                                <input id="department" type="text" class="form-control" name="department" required
+                                    autocomplete="department" placeholder="Department">
+                            </div>
+                            <br>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

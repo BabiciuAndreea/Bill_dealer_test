@@ -25,4 +25,8 @@ class ViewsController extends Controller
     public function login(){
         return view('auth.login');
     }
+
+    public function contacts(){
+        return view('contact.index');
+    }
 }
