@@ -5417,7 +5417,6 @@ return array(
     'Spatie\\LaravelIgnition\\Support\\LaravelDocumentationLinkFinder' => $vendorDir . '/spatie/laravel-ignition/src/Support/LaravelDocumentationLinkFinder.php',
     'Spatie\\LaravelIgnition\\Support\\LaravelVersion' => $vendorDir . '/spatie/laravel-ignition/src/Support/LaravelVersion.php',
     'Spatie\\LaravelIgnition\\Support\\LivewireComponentParser' => $vendorDir . '/spatie/laravel-ignition/src/Support/LivewireComponentParser.php',
-    'Spatie\\LaravelIgnition\\Support\\RunnableSolutionsGuard' => $vendorDir . '/spatie/laravel-ignition/src/Support/RunnableSolutionsGuard.php',
     'Spatie\\LaravelIgnition\\Support\\SentReports' => $vendorDir . '/spatie/laravel-ignition/src/Support/SentReports.php',
     'Spatie\\LaravelIgnition\\Support\\StringComparator' => $vendorDir . '/spatie/laravel-ignition/src/Support/StringComparator.php',
     'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => $vendorDir . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
