@@ -13,9 +13,9 @@ class ConatactPersonController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($idClient)
     {
-        $contactPersons = ContactPerson::paginate(8);
+        $contactPersons = ContactPerson::where("client_id", $idClient)->paginate(8);
 
         return view('contact.index', compact('contactPersons'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -50,7 +50,7 @@ class ConatactPersonController extends Controller
         $contact->client_id=$idClient;    
         $contact->save();
 
-        return redirect()->route('contact.index')
+        return redirect()->route('contact.index', $idClient)
             ->with('success', 'Contact created successfully.');
     }
 
@@ -71,10 +71,12 @@ class ConatactPersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
-        //
+        return view('contact.edit', compact('id'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -83,7 +85,7 @@ class ConatactPersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ContactPerson $contactPersons)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'name' => 'required',
@@ -92,9 +94,11 @@ class ConatactPersonController extends Controller
             'department' => 'required'
         ]);
 
+        $contactPersons = ContactPerson::find($id);
         $contactPersons->update($request->all());
 
-        return redirect()->route('contact.index');
+        return redirect()->route('client.index')
+        ->with('success', 'Contact updated successfully.');;
     }
 
     /**
@@ -103,10 +107,10 @@ class ConatactPersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ContactPerson $contactPersons)
+    public function destroy($id)
     {
-        $contactPersons->delete();
-        return redirect()->route('contact.index')
+        ContactPerson::destroy($id);
+        return redirect()->route('client.index')
             ->with('success', 'Contact deleted successfully');
     }
 }

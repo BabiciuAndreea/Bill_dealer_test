@@ -40,6 +40,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if (count($invoices) > 0)
                     @foreach ($invoices as $invoice)
                         <tr>
                             <td>{{ $invoice->id }}</td>
@@ -63,6 +64,11 @@
                             </td>
                         </tr>
                     @endforeach
+                    @else
+                            <tr>
+                                <td colspan="9" align="center">No Records Found.</td>
+                            </tr>
+                        @endif
                 </tbody>
             </table>
 

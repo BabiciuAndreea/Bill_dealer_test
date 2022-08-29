@@ -7,7 +7,7 @@
                 <div class="row p-0 py-2">
                     <div class="col"> <a href="/dashboard"
                             class="d-flex align-items-center pb-1 mb-md-0 mx-3 px-0 me-md-auto text-white text-decoration-none">
-                            <img src="{{ 'images/Logo_aplicatie_facturi.png' }}"
+                            <img src="{{ '/images/Logo_aplicatie_facturi.png' }}"
                                 class="rounded-circle logo mb-1 shadow1">
                         </a> </div>
                     <div class="col">
@@ -221,7 +221,7 @@
                         <a href="#"
                             class="d-flex px-4 align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ 'storage/' . Auth::user()->avatar }}" alt="hugenerd" width="30"
+                            <img src="{{ '/storage/' . Auth::user()->avatar }}" alt="hugenerd" width="30"
                                 height="30" class="rounded-circle">
                             <span class="tab d-none d-sm-inline mx-1">{{ Auth::user()->first_name }}
                                 {{ Auth::user()->last_name }}</span>

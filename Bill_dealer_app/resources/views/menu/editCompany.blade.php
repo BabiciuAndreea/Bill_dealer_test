@@ -45,6 +45,7 @@
                                         </ul>
                                     </div>
                                 @endif
+                                @if (count($companies) > 0)
                                 @foreach ($companies as $company)
                                 <form action="{{ route('companies.update', $company->id) }}" method="POST">
                                    
@@ -152,6 +153,11 @@
                                    
                                 </form>
                                 @endforeach
+                                @else
+                            <tr>
+                                <td colspan="2" align="center">There is no company to edit. <br> Please add one.</td>
+                            </tr>
+                        @endif
                             </div>
                         </div>
                     </div>

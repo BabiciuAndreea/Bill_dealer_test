@@ -38,6 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if (count($products) > 0)
                     @foreach ($products as $product)
                         <tr>
                             <td>{{ $product->id }}</td>
@@ -59,6 +60,11 @@
                             </td>
                         </tr>
                     @endforeach
+                    @else
+                            <tr>
+                                <td colspan="7" align="center">No Records Found.</td>
+                            </tr>
+                        @endif
                 </tbody>
             </table>
 

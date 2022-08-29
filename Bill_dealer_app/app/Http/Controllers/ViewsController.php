@@ -33,4 +33,8 @@ class ViewsController extends Controller
     public function contact_create($id){
         return view('contact.create', compact('id'));
     }
+
+    public function contact_edit($id){
+        return view('contact.edit', compact('id'));
+    }
 }

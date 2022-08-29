@@ -6,6 +6,8 @@
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel" aria-labelledby="employee-tab">
+            <div class="container px-0 mx-0">
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="pull-left">
@@ -41,6 +43,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if (count($clients) > 0)
                     @foreach ($clients as $client)
                         <tr>
                             <td>{{ $client->id }}</td>
@@ -56,7 +59,7 @@
                                 <a href="{{ route('contact_create', $client->id) }}"> <i
                                         class="bi bi-person-plus mx-2"></i></a>
 
-                                <a href="{{ route('contact.index') }}"> <i class="bi bi-list"></i></a>
+                                <a href="{{ route('contact.index', $client->id) }}"> <i class="bi bi-list"></i></a>
                             </td>
                             <td>
                                 <form action="{{ route('client.destroy', $client->id) }}" method="POST">
@@ -71,6 +74,11 @@
                             </td>
                         </tr>
                     @endforeach
+                    @else
+                            <tr>
+                                <td colspan="11" align="center">No Records Found.</td>
+                            </tr>
+                        @endif
                 </tbody>
             </table>
 
@@ -171,65 +179,7 @@
                 </div>
             </div>
 
-
-
-            {{-- <div id="addContactModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content px-5 py-5">
-                        <form method="POST" action="{{ route('client.store') }}" enctype="multipart/form-data">
-                            @csrf
-                            <div class="row">
-                                <div class="col-11">
-                                    <h6 class="text-start">Add Contact</h6>
-                                </div>
-                                <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">×</button>
-                                </div>
-                            </div>
-                            <p class="text-muted text-start"> Please fill the fields below.</p>
-                            <div class="form-outline">
-                                <input id="name" type="text"
-                                    class="form-control @error('name') is-invalid @enderror" name="name" required
-                                    autocomplete="name" autofocus placeholder="Contact name">
-
-                                @error('client_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <br>
-                            <div class="form-outline">
-                                <input id="phone" type="text"
-                                    class="form-control @error('cif') is-invalid @enderror" name="phone" required
-                                    autocomplete="phone" autofocus placeholder="Phone number">
-
-                                @error('phone')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <br>
-                            <div class="form-outline">
-                                <input id="email" type="text" class="form-control" name="email" required
-                                    autocomplete="email" placeholder="Email">
-                            </div>
-                            <br>
-
-                            <div class="form-outline">
-                                <input id="department" type="text" class="form-control" name="department" required
-                                    autocomplete="department" placeholder="Department">
-                            </div>
-                            <br>
-
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div> --}}
+            </div>
         </div>
     </div>
 

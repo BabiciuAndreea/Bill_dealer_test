@@ -96,7 +96,18 @@ Route::get('produs_pdf',[ProductController::class,'createPdf'])->name('produs_pd
 
 Route::get('{id}/contact_create/', [ViewsController::class, 'contact_create'])->name('contact_create');
 
-Route::resource('contact', ConatactPersonController::class);
+Route::get('contacts', [ViewsController::class, 'contacts'])->name('contacts_view');
+
+Route::get('{id}/contact_create/', [ViewsController::class, 'contact_create'])->name('contact_create');
 
 Route::post('{id}/contact_add', [ConatactPersonController::class, 'store'])->name('contact.store');
 
+Route::get('{id}/contact_view', [ConatactPersonController::class, 'index'])->name('contact.index');
+
+Route::delete('{id}/contact_delete/', [ConatactPersonController::class, 'destroy'])->name('contact.destroy');
+
+Route::get('{id}/contact_edit', [ConatactPersonController::class, 'edit'])->name('contact.edit');
+
+Route::post('{id}/contact_add', [ConatactPersonController::class, 'store'])->name('contact.store');
+
+Route::post('{id}/contact_update', [ConatactPersonController::class, 'update'])->name('contact.update');
