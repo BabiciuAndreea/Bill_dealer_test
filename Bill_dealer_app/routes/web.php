@@ -8,6 +8,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ConatactPersonController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Settings;
@@ -89,3 +90,9 @@ Route::post('downloadPDF',[Settings::class,'downloadPDF'])->name('downloadPDF');
 Route::post('pdf_down',[PdfController::class,'downloadPDF'])->name('pdf_down');
 
 Route::get('contacts', [ViewsController::class, 'contacts'])->name('contacts_view');
+
+Route::get('{id}/contact_create/', [ViewsController::class, 'contact_create'])->name('contact_create');
+
+Route::resource('contact', ConatactPersonController::class);
+
+Route::post('{id}/contact_add', [ConatactPersonController::class, 'store'])->name('contact.store');

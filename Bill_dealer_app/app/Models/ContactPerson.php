@@ -13,6 +13,6 @@ class ContactPerson extends Model
 
 
     protected $fillable = [
-        'client_id', 'name', 'phone', 'email', 'department'
+        'name', 'phone', 'email', 'department'
     ];
 }

@@ -54,7 +54,7 @@
                             <td>{{ $client->phone }}</td>
                             <td>{{ $client->email }}</td>
                             <td>
-                                <a href="#addContactModal" data-toggle="modal"> <i
+                                <a href="{{ route('contact_create', $client->id) }}"> <i
                                 class="bi bi-person-plus mx-2"></i></a>
 
                                 <a href="{{ route('contacts_view') }}"> <i
@@ -175,7 +175,7 @@
 
 
 
-            <div id="addContactModal" class="modal fade">
+            {{-- <div id="addContactModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
                         <form method="POST" action="{{ route('client.store') }}" enctype="multipart/form-data">
@@ -231,7 +231,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
