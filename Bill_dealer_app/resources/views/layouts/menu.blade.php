@@ -24,7 +24,7 @@
                         </a>
                     </li>
 
-                    <li class="">
+                    {{-- <li class="">
                         <div class="dropdown dropend">
                             <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
                                 data-bs-toggle="dropdown">
@@ -58,9 +58,9 @@
                                     </div>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <div class="dropdown dropend">
                             <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
                                 data-bs-toggle="dropdown">
@@ -115,9 +115,9 @@
                                     </div>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <div class="dropdown dropend">
                             <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
                                 data-bs-toggle="dropdown">
@@ -146,9 +146,9 @@
                                     </div>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <div class="dropdown dropend">
                             <button type="button" class="tab btn-lg px-4 nav-item dropdown-toggle"
                                 data-bs-toggle="dropdown">
@@ -174,20 +174,20 @@
                                     </div>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}"
-                            role="tab">
-                            <i class="bi bi-box"></i> Products
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
                             aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}"
                             role="tab">
                             <i class="bi bi-envelope-paper"></i> Invoices
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
+                            aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}"
+                            role="tab">
+                            <i class="bi bi-box"></i> Products
                         </a>
                     </li>
                     <li class="nav-item">

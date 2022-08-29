@@ -8,17 +8,18 @@
             aria-labelledby="employee-tab">
             <div class="container edit-background mx-5">
                 <div class="row">
-                    <div class="col-2 pr-0 bg-org">
-                    </div>
-                    <div class="col-8 px-0">
+                    <div class="col-12 px-0">
                         <div class="card text-black">
                             <div class="card-body text-start">
-                                <div class="row edit-background mx-5">
+                                <div class="row edit-background ">
                                     <div class="col">
+                                        <h6 class="text-sm"> COMPANY INFORMATION </h6>
+                                    </div>
+                                    <div class="col text-end">
                                         <a href="{{ route('companies.index') }}" class="btn edit-button"><i
                                             class="bi bi-pencil"></i><span class="px-1">Edit</span></a>
                                     </div>
-                                    <div class="col">
+                                    <div class="col text-start">
                                         <a href="{{ route('company') }}" class="btn add-button"> <i
                                             class="bi bi-person-plus"></i> <span class=" px-1">Add
                                         </span></a>
@@ -82,7 +83,7 @@
                                         </div>
                                         <div class="form-outline">
                                             <input type="county" name="address"
-                                                    class="form-control form-control-lg text-sm" value="{{ $company->address}}" placeholder="Street address" />
+                                                    class="form-control form-control-md text-sm" value="{{ $company->address}}" placeholder="Street address" />
                                         </div>
                                         <br>
                                         <div class="row">
@@ -113,13 +114,13 @@
                                             <div class="col">
 
                                                 <input type="text" name="phone" value="{{ $company->phone}}"
-                                                    class="form-control form-control-md" placeholder="Phone" />
+                                                    class="form-control form-control-sm" placeholder="Phone" />
 
                                             </div>
                                             <div class="col">
 
                                                 <input type="email" name="email" value="{{ $company->email}}"
-                                                    class="form-control form-control-md" placeholder="Email" />
+                                                    class="form-control form-control-sm" placeholder="Email" />
 
                                             </div>
                                         </div>
@@ -161,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2 px-0 bg-blue"></div>
+                   
                 </div>
             </div>
         </div>
