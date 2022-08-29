@@ -75,7 +75,7 @@ Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard'
 
 Route::get('user_dashboard', [userDashController::class, 'index'])->name('userdash');
 
-
+Route::get('Login', [ViewsController::class, 'login'])->name('Login');
 
 Route::get('excel',[ProductController::class,'exportExcel'])->name('excel');
 
