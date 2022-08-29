@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('settings_id');
-            $table->string('pdf_template');
+            $table->string('settings_id')->nullable();
         });
     }
 
