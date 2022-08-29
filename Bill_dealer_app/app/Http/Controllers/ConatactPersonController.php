@@ -37,7 +37,7 @@ class ConatactPersonController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $idClient)
     {
         $request->validate([
             'name' => 'required',
@@ -46,7 +46,9 @@ class ConatactPersonController extends Controller
             'department' => 'required'
         ]);
 
-        ContactPerson::create($request->all());
+        $contact = ContactPerson::create($request->all());
+        $contact->client_id=$idClient;    
+        $contact->save();
 
         return redirect()->route('contact.index')
             ->with('success', 'Contact created successfully.');

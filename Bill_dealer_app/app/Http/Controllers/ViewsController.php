@@ -29,4 +29,8 @@ class ViewsController extends Controller
     public function contacts(){
         return view('contact.index');
     }
+
+    public function contact_create($id){
+        return view('contact.create', compact('id'));
+    }
 }

@@ -5,8 +5,7 @@
     @include('layouts.menu')
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
-        <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel"
-            aria-labelledby="employee-tab">
+        <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel" aria-labelledby="employee-tab">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="pull-left">
@@ -54,11 +53,10 @@
                             <td>{{ $client->phone }}</td>
                             <td>{{ $client->email }}</td>
                             <td>
-                                <a href="#addContactModal" data-toggle="modal"> <i
-                                class="bi bi-person-plus mx-2"></i></a>
+                                <a href="{{ route('contact_create', $client->id) }}"> <i
+                                        class="bi bi-person-plus mx-2"></i></a>
 
-                                <a href="{{ route('contacts_view') }}"> <i
-                                    class="bi bi-list"></i></a>
+                                <a href="{{ route('contact.index') }}"> <i class="bi bi-list"></i></a>
                             </td>
                             <td>
                                 <form action="{{ route('client.destroy', $client->id) }}" method="POST">
@@ -175,7 +173,7 @@
 
 
 
-            <div id="addContactModal" class="modal fade">
+            {{-- <div id="addContactModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
                         <form method="POST" action="{{ route('client.store') }}" enctype="multipart/form-data">
@@ -231,7 +229,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
