@@ -88,4 +88,4 @@ Route::post('pdf_down',[PdfController::class,'downloadPDF'])->name('pdf_down');
 Route::post('downloadPDF',[Settings::class,'downloadPDF'])->name('downloadPDF');
 Route::post('pdf_down',[PdfController::class,'downloadPDF'])->name('pdf_down');
 
-
+Route::get('contacts', [ViewsController::class, 'contacts'])->name('contacts_view');
