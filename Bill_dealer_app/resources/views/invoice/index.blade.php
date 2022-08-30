@@ -51,7 +51,9 @@
                             <td>{{ $invoice->id_client }}</td>
                             <td> 
                                 <a href="{{ route('order') }}"> <i
-                                    class="bi bi-person-plus mx-2"></i></a>
+                                    class="bi bi-clipboard-plus mx-2"></i></a>
+                                    {{-- clipboard-plus
+                                    card-checklist --}}
                             </td>
                             <td><select class="form-select-sm ms-3 py-0" aria-label="status">
                                 <option value="draft">Draft</option>
