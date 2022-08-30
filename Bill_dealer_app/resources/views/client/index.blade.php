@@ -59,7 +59,7 @@
                                 <a href="{{ route('contact_create', $client->id) }}"> <i
                                         class="bi bi-person-plus mx-2"></i></a>
 
-                                <a href="{{ route('contact.index', $client->id) }}"> <i class="bi bi-list"></i></a>
+                                <a href="{{ route('contact.index', $client->id) }}"> <i class="bi bi-person-lines-fill"></i></a>
                             </td>
                             <td>
                                 <form action="{{ route('client.destroy', $client->id) }}" method="POST">

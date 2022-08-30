@@ -49,8 +49,17 @@
                             <td>{{ $invoice->serie_factura }}</td>
                             <td>{{ $invoice->nr_factura }}</td>
                             <td>{{ $invoice->id_client }}</td>
-                            <td>{{ $invoice->id_comanda }}</td>
-                            <td>{{ $invoice->status }}</td>
+                            <td> 
+                                <a href="{{ route('order') }}"> <i
+                                    class="bi bi-person-plus mx-2"></i></a>
+                            </td>
+                            <td><select class="form-select-sm ms-3 py-0" aria-label="status">
+                                <option value="draft">Draft</option>
+                                <option value="issued">Issued</option>
+                                <option value="canceled">Canceled</option>
+                                <option value="paid">Paid</option>
+                                <option value="unpaid">Unpaid</option>
+                            </select></td>
                             <td>
                                 <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
                                     <a class="btn-sm edit-buttons"
@@ -147,17 +156,16 @@
                                     autocomplete="id_client" placeholder="Client">
                             </div>
                             <br>
-                            <div class="form-outline">
+                            {{-- <div class="form-outline">
                                 <input id="id_comanda" type="text" class="form-control" name="id_comanda" required
                                     autocomplete="id_comanda" placeholder="Order">
                             </div>
-                            <br>
-                            <div class="form-outline">
+                            <br> --}}
+                            {{-- <div class="form-outline">
                                 <input id="status" type="text" class="form-control" name="status" required
                                     autocomplete="status" placeholder="Status">
-                            </div>
+                            </div> --}}
                             
-
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add</button>
                                 

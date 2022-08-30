@@ -26,7 +26,7 @@
 
     <div class="content">
         <div class="container-fluid">
-            <div class="row mx-2  mt-5 w-100">
+            <div class="row mx-2 mt-1 w-100">
                 <div class="col-xl-6">
                     <div class="card">
                         <div class="card-header border-0">
