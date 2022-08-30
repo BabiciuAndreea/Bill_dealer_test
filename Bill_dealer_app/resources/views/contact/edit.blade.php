@@ -7,10 +7,11 @@
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
 
     <br>
-            <a href="{{ route('client.index') }}" class="btn btn-secondary btn-sm">
-            <i class="fa-solid fa-arrow-left-long"></i>
-            </a>
-        </div>
+    <div class="pull-left">
+        <a href="{{ route('invoice.index') }}" class="btn btn-secondary btn-sm mx-5">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        </a>
+    </div>
 
         <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel" aria-labelledby="employee-tab">
             <div class="container mx-5 mt-5 w-100">

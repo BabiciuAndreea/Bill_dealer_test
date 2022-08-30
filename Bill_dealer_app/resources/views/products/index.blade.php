@@ -5,10 +5,7 @@
     @include('layouts.menu')
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
-
-        <div class="tab-pane fade show active px-5 py-0 my-0 bigger" id="company" role="tabpanel" aria-labelledby="employee-tab">
-
-        <div class="tab-pane fade show active px-4 py-0 my-0 mx-0 bigger" id="company" role="tabpanel"
+        <div class="tab-pane fade show active px-4 py-0 my-0 mx-4 bigger" id="company" role="tabpanel"
             aria-labelledby="employee-tab">
 
             <div class="row">
@@ -31,12 +28,12 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Unit</th>
-                        <th>Quantity</th>
-                        <th>Type</th>
+                        <th class="px-2">ID</th>
+                        <th class="px-1">Name</th>
+                        <th class="px-1">Price</th>
+                        <th class="px-1">Unit</th>
+                        <th class="px-1">Quantity</th>
+                        <th class="px-1">Type</th>
                         <th class="px-5">Actions</th>
                     </tr>
                 </thead>
@@ -69,12 +66,6 @@
                         <td colspan="7" align="center">No Records Found.</td>
                     </tr>
                     @endif
-
-                            <tr>
-                                <td colspan="7" align="center">No Records Found.</td>
-                            </tr>
-                        @endif
-
                 </tbody>
             </table>
 

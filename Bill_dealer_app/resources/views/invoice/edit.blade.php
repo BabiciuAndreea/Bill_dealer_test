@@ -69,26 +69,6 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
 
-                        <div class="form-group">
-                            <strong class="px-2">Client:</strong>
-                            <input type="text" name="id_client" value="{{ $invoice->id_client }}"
-                                class="form-control text-muted">
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
-                            <div class="form-group">
-                                <strong class="px-2">Order:</strong>
-                                <input type="text" name="id_comanda" value="{{ $invoice->id_comanda }}"
-                                    class="form-control text-muted">
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
-                            <div class="form-group">
-                                <strong class="px-2">Status:</strong>
-                                <input type="text" name="status" value="{{ $invoice->status }}"
-                                    class="form-control text-muted">
-                            </div>
-                        </div>
-
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-5">
                             <button type="submit" class="btn btn-success">Update</button>
                         </div>
