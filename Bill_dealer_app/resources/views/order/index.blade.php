@@ -65,7 +65,11 @@
                                 </div>
                             </td>
                             <td>
+
+                                <select class="form-select ms-3 py-0" aria-label="Default select example">
+
                                 <select class="form-select ms-3 py-0" aria-label="tva">
+
                                     <option value="19">19%</option>
                                     <option value="9">9%</option>
                                     <option value="5">5%</option>
@@ -95,7 +99,9 @@
     <script>
         function getSelectValue() {
             var selectedValue = document.getElementById("list").value;
-        
+
+            console.log(selectedValue);
+
         }
     </script>
 </body>

@@ -4,7 +4,19 @@
 
     @include('layouts.menu')
 
+
+    <div class="tab-content mx-5">
+        <br>
+            <a href="{{ route('client.index') }}" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            </a>
+        </div>
+
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
+
+
+    <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
+
         <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel" aria-labelledby="employee-tab">
             <div class="container mt-5 mx-5">
                 @if ($message = Session::get('success'))

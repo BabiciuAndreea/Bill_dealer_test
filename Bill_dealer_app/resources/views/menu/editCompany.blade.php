@@ -24,7 +24,7 @@
                                             class="bi bi-person-plus"></i> <span class=" px-1">Add
                                         </span></a>
                                     </div>
-            
+
                                 </div>
 
                                 <HR />
@@ -49,7 +49,7 @@
                                 @if (count($companies) > 0)
                                 @foreach ($companies as $company)
                                 <form action="{{ route('companies.update', $company->id) }}" method="POST">
-                                   
+
                                         <input type="text" name="company_name" class="form-control form-control-md"
                                             placeholder="Company name" value="{{ $company->company_name }}" />
                                         <br>
@@ -89,7 +89,7 @@
                                         <div class="row">
                                             <div class="col">
 
-                                                <input type="text" name="caen" value="{{ $company->caen}}" 
+                                                <input type="text" name="caen" value="{{ $company->caen}}"
                                                     class="form-control form-control-md" placeholder="Caen" />
 
                                             </div>
@@ -151,7 +151,7 @@
                                                     company</button>
                                             </div>
                                         </div>
-                                   
+
                                 </form>
                                 @endforeach
                                 @else
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>

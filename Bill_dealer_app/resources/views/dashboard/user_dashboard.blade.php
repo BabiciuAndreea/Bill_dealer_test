@@ -63,8 +63,8 @@
                         <div class="card-header border-0">
                             <h3 class="card-title">Products</h3>
                             <div class="card-tools">
-                                <a href="#" class="btn btn-secondary btn-sm">
-                                    <i class="fas fa-download"></i>
+                                <a href="{{ route('produs_pdf') }}" class="btn btn-secondary btn-sm">
+                                 <i class="fas fa-download"></i>
                                 </a>
                                 <a href="{{ route('excel') }}" target="_blank" class="btn btn-secondary btn-sm" >
                                 <i class="fa-regular fa-file-excel"></i>
@@ -149,7 +149,6 @@
                     <div class="card">
                         <div class="card-header border-0">
                             <h3 class="card-title">BNR COURSE</h3>
-                            
                             <div class="card-body">
                                 <table class="table">
                                     @foreach($curs->rates as $rate)
@@ -163,7 +162,6 @@
                                 </table>
                             </div>
                         </div>
-                        
 
                     </div>
                 </div>

@@ -615,6 +615,9 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'App\\Http\\Controllers\\EditCompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/EditCompanyController.php',
         'App\\Http\\Controllers\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmployeeController.php',
         'App\\Http\\Controllers\\InvoiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/InvoiceController.php',
+
+        'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
+
         'App\\Http\\Controllers\\PdfController' => __DIR__ . '/../..' . '/app/Http/Controllers/PdfController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
@@ -633,6 +636,9 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Mail\\UpdateMail' => __DIR__ . '/../..' . '/app/Mail/UpdateMail.php',
+
+        'App\\Models\\Bnrcourse' => __DIR__ . '/../..' . '/app/Models/Bnrcourse.php',
+
         'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
         'App\\Models\\Company' => __DIR__ . '/../..' . '/app/Models/Company.php',
         'App\\Models\\Company_seetings' => __DIR__ . '/../..' . '/app/Models/Company_seetings.php',
@@ -2107,6 +2113,7 @@ class ComposerStaticInitf2f10940161a3c75e9e4fcb20a1f345f
         'Illuminate\\Broadcasting\\PendingBroadcast' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/PendingBroadcast.php',
         'Illuminate\\Broadcasting\\PresenceChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/PresenceChannel.php',
         'Illuminate\\Broadcasting\\PrivateChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/PrivateChannel.php',
+        'Illuminate\\Broadcasting\\UniqueBroadcastEvent' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Broadcasting/UniqueBroadcastEvent.php',
         'Illuminate\\Bus\\Batch' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Bus/Batch.php',
         'Illuminate\\Bus\\BatchFactory' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Bus/BatchFactory.php',
         'Illuminate\\Bus\\BatchRepository' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Bus/BatchRepository.php',

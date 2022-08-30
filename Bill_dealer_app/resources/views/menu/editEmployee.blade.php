@@ -4,7 +4,14 @@
 
     @include('layouts.menu')
 
+
     <div class="tab-content mt-5 mx-5 " id="v-pills-tabContent">
+    <br>
+        <div class="pull-left">
+            <a href="{{ route('addEmployee') }}" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            </a>
+        </div>
         <div class="tab-pane fade mx-5 show active" id="employee" role="tabpanel" aria-labelledby="employee-tab">
             <div class="container mx-5">
                 <form action="{{ route('employees.update',$employee->id) }}" method="POST">
@@ -49,7 +56,7 @@
                         <div class="col-md-6 mb-4">
                             <div class="form-outline">
                                 <input id="password-confirm" type="password" class="form-control"
-                                    name="password_confirmation" 
+                                    name="password_confirmation"
                                     placeholder="Cofirm Password">
                             </div>
                         </div>
