@@ -14,6 +14,7 @@ All notable changes of the PHPUnit 9.5 release series are documented in this fil
 * [#4913](https://github.com/sebastianbergmann/phpunit/issues/4913): Failed `assert()` should show a backtrace
 * [#5012](https://github.com/sebastianbergmann/phpunit/pull/5012): Memory leak in `ExceptionWrapper`
 
+
 ## [9.5.23] - 2022-08-22
 
 ### Changed
@@ -190,7 +191,9 @@ All notable changes of the PHPUnit 9.5 release series are documented in this fil
 
 * [#4535](https://github.com/sebastianbergmann/phpunit/issues/4535): `getMockFromWsdl()` does not handle methods that do not have parameters correctly
 
+
 [9.5.24]: https://github.com/sebastianbergmann/phpunit/compare/9.5.23...9.5.24
+
 [9.5.23]: https://github.com/sebastianbergmann/phpunit/compare/9.5.22...9.5.23
 [9.5.22]: https://github.com/sebastianbergmann/phpunit/compare/9.5.21...9.5.22
 [9.5.21]: https://github.com/sebastianbergmann/phpunit/compare/9.5.20...9.5.21

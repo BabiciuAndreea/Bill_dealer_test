@@ -5,13 +5,13 @@
     @include('layouts.menu')
 
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
+
     <br>
         <div class="pull-left">
             <a href="{{ route('invoice.index') }}" class="btn btn-secondary btn-sm">
             <i class="fa-solid fa-arrow-left-long"></i>
             </a>
         </div>
-
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="row mt-2">
@@ -68,6 +68,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+
                         <div class="form-group">
                             <strong class="px-2">Client:</strong>
                             <input type="text" name="id_client" value="{{ $invoice->id_client }}"
@@ -87,6 +88,7 @@
                                     class="form-control text-muted">
                             </div>
                         </div>
+
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-5">
                             <button type="submit" class="btn btn-success">Update</button>
                         </div>

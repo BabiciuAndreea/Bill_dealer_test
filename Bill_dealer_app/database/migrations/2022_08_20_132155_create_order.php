@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id();
-            $table->integer('tva_total');
-            $table->float('valoare_total');
-            $table->float('curs_valutar');
+            $table->integer('invoice_id');
+            $table->integer('product_id');
+            $table->float('quantity');
+            $table->integer('tva');
         });
     }
 

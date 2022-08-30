@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('data_scadenta');
             $table->string('serie_factura');
             $table->integer('nr_factura');
-            $table->string('status')->default('neplatita');
+            $table->string('status')->default('Unpaid');
         });
     }
 

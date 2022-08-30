@@ -5,7 +5,6 @@
     @include('layouts.menu')
 
 
-
     <div class="tab-content mt-5 mx-5 " id="v-pills-tabContent">
     <br>
         <div class="pull-left">

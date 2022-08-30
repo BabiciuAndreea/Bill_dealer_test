@@ -44,9 +44,9 @@ class InvoiceController extends Controller
             'data_scadenta' => 'required',
             'serie_factura' => 'required',
             'nr_factura' => 'required',
-            'id_client' => 'required',
-            'id_comanda' => 'required',
-            'status' => 'required'
+            // 'id_client' => 'required',
+            // 'id_comanda' => 'required',
+            // 'status' => 'required'
         ]);
 
         Invoice::create($request->all());
@@ -113,9 +113,7 @@ class InvoiceController extends Controller
             'data_scadenta' => 'required',
             'serie_factura' => 'required',
             'nr_factura' => 'required',
-            'id_client' => 'required',
-            'id_comanda' => 'required',
-            'status' => 'required'
+        
         ]);
 
         $invoice->update($request->all());

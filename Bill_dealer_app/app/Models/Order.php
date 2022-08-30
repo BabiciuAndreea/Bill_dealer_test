@@ -12,6 +12,6 @@ class Order extends Model
     protected $table = 'order';
 
     protected $fillable = [
-        'tva_total', 'valoare_total', 'curs_valutar'
+        'id', 'invoice_id', 'product_id', 'quantity', 'tva'
     ];
 }

@@ -5,14 +5,24 @@
     @include('layouts.menu')
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
+
         <div class="tab-pane fade show active px-5 py-0 my-0" id="invoice" role="tabpanel" aria-labelledby="employee-tab">
+
+        <div class="tab-pane fade show active px-5 py-0 my-0" id="invoice" role="tabpanel"
+            aria-labelledby="employee-tab">
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="pull-left">
                         <h3>Invoices</h3>
                     </div>
                     <div class="pull-right">
+
                         <a href="#addProductModal" class="btn add-button my-3" data-toggle="modal"> <i class="bi bi-person-plus"></i> <span class="py-1 px-1">Add invoice</span></a>
+
+                        <a href="#addProductModal" class="btn add-button my-3" data-toggle="modal"> <i
+                                class="bi bi-person-plus"></i> <span class="py-1 px-1">Add invoice</span></a>
+
                     </div>
                 </div>
             </div>
@@ -40,6 +50,7 @@
                 <tbody>
                     @if (count($invoices) > 0)
                     @foreach ($invoices as $invoice)
+
                     <tr>
                         <td>{{ $invoice->id }}</td>
                         <td>{{ $invoice->data_emitere }}</td>
@@ -67,12 +78,52 @@
                         <td colspan="9" align="center">No Records Found.</td>
                     </tr>
                     @endif
+
+                        <tr>
+                            <td>{{ $invoice->id }}</td>
+                            <td>{{ $invoice->data_emitere }}</td>
+                            <td>{{ $invoice->data_scadenta }}</td>
+                            <td>{{ $invoice->serie_factura }}</td>
+                            <td>{{ $invoice->nr_factura }}</td>
+                            <td>{{ $invoice->id_client }}</td>
+                            <td> 
+                                <a href="{{ route('order') }}"> <i
+                                    class="bi bi-clipboard-plus mx-2"></i></a>
+                                    {{-- clipboard-plus
+                                    card-checklist --}}
+                            </td>
+                            <td><select class="form-select-sm ms-3 py-0" aria-label="status">
+                                <option value="draft">Draft</option>
+                                <option value="issued">Issued</option>
+                                <option value="canceled">Canceled</option>
+                                <option value="paid">Paid</option>
+                                <option value="unpaid">Unpaid</option>
+                            </select></td>
+                            <td>
+                                <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
+                                    <a class="btn-sm edit-buttons"
+                                        href="{{ route('invoices.edit', $invoice->id) }}">Edit</a>
+
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                    @else
+                            <tr>
+                                <td colspan="9" align="center">No Records Found.</td>
+                            </tr>
+                        @endif
+
                 </tbody>
             </table>
 
             {!! $invoices->links('vendor.pagination.custom') !!}
 
-            <div id="addProductModal" class="modal fade">
+           <div id="addProductModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
                         <form method="POST" action="{{ route('invoices.store') }}" enctype="multipart/form-data">
@@ -112,9 +163,34 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
+
                                 @enderror
                             </div>
                             <br>
+
+
+                            <div class="form-outline">
+                                <input id="nr_factura" type="text" class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura" required autocomplete="nr_factura" placeholder="Invoice number">
+
+                                @error('paquantityssword')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+
+                                @enderror
+                            </div>
+
+                            <br>
+
+                            {{-- <div class="form-outline">
+                                <input id="id_client" type="text" class="form-control" name="id_client" required autocomplete="id_client" placeholder="Client">
+                            </div>
+                            <br>
+                            <div class="form-outline">
+                                <input id="id_comanda" type="text" class="form-control" name="id_comanda" required autocomplete="id_comanda" placeholder="Order">
+                            </div>
+                            <br>
+
 
 
                             <div class="form-outline">
@@ -140,6 +216,10 @@
                             <div class="form-outline">
                                 <input id="status" type="text" class="form-control" name="status" required autocomplete="status" placeholder="Status">
                             </div>
+
+                            <div class="form-outline">
+                                <input id="status" type="text" class="form-control" name="status" required autocomplete="status" placeholder="Status">
+                            </div> --}}
 
 
                             <div class="text-center">
