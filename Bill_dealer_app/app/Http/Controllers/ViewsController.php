@@ -21,4 +21,24 @@ class ViewsController extends Controller
     public function register(){
         return view('auth.register');
     }
+
+    public function login(){
+        return view('auth.login');
+    }
+
+    public function contacts(){
+        return view('contact.index');
+    }
+
+    public function contact_create($id){
+        return view('contact.create', compact('id'));
+    }
+
+    public function contact_edit($id){
+        return view('contact.edit', compact('id'));
+    }
+
+    public function order(){
+        return view('order.index');
+    }
 }

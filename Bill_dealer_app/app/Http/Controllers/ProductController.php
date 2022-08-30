@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ProductsExport;
+
+
+use Barryvdh\DomPDF\Facade\Pdf;
+
+
 
 class ProductController extends Controller
 {
@@ -15,7 +22,7 @@ class ProductController extends Controller
     {
         $products = Product::latest()->paginate(8);
 
-        return view('products.index',compact('products'))
+        return view('products.index', compact('products'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -43,7 +50,7 @@ class ProductController extends Controller
         Product::create($request->all());
 
         return redirect()->route('products.index')
-            ->with('success','Product created successfully.');
+            ->with('success', 'Product created successfully.');
     }
 
     /**
@@ -51,7 +58,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show',compact('product'));
+        return view('products.show', compact('product'));
     }
 
     /**
@@ -59,7 +66,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit',compact('product'));
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -88,6 +95,23 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()->route('products.index')
-            ->with('success','Product deleted successfully');
+            ->with('success', 'Product deleted successfully');
+    }
+
+
+    public function exportExcel(){
+        //$products = Product::select('name', 'price', 'unit', 'quantity', 'type' )->get()->toArray();
+        return Excel::download(new ProductsExport, 'products.xlsx');
+
+    }
+
+    public function createPdf (){
+        $products = Product::all();
+
+        // $show=null;
+        $pdf = PDF::loadview('products.pdf_products', compact('products'));
+        return $pdf->download('products.pdf');
+
     }
 }
+

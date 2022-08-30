@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('invoice', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('data_emitere');
-            $table->timestamp('data_scadenta');
+            $table->date('data_emitere');
+            $table->date('data_scadenta');
             $table->string('serie_factura');
             $table->integer('nr_factura');
             $table->string('status')->default('neplatita');

@@ -212,3 +212,12 @@ h6{
     background-color: #2d3e4e;
     color: #E8ECEB;
 }
+
+.smaller{
+    width: 50%;
+}
+
+.products-select{
+    background-color: #2d3e4e;
+    color: white;
+}

@@ -2,9 +2,16 @@
 
 <body>
 
-    @include('layouts.menu');
+    @include('layouts.menu')
 
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
+    <br>
+        <div class="pull-left">
+            <a href="{{ route('products.index') }}" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            </a>
+        </div>
+
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="row mt-5">
