@@ -13,6 +13,6 @@ class Invoice extends Model
 
 
     protected $fillable = [
-        'data_emitere', 'data_scadenta', 'serie_factura', 'nr_factura', 'id_client', 'id_comanda', 'status'
+        'data_emitere', 'data_scadenta', 'serie_factura', 'nr_factura'
     ];
 }

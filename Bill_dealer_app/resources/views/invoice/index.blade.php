@@ -85,7 +85,7 @@
 
             {!! $invoices->links('vendor.pagination.custom') !!}
 
-            <div id="addProductModal" class="modal fade">
+           <div id="addProductModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content px-5 py-5">
                         <form method="POST" action="{{ route('invoices.store') }}" enctype="multipart/form-data">
@@ -94,83 +94,70 @@
                                 <div class="col-11">
                                     <h6 class="text-start">Add Invoice</h6>
                                 </div>
-                                <div class="col-1"> <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">×</button>
+                                <div class="col-1"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 </div>
                             </div>
                             <p class="text-muted text-start"> Please fill the fields below.</p>
                             <div class="form-outline">
-                                <input id="name" type="text"
-                                    class="form-control @error('name') is-invalid @enderror" name="data_emitere"
-                                    required autocomplete="data_emitere" autofocus placeholder="Issue date">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="data_emitere" required autocomplete="data_emitere" autofocus placeholder="Issue date">
 
                                 @error('data_emitere')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <br>
                             <div class="form-outline">
-                                <input id="data_scadenta" type="text"
-                                    class="form-control @error('data_scadenta') is-invalid @enderror"
-                                    name="data_scadenta" required autocomplete="data_scadenta" autofocus
-                                    placeholder="Due date">
+                                <input id="data_scadenta" type="text" class="form-control @error('data_scadenta') is-invalid @enderror" name="data_scadenta" required autocomplete="data_scadenta" autofocus placeholder="Due date">
 
                                 @error('data_scadenta')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <br>
                             <div class="form-outline">
-                                <input id="serie_factura" type="text"
-                                    class="form-control @error('serie_factura') is-invalid @enderror"
-                                    name="serie_factura" required autocomplete="serie_factura"
-                                    placeholder="Invoice serie">
+                                <input id="serie_factura" type="text" class="form-control @error('serie_factura') is-invalid @enderror" name="serie_factura" required autocomplete="serie_factura" placeholder="Invoice serie">
 
                                 @error('serie_factura')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <br>
 
 
                             <div class="form-outline">
-                                <input id="nr_factura" type="text"
-                                    class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura"
-                                    required autocomplete="nr_factura" placeholder="Invoice number">
+                                <input id="nr_factura" type="text" class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura" required autocomplete="nr_factura" placeholder="Invoice number">
 
                                 @error('paquantityssword')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
                             <br>
 
-                            <div class="form-outline">
-                                <input id="id_client" type="text" class="form-control" name="id_client" required
-                                    autocomplete="id_client" placeholder="Client">
+                            {{-- <div class="form-outline">
+                                <input id="id_client" type="text" class="form-control" name="id_client" required autocomplete="id_client" placeholder="Client">
                             </div>
                             <br>
-                            {{-- <div class="form-outline">
-                                <input id="id_comanda" type="text" class="form-control" name="id_comanda" required
-                                    autocomplete="id_comanda" placeholder="Order">
+                            <div class="form-outline">
+                                <input id="id_comanda" type="text" class="form-control" name="id_comanda" required autocomplete="id_comanda" placeholder="Order">
                             </div>
-                            <br> --}}
-                            {{-- <div class="form-outline">
-                                <input id="status" type="text" class="form-control" name="status" required
-                                    autocomplete="status" placeholder="Status">
+                            <br>
+                            <div class="form-outline">
+                                <input id="status" type="text" class="form-control" name="status" required autocomplete="status" placeholder="Status">
                             </div> --}}
-                            
+
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary mt-3" name="sign_in">Add</button>
-                                
+
                             </div>
                         </form>
                     </div>
