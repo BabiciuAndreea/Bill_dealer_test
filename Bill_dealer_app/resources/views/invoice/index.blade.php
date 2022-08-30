@@ -38,7 +38,7 @@
                             <th class="px-4">Due date</th>
                             <th class="px-4">Invoice serie</th>
                             <th class="px-4">Invoice number</th>
-                            <th class="px-4">Client</th>
+                            <th class="px-5 mx-3">Client</th>
                             <th class="px-4">Order</th>
                             <th class="px-4">Status</th>
                             <th class="px-5">Actions</th>
@@ -53,10 +53,23 @@
                                     <td>{{ $invoice->data_scadenta }}</td>
                                     <td>{{ $invoice->serie_factura }}</td>
                                     <td>{{ $invoice->nr_factura }}</td>
-                                    <td>{{ $invoice->id_client }}</td>
                                     <td>
-                                        <a href="{{ route('order') }}"> <i
-                                            class="bi bi-clipboard-plus"></i></a>
+                                        <select class="form-select-sm ms-3 py-0" name="client" aria-label="client">
+                                            <option selected>Select client </option>
+                                            @foreach ($clients as $client)
+                                                <option value="{{ $client->id }}">{{ $client->client_name }}</option>
+                                            @endforeach
+                                        </select>
+
+                                        <select class="form-select-sm ms-3 py-0" name="client" aria-label="client">
+                                            <option selected>Select contact </option>
+                                            @foreach ($clients as $client)
+                                                <option value="{{ $client->id }}">{{ $client->client_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('order') }}"> <i class="bi bi-clipboard-plus"></i></a>
                                     </td>
                                     <td>
                                         <select class="form-select-sm ms-3 py-0" aria-label="status">
@@ -91,6 +104,7 @@
                     </tbody>
                 </table>
 
+               
                 {!! $invoices->links('vendor.pagination.custom') !!}
 
                 <div id="addProductModal" class="modal fade">

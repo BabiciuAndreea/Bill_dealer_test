@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
-use PDF;
+use App\Models\Client;
+
 class InvoiceController extends Controller
 {
     /**
@@ -16,8 +17,9 @@ class InvoiceController extends Controller
     public function index()
     {
         $invoices = Invoice::paginate(8);
+        $clients = Client::get();
 
-        return view('invoice.index', compact('invoices'))
+        return view('invoice.index', compact('invoices','clients'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
