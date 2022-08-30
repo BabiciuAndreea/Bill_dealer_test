@@ -70,7 +70,7 @@
                         <div class="card-header border-0">
                             <h3 class="card-title">Products</h3>
                             <div class="card-tools">
-                                <a href="{{ route('produs_pdf') }}" class="btn btn-secondary btn-sm">
+                                <a href="#" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-download"></i>
                                 </a>
                                 <a href="{{ route('excel') }}" target="_blank" class="btn btn-secondary btn-sm" >
@@ -120,11 +120,6 @@
                                 <h3 class="card-title">Sales</h3>
                                 <a href="javascript:void(0);">View Report</a>
                             </div>
-                            <a href="#" class="btn btn-secondary btn-sm">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <a href="#" class="btn btn-secondary btn-sm" >
-                                <i class="fa-regular fa-file-excel"></i></a>
                         </div>
                         <div class="card-body">
                             <div class="d-flex">
@@ -160,39 +155,22 @@
 
                     <div class="card">
                         <div class="card-header border-0">
-                            <h3 class="card-title">Top Clients</h3>
-                            <div class="card-tools">
-                                <a href="#" class="btn btn-sm btn-secondary">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <a href="#" class="btn btn-secondary btn-sm">
-                                <i class="fa-regular fa-file-excel"></i>
-                                </a>
+                            <h3 class="card-title">BNR COURSE</h3>
+                            
+                            <div class="card-body">
+                                <table class="table">
+                                    @foreach($curs->rates as $rate)
+                                        @if(in_array($rate->currency, $coins))
+                                    <tr>
+                                        <td>{{$rate->multiplier}} {{$rate->currency}}</td>
+                                        <td>{{$rate->rate}} RON</td>
+                                    </tr>
+                                        @endif
+                                    @endforeach
+                                </table>
                             </div>
                         </div>
-                        <div class="progress-group">
-                            Complete Purchase
-                            <span class="float-right"><b>310</b>/400</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-danger" style="width: 75%"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-group">
-                            <span class="progress-text">Visit Premium Page</span>
-                            <span class="float-right"><b>480</b>/800</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-success" style="width: 60%"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-group">
-                            Send Inquiries
-                            <span class="float-right"><b>250</b>/500</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-warning" style="width: 50%"></div>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>

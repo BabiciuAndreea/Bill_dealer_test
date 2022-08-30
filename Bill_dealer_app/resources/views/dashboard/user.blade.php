@@ -26,10 +26,10 @@
 
 
 
-    <div class = "content">
+    <div class="content">
         <div class="container-fluid">
-            <div class="row mx-1  mt-5 w-100">
-                <div class="col-lg-7">
+            <div class="row mx-2  mt-5 w-100">
+                <div class="col-xl-6">
                     <div class="card">
                         <div class="card-header border-0">
                             <div class="d-flex justify-content-between">
@@ -92,21 +92,21 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach ($products as $product)
-                                <tr>
-                                    <td>
-                                        {{ $product->name }}
-                                    </td>
-                                    <td>{{ $product->price }}</td>
+                                    @foreach ($products as $product)
+                                    <tr>
+                                        <td>
+                                            {{ $product->name }}
+                                        </td>
+                                        <td>{{ $product->price }}</td>
 
-                                    <td>{{ $product->quantity }}</td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                @endforeach
+                                        <td>{{ $product->quantity }}</td>
+                                        <td>
+                                            <a href="#" class="text-muted">
+                                                <i class="fas fa-search"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                             {!! $products->links('vendor.pagination.custom') !!}
@@ -115,7 +115,7 @@
                     <!-- /.card -->
                 </div>
                 <!-- /.col-md-6 -->
-                <div class="col-lg-5">
+                <div class="col-xl-6">
                     <div class="card">
                         <div class="card-header border-0">
                             <div class="d-flex justify-content-between">
@@ -157,39 +157,22 @@
 
                     <div class="card">
                         <div class="card-header border-0">
-                            <h3 class="card-title">Online Store Overview</h3>
-                            <div class="card-tools">
-                                <a href="#" class="btn btn-sm btn-tool">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <a href="#" class="btn btn-sm btn-tool">
-                                    <i class="fas fa-bars"></i>
-                                </a>
+                            <h3 class="card-title">BNR COURSE</h3>
+                            
+                            <div class="card-body">
+                                <table class="table">
+                                    @foreach($curs->rates as $rate)
+                                        @if(in_array($rate->currency, $coins))
+                                    <tr>
+                                        <td>{{$rate->multiplier}} {{$rate->currency}}</td>
+                                        <td>{{$rate->rate}} RON</td>
+                                    </tr>
+                                        @endif
+                                    @endforeach
+                                </table>
                             </div>
                         </div>
-                        <div class="progress-group">
-                            Complete Purchase
-                            <span class="float-right"><b>310</b>/400</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-danger" style="width: 75%"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-group">
-                            <span class="progress-text">Visit Premium Page</span>
-                            <span class="float-right"><b>480</b>/800</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-success" style="width: 60%"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-group">
-                            Send Inquiries
-                            <span class="float-right"><b>250</b>/500</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-warning" style="width: 50%"></div>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>
@@ -204,20 +187,17 @@
     <!-- /.content -->
     </div>
 
-    </div>
-
-    </div>
-
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+
+<!-- de unde ia pentru primele doua grafice, pentru vizitatori si sales-->
 
     <script src="{{ asset('dist/js/adminlte.js') }}"></script>
 
     <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
 
-
-	<!-- de unde ia pentru primele doua grafice, pentru vizitatori si sales-->
     <script src="{{ asset('dist/js/pages/dashboard3.js') }}"></script>
 
     @section('scripts')
