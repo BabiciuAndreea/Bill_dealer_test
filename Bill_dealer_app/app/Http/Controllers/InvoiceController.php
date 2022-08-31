@@ -51,7 +51,14 @@ class InvoiceController extends Controller
             // 'status' => 'required'
         ]);
 
-        Invoice::create($request->all());
+        $invoice = new Invoice();
+        $invoice->data_emitere = $request->get('data_emitere');
+        $invoice->data_scadenta = $request->get('data_scadenta');
+        $invoice->serie_factura = $request->get('serie_factura');
+        $invoice->nr_factura = $request->get('nr_factura');
+        $invoice->id_client = $request->get('client');
+        $invoice->save();
+
         return redirect()->route('invoices.index');
         // $current_user=auth()->user();
         // if($current_user->pdf_template==1)
@@ -98,7 +105,12 @@ class InvoiceController extends Controller
      */
     public function edit(Invoice $invoice)
     {
-        return view('invoice.edit', compact('invoice'));
+        $clients = Client::get();
+        $invoices = Invoice::all();
+
+       
+
+        return view('invoice.edit', compact('invoice','clients','invoices'));
     }
 
     /**
@@ -123,6 +135,7 @@ class InvoiceController extends Controller
         $invoice->serie_factura = $request->get('serie_factura');
         $invoice->nr_factura = $request->get('nr_factura');
         $invoice->status = $request->get('status');
+        $invoice->id_client = $request->get('client');
         $invoice->save();
 
         

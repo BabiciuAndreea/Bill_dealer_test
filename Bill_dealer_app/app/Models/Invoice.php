@@ -20,4 +20,9 @@ class Invoice extends Model
     {
         return $this->hasMany(Order::class);
     }
+
+    public function clients()
+    {
+        return $this->hasMany(Client::class);
+    }
 }

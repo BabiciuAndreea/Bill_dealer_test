@@ -118,3 +118,6 @@ Route::get('{id}/order', [OrderController::class, 'show'])->name('order');
 Route::delete('/{id}/orderUpdated/{invoice_id}/', [OrderController::class, 'destroy'])->name('order.destroy');
 
 Route::post('{id}/show_order', [OrderController::class, 'store'])->name('show_order');
+
+Route::get('invoice_client', [ViewsController::class, 'client'])->name('invoice_client');
+

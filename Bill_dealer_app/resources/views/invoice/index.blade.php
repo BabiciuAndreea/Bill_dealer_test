@@ -54,39 +54,45 @@
                                     <td>{{ $invoice->serie_factura }}</td>
                                     <td>{{ $invoice->nr_factura }}</td>
                                     <td>
-                                        <select class="form-select-sm ms-3 py-0" name="client" aria-label="client">
-                                            <option selected>Select client </option>
-                                            @foreach ($clients as $client)
-                                                <option value="{{ $client->id }}">{{ $client->client_name }}</option>
-                                            @endforeach
-                                        </select>
 
-                                        <select class="form-select-sm ms-3 py-0" name="client" aria-label="client">
-                                            <option selected>Select contact </option>
-                                            @foreach ($clients as $client)
-                                                <option value="{{ $client->id }}">{{ $client->client_name }}</option>
-                                            @endforeach
-                                        </select>
+                                        <a>{{ $clients[$invoice->id_client - 1]->client_name }}</a>
                                     </td>
                                     <td>
-                                        <a href="{{ route('order', $invoice->id) }}"> <i class="bi bi-clipboard-plus"></i></a>
+                                        <a href="{{ route('order', $invoice->id) }}"> <i
+                                                class="bi bi-clipboard-plus"></i></a>
                                     </td>
                                     <td>
                                         {{ $invoice->status }}
                                     </td>
                                     <td>
-                                        <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
-                                            <a class="btn-sm edit-buttons"
-                                                href="{{ route('invoices.edit', $invoice->id) }}">Edit</a>
+                                        @if ($invoice->status == 'Paid')
+                                            <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
+                                                <a type="button" class="btn-sm edit-buttons text-decoration-s"><del>Edit</del></a>
 
-                                            @csrf
-                                            @method('DELETE')
+                                                @csrf
+                                                @method('DELETE')
 
-                                            <button type="submit"
-                                                class="btn btn-xs btn-danger btn-flat show-alert-delete-box btn-sm"
-                                                data-toggle="tooltip" title='Delete'>Delete</button>
-                                            <!-- <button type="submit" class="btn btn-sm btn-danger">Delete</button> -->
-                                        </form>
+                                                <button type="submit" disabled
+                                                    class="btn btn-xs btn-danger btn-flat show-alert-delete-box btn-sm"
+                                                    data-toggle="tooltip" title='Delete'>Delete</button>
+                                                <!-- <button type="submit" class="btn btn-sm btn-danger">Delete</button> -->
+                                            </form>
+                                        
+                                        @else
+                                            <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
+                                                <a class="btn-sm edit-buttons" 
+                                                    href="{{ route('invoices.edit', $invoice->id) }}">Edit</a>
+
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="submit" 
+                                                    class="btn btn-xs btn-danger btn-flat show-alert-delete-box btn-sm"
+                                                    data-toggle="tooltip" title='Delete'>Delete</button>
+                                                <!-- <button type="submit" class="btn btn-sm btn-danger">Delete</button> -->
+                                            </form>
+                                        
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
@@ -98,7 +104,7 @@
                     </tbody>
                 </table>
 
-               
+
                 {!! $invoices->links('vendor.pagination.custom') !!}
 
                 <div id="addProductModal" class="modal fade">
@@ -157,9 +163,8 @@
 
                                 <div class="form-outline">
                                     <input id="nr_factura" type="text"
-                                        class="form-control @error('nr_factura') is-invalid @enderror"
-                                        name="nr_factura" required autocomplete="nr_factura"
-                                        placeholder="Invoice number">
+                                        class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura"
+                                        required autocomplete="nr_factura" placeholder="Invoice number">
 
                                     @error('paquantityssword')
                                         <span class="invalid-feedback" role="alert">
@@ -169,6 +174,15 @@
                                 </div>
 
                                 <br>
+                                <select class="form-select py-2" name="client">
+                                    <option selected>Select client </option>
+                                    @foreach ($clients as $client)
+                                        <option value="{{ $client->id }}">{{ $client->client_name }}</option>
+                                    @endforeach
+                                </select>
+
+                                <br>
+
 
                                 {{-- <div class="form-outline">
                                 <input id="id_client" type="text" class="form-control" name="id_client" required autocomplete="id_client" placeholder="Client">

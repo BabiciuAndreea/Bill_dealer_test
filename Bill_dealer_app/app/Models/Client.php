@@ -20,4 +20,9 @@ class Client extends Model
     {
         return $this->hasMany(ContactPerson::class);
     }
+
+    public function invoice()
+    {
+        return $this->belongsTo(Invoice::class);
+    }
 }

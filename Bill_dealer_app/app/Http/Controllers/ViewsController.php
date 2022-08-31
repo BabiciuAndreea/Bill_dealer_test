@@ -41,4 +41,8 @@ class ViewsController extends Controller
     public function order(){
         return view('order.index');
     }
+
+    public function client(){
+        return view('invoice.client');
+    }
 }
