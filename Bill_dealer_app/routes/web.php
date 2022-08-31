@@ -113,4 +113,8 @@ Route::post('{id}/contact_add', [ConatactPersonController::class, 'store'])->nam
 
 Route::post('{id}/contact_update', [ConatactPersonController::class, 'update'])->name('contact.update');
 
-Route::get('order', [OrderController::class, 'show'])->name('order');
+Route::get('{id}/order', [OrderController::class, 'show'])->name('order');
+
+Route::delete('/{id}/orderUpdated/{invoice_id}/', [OrderController::class, 'destroy'])->name('order.destroy');
+
+Route::post('{id}/show_order', [OrderController::class, 'store'])->name('show_order');

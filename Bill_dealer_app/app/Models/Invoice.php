@@ -15,4 +15,9 @@ class Invoice extends Model
     protected $fillable = [
         'data_emitere', 'data_scadenta', 'serie_factura', 'nr_factura'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

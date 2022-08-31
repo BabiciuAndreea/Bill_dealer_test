@@ -218,6 +218,8 @@ h6{
 }
 
 .products-select{
-    background-color: #2d3e4e;
-    color: white;
+    background-color: none;
+    color: rgba(0, 0, 0, 0.599);
+    font-size: 15px;
+    border: white;
 }

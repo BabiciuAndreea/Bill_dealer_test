@@ -45,7 +45,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if (count($invoices) > 0)
+                        @if ($invoices != null)
                             @foreach ($invoices as $invoice)
                                 <tr>
                                     <td>{{ $invoice->id }}</td>
@@ -69,7 +69,7 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <a href="{{ route('order') }}"> <i class="bi bi-clipboard-plus"></i></a>
+                                        <a href="{{ route('order', $invoice->id) }}"> <i class="bi bi-clipboard-plus"></i></a>
                                     </td>
                                     <td>
                                         <select class="form-select-sm ms-3 py-0" aria-label="status">
