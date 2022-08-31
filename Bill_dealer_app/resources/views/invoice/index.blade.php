@@ -72,13 +72,7 @@
                                         <a href="{{ route('order', $invoice->id) }}"> <i class="bi bi-clipboard-plus"></i></a>
                                     </td>
                                     <td>
-                                        <select class="form-select-sm ms-3 py-0" aria-label="status">
-                                            <option value="draft">Draft</option>
-                                            <option value="issued">Issued</option>
-                                            <option value="canceled">Canceled</option>
-                                            <option value="paid">Paid</option>
-                                            <option value="unpaid">Unpaid</option>
-                                        </select>
+                                        {{ $invoice->status }}
                                     </td>
                                     <td>
                                         <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">

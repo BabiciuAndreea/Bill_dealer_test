@@ -6,10 +6,10 @@
 
     <div class="tab-content mx-5 text-center" id="v-pills-tabContent">
 
-    <br>
+        <br>
         <div class="pull-left">
             <a href="{{ route('invoice.index') }}" class="btn btn-secondary btn-sm">
-            <i class="fa-solid fa-arrow-left-long"></i>
+                <i class="fa-solid fa-arrow-left-long"></i>
             </a>
         </div>
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
@@ -68,12 +68,21 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                        <strong class="px-2">Status:</strong>
+                        <select class="form-select py-2" name="status"  aria-label="status">
+                            <option value="Draft">Draft</option>
+                            <option value="Issued">Issued</option>
+                            <option value="Canceled">Canceled</option>
+                            <option value="Paid">Paid</option>
+                            <option value="Unpaid">Unpaid</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
 
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-5">
                             <button type="submit" class="btn btn-success">Update</button>
                         </div>
                     </div>
-
             </form>
         </div>
     </div>

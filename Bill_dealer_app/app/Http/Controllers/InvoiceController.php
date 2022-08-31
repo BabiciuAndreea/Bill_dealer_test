@@ -115,11 +115,17 @@ class InvoiceController extends Controller
             'data_scadenta' => 'required',
             'serie_factura' => 'required',
             'nr_factura' => 'required',
-        
+            'status' => 'required',
         ]);
 
-        $invoice->update($request->all());
+        $invoice->data_emitere = $request->get('data_emitere');
+        $invoice->data_scadenta = $request->get('data_scadenta');
+        $invoice->serie_factura = $request->get('serie_factura');
+        $invoice->nr_factura = $request->get('nr_factura');
+        $invoice->status = $request->get('status');
+        $invoice->save();
 
+        
         return redirect()->route('invoice.index');
     }
 

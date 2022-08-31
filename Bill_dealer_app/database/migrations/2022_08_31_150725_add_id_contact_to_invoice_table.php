@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('invoice', function (Blueprint $table) {
-            $table->id();
-            $table->date('data_emitere');
-            $table->date('data_scadenta');
-            $table->string('serie_factura');
-            $table->integer('nr_factura');
-            $table->string('status')->default('Draft');
+        Schema::table('invoice', function (Blueprint $table) {
+            $table->integer('id_contact')->nullable();
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoice');
+        Schema::table('invoice', function (Blueprint $table) {
+            //
+        });
     }
 };
