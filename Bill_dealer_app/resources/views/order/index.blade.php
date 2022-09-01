@@ -43,8 +43,18 @@
                                         <option value="9">9%</option>
                                         <option value="5">5%</option>
                                     </select></th>
-                                <th scope="col"><button type="submit" class="btn edit-button mx-3 px-5"
-                                        name="add_product">Add</button></th>
+
+
+                                <th scope="col">
+                                    @if ($invoice->status == 'Paid')
+                                        <button type="submit" class="btn edit-button mx-3 px-5" disabled
+                                            name="add_product">Add</button>
+                                </th>
+                            @else
+                                <button type="submit" class="btn edit-button mx-3 px-5" name="add_product">Add</button>
+                                </th>
+                                @endif
+
                             </tr>
                         </thead>
                     </table>
@@ -80,10 +90,12 @@
                                     <td>{{ $order->quantity }}</td>
                                     <td>{{ $order->tva }}%</td>
                                     <td>
-                                        <form action="{{ route('order.destroy', ['id' => $order->id, 'invoice_id' => $invoice->id]) }}" method="POST">                                            @csrf
+                                        <form
+                                            action="{{ route('order.destroy', ['id' => $order->id, 'invoice_id' => $invoice->id]) }}"
+                                            method="POST"> @csrf
                                             @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
@@ -95,10 +107,14 @@
                         @endif
                     </tbody>
                 </table>
-               
+
                 <form action="{{ route('invoice.index') }}" method="get">
                     @csrf
+                    @if ($invoice->status == 'Paid')
+                        <button type="submit" class="btn edit-button mx-3 mt-3 px-5" disabled name="add_product">Save</button>
+                    @else
                     <button type="submit" class="btn edit-button mx-3 mt-3 px-5" name="add_product">Save</button>
+                    @endif
                 </form>
             </div>
         </div>

@@ -57,6 +57,7 @@ class InvoiceController extends Controller
         $invoice->serie_factura = $request->get('serie_factura');
         $invoice->nr_factura = $request->get('nr_factura');
         $invoice->id_client = $request->get('client');
+        $invoice->pay = $request->get('pay');
         $invoice->save();
 
         return redirect()->route('invoices.index');
@@ -136,6 +137,7 @@ class InvoiceController extends Controller
         $invoice->nr_factura = $request->get('nr_factura');
         $invoice->status = $request->get('status');
         $invoice->id_client = $request->get('client');
+        $invoice->pay = $request->get('pay');
         $invoice->save();
 
 

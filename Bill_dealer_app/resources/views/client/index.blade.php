@@ -11,7 +11,7 @@
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel" aria-labelledby="employee-tab">
-            <div class="container px-0 mx-0">
+            <div class="container px-0 mx-5">
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -36,11 +36,11 @@
                         <tr>
                             <th class="px-1">ID</th>
                             <th class="px-4">Client name</th>
-                            <th class="px-4">CIF</th>
+                            {{-- <th class="px-4">CIF</th>
                             <th class="px-4">Trade register</th>
                             <th class="px-4">City</th>
                             <th class="px-4">County</th>
-                            <th class="px-4">Address</th>
+                            <th class="px-4">Address</th> --}}
                             <th class="px-4">Phone</th>
                             <th class="px-4">Email</th>
                             <th class="px-4">Contact person</th>
@@ -54,12 +54,12 @@
 
                                 <tr>
                                     <td>{{ $client->id }}</td>
-                                    <td>{{ $client->client_name }}</td>
-                                    <td>{{ $client->cif }}</td>
+                                    <td><a href="{{ route('show.client',$client->id) }}" class="text-decoration-underline">{{ $client->client_name }}<a></td>
+                                    {{-- <td>{{ $client->cif }}</td>
                                     <td>{{ $client->nr_reg }}</td>
                                     <td>{{ $client->city }}</td>
                                     <td>{{ $client->county }}</td>
-                                    <td>{{ $client->address }}</td>
+                                    <td>{{ $client->address }}</td> --}}
                                     <td>{{ $client->phone }}</td>
                                     <td>{{ $client->email }}</td>
                                     <td>

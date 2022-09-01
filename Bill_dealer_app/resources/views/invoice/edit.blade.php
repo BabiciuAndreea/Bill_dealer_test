@@ -67,21 +67,34 @@
                                 class="form-control text-muted">
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
-                        <strong class="px-2">Status:</strong>
-                        <select class="form-select py-2" name="status" aria-label="status">
-                            <option value="Draft">Draft</option>
-                            <option value="Issued">Issued</option>
-                            <option value="Canceled">Canceled</option>
-                            <option value="Paid">Paid</option>
-                            <option value="Unpaid">Unpaid</option>
-                        </select>
-                    </div>
+                    @if (count($invoice->orders) > 0)
+                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                            <strong class="px-2">Status:</strong>
+                            <select class="form-select py-2" name="status" aria-label="status">
+                                <option value="Draft">Draft</option>
+                                <option value="Issued">Issued</option>
+                                <option value="Canceled">Canceled</option>
+                                <option value="Paid">Paid</option>
+                                <option value="Unpaid">Unpaid</option>
+                            </select>
+                        </div>
+                    @else
+                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                            <strong class="px-2">Status:</strong>
+                            <select class="form-select py-2" name="status" aria-label="status">
+                                <option value="Draft">Draft</option>
+                                <option value="Issued">Issued</option>
+                                <option value="Canceled">Canceled</option>
+                                {{-- <option value="Paid">Paid</option> --}}
+                                <option value="Unpaid">Unpaid</option>
+                            </select>
+                        </div>
+                    @endif
 
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                         <strong class="px-2">Client:</strong>
                         <select class="form-select py-2" name="client">
-                            <option selected value="{{ $clients[$invoice->id_client - 1]->client_name }}">
+                            <option selected value="{{ $clients[$invoice->id_client - 1]->id }}">
                                 {{ $clients[$invoice->id_client - 1]->client_name }}</option>
                             @foreach ($clients as $client)
                                 <option value="{{ $client->id }}">{{ $client->client_name }}</option>
@@ -90,6 +103,18 @@
                     </div>
 
                     <br>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                        <strong class="px-2">Payment method:</strong>
+                        <select class="form-select py-2" name="pay">
+                            <option selected value="{{ $invoice->pay }}">{{ $invoice->pay }}</option>
+                            <option value="OP">OP</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Card">Card</option>
+
+                        </select>
+                    </div>
+              
                     {{-- <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                         <strong class="px-2">Contact:</strong>
                         <select class="form-select py-2" name="contact">

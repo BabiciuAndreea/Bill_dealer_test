@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Client;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -64,7 +65,12 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        //
+        return view(
+            'client.show',
+            [
+                'client' => Client::findOrFail($id)
+            ]
+        );
     }
 
     /**

@@ -121,3 +121,4 @@ Route::post('{id}/show_order', [OrderController::class, 'store'])->name('show_or
 
 Route::get('invoice_client', [ViewsController::class, 'client'])->name('invoice_client');
 
+Route::get('{id}/show.client', [ClientController::class, 'show'])->name('show.client');

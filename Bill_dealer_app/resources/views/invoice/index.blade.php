@@ -40,6 +40,7 @@
                             <th class="px-4">Invoice number</th>
                             <th class="px-5 mx-3">Client</th>
                             <th class="px-4">Order</th>
+                            <th class="px-4">Payment method</th>
                             <th class="px-4">Status</th>
                             <th class="px-5">Actions</th>
                         </tr>
@@ -57,12 +58,13 @@
                                         <a>{{ $invoice->client->client_name }}</a>
                                     </td>
                                     <td>
-                                        @if ($invoice->status == 'Paid')
-                                            <a type="button"><del><i class="bi bi-clipboard-plus"></i></del></a>
-                                        @else
+                                        
                                             <a href="{{ route('order', $invoice->id) }}"> <i
                                                     class="bi bi-clipboard-plus"></i></a>
-                                        @endif
+                                    
+                                    </td>
+                                    <td>
+                                        {{ $invoice->pay }}
                                     </td>
                                     <td>
                                         {{ $invoice->status }}
@@ -186,6 +188,13 @@
 
                                 <br>
 
+                                <select class="form-select py-2" name="pay">
+                                    <option selected>Select payment</option>
+                                        <option value="OP">OP</option>
+                                        <option value="Cash">Cash</option>
+                                        <option value="Card">Card</option>
+
+                                </select>
 
                                 {{-- <div class="form-outline">
                                 <input id="id_client" type="text" class="form-control" name="id_client" required autocomplete="id_client" placeholder="Client">
