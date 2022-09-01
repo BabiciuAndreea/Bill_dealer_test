@@ -19,6 +19,13 @@ class InvoiceController extends Controller
         $invoices = Invoice::paginate(8);
         $clients = Client::get();
 
+        foreach($invoices as $invoice){
+            if($invoice->data_scadenta < date("Y-m-d")){
+                $invoice->status = 'Overdue';
+                $invoice->save();
+            }
+        }
+
         return view('invoice.index', compact('invoices', 'clients'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -57,6 +64,7 @@ class InvoiceController extends Controller
         $invoice->serie_factura = $request->get('serie_factura');
         $invoice->nr_factura = $request->get('nr_factura');
         $invoice->id_client = $request->get('client');
+        
         $invoice->pay = $request->get('pay');
         $invoice->save();
 
