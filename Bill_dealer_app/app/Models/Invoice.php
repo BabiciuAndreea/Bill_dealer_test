@@ -21,8 +21,8 @@ class Invoice extends Model
         return $this->hasMany(Order::class);
     }
 
-    public function clients()
+    public function client()
     {
-        return $this->hasMany(Client::class);
+        return $this->belongsTo(Client::class, 'id_client');
     }
 }

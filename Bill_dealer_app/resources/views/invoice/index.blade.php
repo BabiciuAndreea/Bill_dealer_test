@@ -55,7 +55,8 @@
                                     <td>{{ $invoice->nr_factura }}</td>
                                     <td>
 
-                                        <a>{{ $clients[$invoice->id_client - 1]->client_name }}</a>
+                                        <!-- <a>{{-- $clients[$invoice->id_client - 1]->client_name --}}</a> -->
+                                        <a>{{ $invoice->client->client_name }}</a>
                                     </td>
                                     <td>
                                         <a href="{{ route('order', $invoice->id) }}"> <i

@@ -23,7 +23,6 @@ class OrderController extends Controller
         $products = Product::get();
         $orders = Order::get();
         $invoice = Invoice::findOrFail($id);
-
         $order = new Order();
         $order->product_id = $request->get('list');
         $order->quantity = $request->get('order_quantity');
