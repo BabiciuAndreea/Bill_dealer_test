@@ -19,7 +19,7 @@ class InvoiceController extends Controller
         $invoices = Invoice::paginate(8);
         $clients = Client::get();
 
-        return view('invoice.index', compact('invoices','clients'))
+        return view('invoice.index', compact('invoices', 'clients'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -65,25 +65,25 @@ class InvoiceController extends Controller
         // {
         //     $show=null;
         // $pdf = Pdf::loadView('Pdf_template.pdf', compact('show'));
-        
+
         // return $pdf->download('Invoice.pdf');
         // }
         // else  if($current_user->pdf_template==2)
         // {
         // $show=null;
         // $pdf = Pdf::loadView('Pdf_template.pdf2', compact('show'));
-        
+
         // return $pdf->download('Invoice2.pdf');
         // }
         // else
         // {
         //     $show=null;
         // $pdf = Pdf::loadView('Pdf_template.pdf3', compact('show'));
-        
+
         // return $pdf->download('Invoice3.pdf');
         // }
 
-        
+
     }
 
     /**
@@ -106,11 +106,11 @@ class InvoiceController extends Controller
     public function edit(Invoice $invoice)
     {
         $clients = Client::get();
-        $invoices = Invoice::all();
+        // $invoices = Invoice::all();
 
-       
 
-        return view('invoice.edit', compact('invoice','clients','invoices'));
+
+        return view('invoice.edit', compact('invoice', 'clients'));
     }
 
     /**
@@ -138,7 +138,7 @@ class InvoiceController extends Controller
         $invoice->id_client = $request->get('client');
         $invoice->save();
 
-        
+
         return redirect()->route('invoice.index');
     }
 

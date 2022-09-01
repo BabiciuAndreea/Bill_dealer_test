@@ -16,13 +16,13 @@ class Client extends Model
         'client_name', 'cif', 'nr_reg', 'city', 'county', 'id_comanda', 'address', 'phone', 'email'
     ];
 
-    public function contact()
+    public function contacts()
     {
         return $this->hasMany(ContactPerson::class);
     }
 
     public function invoice()
     {
-        return $this->hasMany(Invoice::class,'id_client');
+        return $this->hasMany(Invoice::class, 'id_client');
     }
 }

@@ -6,14 +6,15 @@
 
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <!-- <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}"> -->
-	<!-- css creat de Dana -->
+    <!-- css creat de Dana -->
     <link href="{{ asset('css/employee.css') }}" rel="stylesheet">
 
 </head>
@@ -27,9 +28,9 @@
     <div class="content">
         <div class="container-fluid">
 
-            <div class="row mx-2  mt-5 w-100">
+            {{-- <div class="row mx-2  mt-5 w-100"> --}}
 
-            <div class="row mx-2 mt-1 w-100">
+            <div class="row mx-2 mt-5 w-100">
 
                 <div class="col-xl-6">
                     <div class="card">
@@ -78,8 +79,8 @@
                                 <a href="{{ route('produs_pdf') }}" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-download"></i>
                                 </a>
-                                <a href="{{ route('excel') }}" target="_blank" class="btn btn-secondary btn-sm" >
-                                <i class="fa-regular fa-file-excel"></i>
+                                <a href="{{ route('excel') }}" target="_blank" class="btn btn-secondary btn-sm">
+                                    <i class="fa-regular fa-file-excel"></i>
                                 </a>
                             </div>
                         </div>
@@ -96,19 +97,19 @@
 
                                 <tbody>
                                     @foreach ($products as $product)
-                                    <tr>
-                                        <td>
-                                            {{ $product->name }}
-                                        </td>
-                                        <td>{{ $product->price }}</td>
+                                        <tr>
+                                            <td>
+                                                {{ $product->name }}
+                                            </td>
+                                            <td>{{ $product->price }}</td>
 
-                                        <td>{{ $product->quantity }}</td>
-                                        <td>
-                                            <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            <td>{{ $product->quantity }}</td>
+                                            <td>
+                                                <a href="#" class="text-muted">
+                                                    <i class="fas fa-search"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -163,12 +164,12 @@
                             <h3 class="card-title">BNR COURSE</h3>
                             <div class="card-body">
                                 <table class="table">
-                                    @foreach($curs->rates as $rate)
-                                        @if(in_array($rate->currency, $coins))
-                                    <tr>
-                                        <td>{{$rate->multiplier}} {{$rate->currency}}</td>
-                                        <td>{{$rate->rate}} RON</td>
-                                    </tr>
+                                    @foreach ($curs->rates as $rate)
+                                        @if (in_array($rate->currency, $coins))
+                                            <tr>
+                                                <td>{{ $rate->multiplier }} {{ $rate->currency }}</td>
+                                                <td>{{ $rate->rate }} RON</td>
+                                            </tr>
                                         @endif
                                     @endforeach
                                 </table>
@@ -179,11 +180,11 @@
                 </div>
             </div>
             <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
+            {{-- </div> --}}
+            <!-- /.row -->
 
-    </div>
-    <!-- /.container-fluid -->
+        </div>
+        <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
     </div>
@@ -193,7 +194,7 @@
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 
-<!-- de unde ia pentru primele doua grafice, pentru vizitatori si sales-->
+    <!-- de unde ia pentru primele doua grafice, pentru vizitatori si sales-->
 
     <script src="{{ asset('dist/js/adminlte.js') }}"></script>
 
@@ -202,9 +203,7 @@
     <script src="{{ asset('dist/js/pages/dashboard3.js') }}"></script>
 
     @section('scripts')
-
-    <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
-
+        <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
     @endsection
 
 </body>

@@ -13,13 +13,14 @@ class OrderController extends Controller
     public function show($id)
     {
         $products = Product::get();
-        $orders = Order::where('invoice_id',$id);
+        $orders = Order::where('invoice_id', $id);
         $invoice = Invoice::findOrFail($id);
-        
-        return view('order.index', compact('products','orders','invoice'));
+
+        return view('order.index', compact('products', 'orders', 'invoice'));
     }
 
-    public function store(Request $request, $id){
+    public function store(Request $request, $id)
+    {
         $products = Product::get();
         $orders = Order::get();
         $invoice = Invoice::findOrFail($id);
@@ -30,7 +31,7 @@ class OrderController extends Controller
         $order->invoice_id = $id;
         $order->save();
 
-        return view('order.index', compact('products','orders','invoice'));
+        return redirect(route('order', compact('id')));
     }
 
     public function destroy($id, $invoice_id)
