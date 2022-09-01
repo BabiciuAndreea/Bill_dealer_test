@@ -45,7 +45,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if ($invoices != null)
+                        @if (count($invoices) > 0)
                             @foreach ($invoices as $invoice)
                                 <tr>
                                     <td>{{ $invoice->id }}</td>
@@ -59,8 +59,12 @@
                                         <a>{{ $invoice->client->client_name }}</a>
                                     </td>
                                     <td>
-                                        <a href="{{ route('order', $invoice->id) }}"> <i
-                                                class="bi bi-clipboard-plus"></i></a>
+                                        @if ($invoice->status == 'Paid')
+                                            <a type="button"><del><i class="bi bi-clipboard-plus"></i></del></a>
+                                        @else
+                                            <a href="{{ route('order', $invoice->id) }}"> <i
+                                                    class="bi bi-clipboard-plus"></i></a>
+                                        @endif
                                     </td>
                                     <td>
                                         {{ $invoice->status }}
@@ -68,7 +72,7 @@
                                     <td>
                                         @if ($invoice->status == 'Paid')
                                             <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
-                                                <a type="button" class="btn-sm edit-buttons text-decoration-s"><del>Edit</del></a>
+                                                <a type="button" class="btn-sm edit-buttons"><del>Edit</del></a>
 
                                                 @csrf
                                                 @method('DELETE')
@@ -78,21 +82,20 @@
                                                     data-toggle="tooltip" title='Delete'>Delete</button>
                                                 <!-- <button type="submit" class="btn btn-sm btn-danger">Delete</button> -->
                                             </form>
-                                        
                                         @else
-                                            <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
-                                                <a class="btn-sm edit-buttons" 
+                                            <form action="{{ route('invoices.destroy', $invoice->id) }}"
+                                                method="POST">
+                                                <a class="btn-sm edit-buttons"
                                                     href="{{ route('invoices.edit', $invoice->id) }}">Edit</a>
 
                                                 @csrf
                                                 @method('DELETE')
 
-                                                <button type="submit" 
+                                                <button type="submit"
                                                     class="btn btn-xs btn-danger btn-flat show-alert-delete-box btn-sm"
                                                     data-toggle="tooltip" title='Delete'>Delete</button>
                                                 <!-- <button type="submit" class="btn btn-sm btn-danger">Delete</button> -->
                                             </form>
-                                        
                                         @endif
                                     </td>
                                 </tr>
@@ -164,8 +167,9 @@
 
                                 <div class="form-outline">
                                     <input id="nr_factura" type="text"
-                                        class="form-control @error('nr_factura') is-invalid @enderror" name="nr_factura"
-                                        required autocomplete="nr_factura" placeholder="Invoice number">
+                                        class="form-control @error('nr_factura') is-invalid @enderror"
+                                        name="nr_factura" required autocomplete="nr_factura"
+                                        placeholder="Invoice number">
 
                                     @error('paquantityssword')
                                         <span class="invalid-feedback" role="alert">
