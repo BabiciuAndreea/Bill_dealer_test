@@ -8,7 +8,7 @@
 
     <br>
     <div class="pull-left">
-        <a href="{{ route('invoice.index') }}" class="btn btn-secondary btn-sm mx-5">
+        <a href="{{ route('client.index') }}" class="btn btn-secondary btn-sm mx-5">
         <i class="fa-solid fa-arrow-left-long"></i>
         </a>
     </div>
@@ -28,7 +28,7 @@
 
                                     class="form-control @error('name') is-invalid @enderror" name="name"
 
-                                    class="form-control @error('name') is-invalid @enderror" name="name" 
+                                    class="form-control @error('name') is-invalid @enderror" name="name"
 
                                     autocomplete="name" autofocus placeholder="Contact name">
                             </div>
@@ -37,7 +37,7 @@
 
                                 <input id="phone" type="text" class="form-control" name="phone"
 
-                                <input id="phone" type="text" class="form-control" name="phone" 
+                                <input id="phone" type="text" class="form-control" name="phone"
 
                                     autocomplete="phone" autofocus placeholder="Phone number">
                             </div>
@@ -46,7 +46,7 @@
 
                                 <input id="email" type="text" class="form-control" name="email"
 
-                                <input id="email" type="text" class="form-control" name="email" 
+                                <input id="email" type="text" class="form-control" name="email"
 
                                     autocomplete="email" placeholder="Email">
                             </div>
@@ -56,7 +56,7 @@
 
                                 <input id="department" type="text" class="form-control" name="department"
 
-                                <input id="department" type="text" class="form-control" name="department" 
+                                <input id="department" type="text" class="form-control" name="department"
 
                                     autocomplete="department" placeholder="Department">
                             </div>
