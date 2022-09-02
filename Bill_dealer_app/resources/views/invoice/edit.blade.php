@@ -79,13 +79,13 @@
                             </select>
                         </div>
                     @else
-                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                             <strong class="px-2">Status:</strong>
                             <select class="form-select py-2" name="status" aria-label="status">
                                 <option value="Draft">Draft</option>
                                 <option value="Issued">Issued</option>
                                 <option value="Canceled">Canceled</option>
-                                {{-- <option value="Paid">Paid</option> --}}
+                                <option disabled value="Paid">Paid - the order doesn't contain any products</option>
                                 <option value="Unpaid">Unpaid</option>
                             </select>
                         </div>
@@ -114,7 +114,7 @@
 
                         </select>
                     </div>
-              
+
                     {{-- <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                         <strong class="px-2">Contact:</strong>
                         <select class="form-select py-2" name="contact">

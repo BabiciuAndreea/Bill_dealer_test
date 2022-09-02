@@ -12,7 +12,7 @@
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0" id="invoice" role="tabpanel" aria-labelledby="employee-tab">
-            <div class="container">
+            <div class="container text-size mx-5">
                 <form action="{{ route('show_order', $invoice->id) }}" method="POST">
                     @csrf
                     <h3 class="text-start">ORDER</h3>
@@ -46,7 +46,7 @@
 
 
                                 <th scope="col">
-                                    @if ($invoice->status == 'Paid')
+                                    @if ($invoice->status == 'Paid' || $invoice->status == 'Canceled')
                                         <button type="submit" class="btn edit-button mx-3 px-5" disabled
                                             name="add_product">Add</button>
                                 </th>
@@ -94,8 +94,12 @@
                                             action="{{ route('order.destroy', ['id' => $order->id, 'invoice_id' => $invoice->id]) }}"
                                             method="POST"> @csrf
                                             @method('DELETE')
+                                            @if ($invoice->status == 'Paid' || $invoice->status == 'Canceled')
 
+                                            <button type="submit" class="btn btn-sm btn-danger" disabled>Delete</button>
+                                            @else
                                             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                             @endif
                                         </form>
                                     </td>
                                 </tr>
@@ -110,7 +114,7 @@
 
                 <form action="{{ route('invoice.index') }}" method="get">
                     @csrf
-                    @if ($invoice->status == 'Paid')
+                    @if ($invoice->status == 'Paid' || $invoice->status == 'Canceled')
                         <button type="submit" class="btn edit-button mx-3 mt-3 px-5" disabled name="add_product">Save</button>
                     @else
                     <button type="submit" class="btn edit-button mx-3 mt-3 px-5" name="add_product">Save</button>

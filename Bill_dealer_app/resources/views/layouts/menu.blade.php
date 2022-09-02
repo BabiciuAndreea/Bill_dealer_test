@@ -2,24 +2,18 @@
 <div class="container-fluid py-0 px-0 mx-0">
     <div class=" rounded-lg d-block d-sm-flex settings_container">
         <div class="profile-tab-nav border-right profile-tab my-0">
-            <div
-                class="d-flex flex-column background align-items-center align-items-sm-start px-1 pt-2 text-white min-vh-100">
+            <div class="d-flex flex-column background align-items-center align-items-sm-start px-1 pt-2 text-white min-vh-100">
                 <div class="row p-0 py-2">
-                    <div class="col"> <a href="/dashboard"
-                            class="d-flex align-items-center pb-1 mb-md-0 mx-3 px-0 me-md-auto text-white text-decoration-none">
-                            <img src="{{ '/images/Logo_aplicatie_facturi.png' }}"
-                                class="rounded-circle logo mb-1 shadow1">
+                    <div class="col"> <a href="/dashboard" class="d-flex align-items-center pb-1 mb-md-0 mx-3 px-0 me-md-auto text-white text-decoration-none">
+                            <img src="{{ '/images/Logo_aplicatie_facturi.png' }}" class="rounded-circle logo mb-1 shadow1">
                         </a> </div>
                     <div class="col">
                         <div class="company_name text-centered px-0 mx-0 mt-3"> Bill Dealer </div>
                     </div>
                 </div>
-                <ul class="nav nav-pills flex-column mb-sm-auto mt-5 pl-2 mb-0 align-items-center align-items-sm-start"
-                    id="menu">
+                <ul class="nav nav-pills flex-column mb-sm-auto mt-5 pl-2 mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}"
-                            role="tab">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" aria-controls="notification" aria-selected="false" href="{{ route('dashboard') }}" role="tab">
                             <i class="bi bi-graph-up-arrow"></i> Dashboard
                         </a>
                     </li>
@@ -175,54 +169,53 @@
                             </ul>
                         </div>
                     </li> --}}
-
-                    <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}"
-                            role="tab">
+                    <br>
+                    <br>
+                    <br>
+                    <li class="nav-item mt-3">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" aria-controls="notification" aria-selected="false" href="{{ route('invoice.index') }}" role="tab">
                             <i class="bi bi-envelope-paper"></i> Invoices
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}"
-                            role="tab">
+                    <br>
+                    <br>
+                    <br>
+                    <li class="nav-item mt-3">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" aria-controls="notification" aria-selected="false" href="{{ route('products.index') }}" role="tab">
                             <i class="bi bi-box"></i> Products
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('client.index') }}"
-                            role="tab">
+                    <br>
+                    <br>
+                    <br>
+                    <li class="nav-item mt-3">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" aria-controls="notification" aria-selected="false" href="{{ route('client.index') }}" role="tab">
                             <i class="bi bi-person"></i> Clients
                         </a>
                     </li>
+                    <br>
+                    <br>
+                    <br>
 
-                    <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('addEmployee') }}"
-                            role="tab">
+                    <li class="nav-item mt-3">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" aria-controls="notification" aria-selected="false" href="{{ route('addEmployee') }}" role="tab">
                             <i class="bi bi-people"></i> Employees
                         </a>
                     </li>
-
-                    <li class="nav-item">
-                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item"
-                            aria-controls="notification" aria-selected="false" href="{{ route('company') }}"
-                            role="tab">
+                    <br>
+                    <br>
+                    <br>
+                    <li class="nav-item mt-3">
+                        <a type="button" class="tab text-decoration-none btn-lg px-4 nav-item" aria-controls="notification" aria-selected="false" href="{{ route('company') }}" role="tab">
                             <i class="bi bi-building"></i> Company
                         </a>
                     </li>
                 </ul>
-                <hr>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <div class="dropdown pb-5">
-                        <a href="#"
-                            class="d-flex px-4 align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ '/storage/' . Auth::user()->avatar }}" alt="hugenerd" width="30"
-                                height="30" class="rounded-circle">
+                        <a href="#" class="d-flex px-4 align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{ '/storage/' . Auth::user()->avatar }}" alt="hugenerd" width="30" height="30" class="rounded-circle">
                             <span class="tab d-none d-sm-inline mx-1">{{ Auth::user()->first_name }}
                                 {{ Auth::user()->last_name }}</span>
                         </a>

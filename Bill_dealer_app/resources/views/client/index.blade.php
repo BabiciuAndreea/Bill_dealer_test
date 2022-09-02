@@ -11,15 +11,15 @@
 
     <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
         <div class="tab-pane fade show active px-5 py-0 my-0" id="client" role="tabpanel" aria-labelledby="employee-tab">
-            <div class="container px-0 mx-5">
+            <div class="container px-0 mx-5 text-size">
 
-                <div class="row">
+                <div class="row mx-5 mt-5">
                     <div class="col-lg-12">
                         <div class="pull-left">
                             <h3>Clients</h3>
                         </div>
                         <div class="pull-right">
-                            <a href="#addProductModal" class="btn add-button my-3" data-toggle="modal"> <i
+                            <a href="#addProductModal" class="btn add-button" data-toggle="modal"> <i
                                     class="bi bi-person-plus"></i> <span class="py-1 px-1">Add client</span></a>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                     </div>
                 @endif
 
-                <table class="table table-striped table-hover w-100">
+                <table class="table table-striped table-hover w-100 mx-5 mt-2">
                     <thead>
                         <tr>
                             <th class="px-1">ID</th>

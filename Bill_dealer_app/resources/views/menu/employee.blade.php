@@ -9,8 +9,8 @@
 
     <div class="tab-content mt-5 " id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="employee" role="tabpanel" aria-labelledby="employee-tab">
-            <div class="container">
-                <div class="table-wrapper px-0 mx-0 py-0 px-0">
+            <div class="container mx-5 text-size">
+                <div class="table-wrapper px-0 mx-5 py-0 px-0">
                     <div class="table-title px-2 mt-5">
                         <div class="row">
                             <div class="col-sm-6">

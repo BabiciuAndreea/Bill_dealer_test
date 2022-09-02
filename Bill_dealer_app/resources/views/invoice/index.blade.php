@@ -4,7 +4,7 @@
 
     @include('layouts.menu')
 
-    <div class="tab-content mt-5 mx-0 text-center" id="v-pills-tabContent">
+    <div class="tab-content mt-5 mx-0 text-center text-size" id="v-pills-tabContent">
 
         <div class="tab-pane fade show active px-5 py-0 my-0" id="invoice" role="tabpanel" aria-labelledby="employee-tab">
 
@@ -58,10 +58,10 @@
                                         <a>{{ $invoice->client->client_name }}</a>
                                     </td>
                                     <td>
-                                        
+
                                             <a href="{{ route('order', $invoice->id) }}"> <i
                                                     class="bi bi-clipboard-plus"></i></a>
-                                    
+
                                     </td>
                                     <td>
                                         {{ $invoice->pay }}
@@ -70,7 +70,7 @@
                                         {{ $invoice->status }}
                                     </td>
                                     <td>
-                                        @if ($invoice->status == 'Paid')
+                                        @if ($invoice->status == 'Paid' || $invoice->status == 'Canceled')
                                             <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST">
                                                 <a type="button" class="btn-sm edit-buttons"><del>Edit</del></a>
 

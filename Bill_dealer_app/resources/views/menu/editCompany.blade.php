@@ -7,7 +7,7 @@
         <div class="tab-pane fade show active px-5 py-0 my-0 mx-5" id="company" role="tabpanel"
             aria-labelledby="employee-tab">
             <div class="container edit-background mx-5">
-                <div class="row">
+                <div class="row mx-5 py-4">
                     <div class="col-12 px-0">
                         <div class="card text-black">
                             <div class="card-body text-start">
