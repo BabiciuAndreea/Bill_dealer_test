@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Mail\UpdateMail;
+use App\Mail\NewPassword;
 use Illuminate\Support\Facades\Mail;
 
 class Settings extends Controller
@@ -59,7 +60,7 @@ class Settings extends Controller
               'body' => 'This is for testing email using smtp.'
           ];
            
-          Mail::to($current_user->email)->send(new UpdateMail($mailData));
+          Mail::to($current_user->email)->send(new NewPassword($mailData));
              
           return redirect()->route('settings');
 
