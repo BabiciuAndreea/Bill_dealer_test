@@ -10,6 +10,20 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="Edit/style.css">
 </head>
+<style>
+	.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
 <body>
 	
 	<section class="py-5 my-5">
@@ -36,22 +50,11 @@
 							<i class="fa fa-key text-center mr-1 "style="color:white;"></i> 
 							Password
 						</a>
-						<a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false"style="color:white;">
-							<i class="fa fa-user text-center mr-1"style="color:white;"></i> 
-							Security
-						</a>
 						<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false"style="color:white;">
 							<i class="fa fa-tv text-center mr-1"style="color:white;"></i> 
 							Company 
 						</a>
-						<a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false"style="color:white;">
-							<i class="fa fa-bell text-center mr-1"style="color:white;"></i> 
-							Notification
-						</a>
-                        <a class="nav-link" id="notification-tab" data-toggle="pill" href="#settings" role="tab" aria-controls="notification" aria-selected="false"style="color:white;">
-							<i class="fa fa-sliders text-center mr-1"style="color:white;"></i> 
-							Edit Page
-						</a>
+						
 					</div>
 				</div>
 				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
@@ -136,81 +139,66 @@
 							<button class="btn btn-light">Cancel</button>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
-						<h3 class="mb-4">Security Settings</h3>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Login</label>
-								  	<input type="text" class="form-control">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Two-factor auth</label>
-								  	<input type="text" class="form-control">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="recovery">
-										<label class="form-check-label" for="recovery">
-										Recovery
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<button class="btn btn-primary">Update</button>
-							<button class="btn btn-light">Cancel</button>
-						</div>
-					</div>
+					
 					<div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
 						<h3 class="mb-4">Company Setting </h3>
 						<form action="{{ route('downloadPDF') }}" method="post">
                             @csrf
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Company name</label>
-								  	<input type="password" class="form-control" name="old_password">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Logo</label>
-								  	<input type="password" class="form-control" name="new_password">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Adress</label>
-								  	<input type="password" class="form-control" name="confirm_password">
-								</div>
-							</div>
-						</div>
-                             <div class="form-check">
+						
+						
+                             <!-- <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1">
                                 <label class="form-check-label" for="flexRadioDefault1">
+								<img src="{{ url('images/invoice1.PNG') }}" alt="" class="img-fluid px-0">
                                    PDF  Template nr 1
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
+								<img src="{{ url('images/invoice2.PNG') }}" alt="" class="img-fluid px-0">
                                     PDF Template nr 2
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="3">
                                 <label class="form-check-label" for="flexRadioDefault2">
+								<img src="{{ url('images/invoice3.PNG') }}" alt="" class="img-fluid px-0">
+                                PDF Template nr 3
+                                </label>
+                                </div> -->
+								<div class="row">
+								<div class="column">
+								<div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+								<img src="{{ url('images/invoice1.PNG') }}" alt="" class="img-fluid px-0">
+                                   PDF  Template nr 1
+                                </label>
+                                </div>
+								</div>
+								<div class="column">
+								<div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+								<img src="{{ url('images/invoice2.PNG') }}" alt="" class="img-fluid px-0">
+                                    PDF Template nr 2
+                                </label>
+                                </div>
+								</div>
+								
+								
+								<div class="column">
+								<div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="3">
+                                <label class="form-check-label" for="flexRadioDefault2">
+								<img src="{{ url('images/invoice3.PNG') }}" alt="" class="img-fluid px-0">
                                 PDF Template nr 3
                                 </label>
                                 </div>
+								</div>
+								
+								</div>
 						<div>
 							<button class="btn btn-primary"type="submit">Update</button>
                         </form>
@@ -218,74 +206,7 @@
 							<button class="btn btn-light">Cancel</button>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
-						<h3 class="mb-4">Notification Settings</h3>
-						<div class="form-group">
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox" value="" id="notification1">
-								<label class="form-check-label" for="notification1">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusantium accusamus, neque cupiditate quis
-								</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox" value="" id="notification2" >
-								<label class="form-check-label" for="notification2">
-									hic nesciunt repellat perferendis voluptatum totam porro eligendi.
-								</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox" value="" id="notification3" >
-								<label class="form-check-label" for="notification3">
-									commodi fugiat molestiae tempora corporis. Sed dignissimos suscipit
-								</label>
-							</div>
-						</div>
-						<div>
-							<button class="btn btn-primary">Update</button>
-							<button class="btn btn-light">Cancel</button>
-						</div>
-					</div>
 					
-					<div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="notification-tab">
-						<h3 class="mb-4">Settings</h3>
-
-						
-						<label >
-
-			<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Theme</label>
-								  	
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Font size</label>
-								  	
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-								  	<label>Page zoom</label>
-								  	
-								</div>
-							</div>
-							
-						
-						<div class="dark_theme"	>		
-						<label >
-						<input type="checkbox" id="check">
-						<label>Dark mode</label>
-						<span class="check"></span>
-					</label>
-						</div>
-					</div>
-				</div>
 			</div>
 		
 	</section>

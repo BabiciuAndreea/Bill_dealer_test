@@ -12,12 +12,12 @@ background:#eee;
 margin-top:20px;
 }
 .text-danger strong {
-        	color: #9f181c;
+        	color: ##e09e50;
 		}
 		.receipt-main {
 			background: #ffffff none repeat scroll 0 0;
 			border-bottom: 12px solid #333333;
-			border-top: 12px solid #9f181c;
+			border-top: 12px solid #2d3e4e
 			margin-top: 50px;
 			margin-bottom: 50px;
 			padding: 40px 30px !important;
@@ -71,7 +71,7 @@ margin-top:20px;
 			padding: 13px 20px !important;
 		}
 		.receipt-main td {
-			font-size: 13px;
+			font-size: 20px;
 			font-weight: initial !important;
 		}
 		.receipt-main td p:last-child {
@@ -102,7 +102,6 @@ margin-top:20px;
 <body>
 <div class="col-md-12">   
  <div class="row">
-		
         <div class="receipt-main col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
             <div class="row">
     			<div class="receipt-header">
@@ -111,10 +110,17 @@ margin-top:20px;
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 text-right">
 						<div class="receipt-right">
-							<h5>Company Name.</h5>
-							<p>+1 3649-6589 <i class="fa fa-phone"></i></p>
-							<p>company@gmail.com <i class="fa fa-envelope-o"></i></p>
-							<p>USA <i class="fa fa-location-arrow"></i></p>
+								<h5>{{$company->company_name}}</h5>
+								<p>{{$company->cif }}</p>
+								<p>{{$company->nr_reg }}</p>
+								<p>{{$company->iban }}</p>
+								<p>{{$company->bank }}</p>
+								<p>{{$company->phone}}<i class="fa fa-phone"></i></p>
+								<p>{{$company->email}}<i class="fa fa-envelope-o"></i></p>
+								<p>{{$company->address}} <i class="fa fa-location-arrow"></i></p>
+								<p>{{$company->city }}</p>
+								<p>{{$company->county }}</p>
+								
 						</div>
 					</div>
 				</div>
@@ -124,15 +130,17 @@ margin-top:20px;
 				<div class="receipt-header receipt-header-mid">
 					<div class="col-xs-8 col-sm-8 col-md-8 text-left">
 						<div class="receipt-right">
-							<h5>Customer Name </h5>
-							<p><b>Mobile :</b> +1 12345-4569</p>
-							<p><b>Email :</b> customer@gmail.com</p>
-							<p><b>Address :</b> New York, USA</p>
+							<h5>Client</h5>
+							{{$invoice->client->client_name}} 
+							<p><b>Mobile :</b> {{$invoice->client->phone}}</p>
+							<p><b>Email :</b> {{$invoice->client->email}}</p>
+							<p><b>Address :</b> {{$invoice->client->address}},{{$invoice->client->city}},{{$invoice->client->county}}</p>
 						</div>
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4">
 						<div class="receipt-left">
-							<h3>INVOICE # 102</h3>
+							<h3>INVOICE {{$invoice->nr_factura}}</h3>
+							<h3>INVOICE {{$invoice->serie_factura}}</h3>
 						</div>
 					</div>
 				</div>
@@ -143,56 +151,50 @@ margin-top:20px;
                     <thead>
                         <tr>
                             <th>Description</th>
-                            <th>Amount</th>
+                            <th>Price</th>
+							<th>Quantity</th>
+							<th>TVA</th>
+							<th> Price with TVA</th>
+							
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="col-md-9">Payment for August 2016</td>
-                            <td class="col-md-3"><i class="fa fa-inr"></i> 15,000/-</td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-9">Payment for June 2016</td>
-                            <td class="col-md-3"><i class="fa fa-inr"></i> 6,00/-</td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-9">Payment for May 2016</td>
-                            <td class="col-md-3"><i class="fa fa-inr"></i> 35,00/-</td>
-                        </tr>
+					@foreach ($invoice->orders  as $order)
+                                    <tr>
+                                       
+                                       
+                                            <h3>
+                                            {{ $order->product->name}}
+                                            </h3>
+                                        <td class="notva">{{$order->product->price}}</th> 
+                                        <td class="qty">{{ $order->quantity}}</td>
+                                        <td class="tva">{{$order->tva}}%</th>
+                                        <td class="withtva">{{$order->product->price*$order->quantity*$order->tva/100+$order->product->price*$order->quantity}}</th>
+                                      
+                                    </tr>
+                                   
+                        @endforeach
+                                </tbody>
+                                @foreach($invoice->orders  as $order)
+                                        {{$sub+=$order->product->price*$order->quantity}}
+                                     
+                               @endforeach
                         <tr>
                             <td class="text-right">
                             <p>
-                                <strong>Total Amount: </strong>
-                            </p>
-                            <p>
-                                <strong>Late Fees: </strong>
-                            </p>
-							<p>
-                                <strong>Payable Amount: </strong>
-                            </p>
-							<p>
-                                <strong>Balance Due: </strong>
+                                <strong>Total without tva: </strong>
                             </p>
 							</td>
                             <td>
                             <p>
-                                <strong><i class="fa fa-inr"></i> 65,500/-</strong>
-                            </p>
-                            <p>
-                                <strong><i class="fa fa-inr"></i> 500/-</strong>
-                            </p>
-							<p>
-                                <strong><i class="fa fa-inr"></i> 1300/-</strong>
-                            </p>
-							<p>
-                                <strong><i class="fa fa-inr"></i> 9500/-</strong>
+                                <strong><i class="fa fa-inr"></i> {{$sub}}</strong>
                             </p>
 							</td>
                         </tr>
                         <tr>
                            
                             <td class="text-right"><h2><strong>Total: </strong></h2></td>
-                            <td class="text-left text-danger"><h2><strong><i class="fa fa-inr"></i> 31.566/-</strong></h2></td>
+                            <td class="text-left text-danger"><h2><strong><i class="fa fa-inr"></i> {{$sub*$order->tva/100+$sub}}</strong></h2></td>
                         </tr>
                     </tbody>
                 </table>
@@ -202,8 +204,10 @@ margin-top:20px;
 				<div class="receipt-header receipt-header-mid receipt-footer">
 					<div class="col-xs-8 col-sm-8 col-md-8 text-left">
 						<div class="receipt-right">
-							<p><b>Date :</b> 15 Aug 2016</p>
-							<h5 style="color: rgb(140, 140, 140);">Thanks for shopping.!</h5>
+							<p><b>Date of invoice :</b> {{$invoice->data_emitere}}</p>
+							<p><b>Due Date:</b> {{$invoice->data_emitere}}</p>
+							<h5 style="color: rgb(140, 140, 140);">Written by:{{Auth::user()->first_name}}{{Auth::user()->last_name}}</h5>
+							
 						</div>
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4">

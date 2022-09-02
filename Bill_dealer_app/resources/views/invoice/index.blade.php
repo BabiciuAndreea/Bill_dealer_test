@@ -97,6 +97,8 @@
                                                 <!-- <button type="submit" class="btn btn-sm btn-danger">Delete</button> -->
                                             </form>
                                         @endif
+                                        <a href="{{ route('pdf', $invoice->id) }}"> <i
+                                                class="bi bi-file-earmark-pdf"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

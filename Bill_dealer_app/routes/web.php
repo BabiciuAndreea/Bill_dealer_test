@@ -126,3 +126,4 @@ Route::get('{id}/show.client', [ClientController::class, 'show'])->name('show.cl
 Route::get('unpaid_invoices_pdf',[InvoiceController::class,'createPdf'])->name('unpaid_invoices_pdf');
 
 Route::get('invoice_excel',[InvoiceController::class,'exportExcel'])->name('excel_invoice');
+Route::get('{id}/pdf', [PdfController::class, 'downloadPDF'])->name('pdf');
