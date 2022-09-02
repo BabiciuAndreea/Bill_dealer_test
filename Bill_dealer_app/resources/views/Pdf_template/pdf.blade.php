@@ -210,17 +210,17 @@ background-color: #f7f7ff;
         <div class="card-body">
             <div id="invoice">
                 <div class="toolbar hidden-print">
-
+                    
                     <hr>
                 </div>
                 <div class="invoice overflow-auto">
                     <div style="min-width: 600px">
                         <header>
                             <div class="row">
-
+                               
                                 <div class="col company-details">
                                     <h2 class="name">
-
+                                       
                                     {{$company->company_name}}
 									</a>
                                     </h2>
@@ -259,53 +259,53 @@ background-color: #f7f7ff;
                             <table>
                                 <thead>
                                     <tr>
-
+        
                                         <th class="text-left">DESCRIPTION</th>
                                         <th class="text-right">PRICE</th>
                                         <th class="text-right">   QUANTITY</th>
                                         <th class="text-right">      TVA</th>
                                         <th class="text-right">     PRICE WITH TVA</th>
-
+                                  
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach ($invoice->orders  as $order)
                                     <tr>
-
-
+                                       
+                                       
                                             <h3>
                                             {{ $order->product->name}}
                                             </h3>
-                                        <th class="notva">{{$order->product->price}}</th>
+                                        <th class="notva">{{$order->product->price}}</th> 
                                         <td class="qty">{{ $order->quantity}}</td>
                                         <th class="tva">{{$order->tva}}%</th>
                                         <th class="withtva">{{$order->product->price*$order->quantity*$order->tva/100+$order->product->price*$order->quantity}}</th>
-
+                                      
                                     </tr>
-
+                                   
                                     @endforeach
                                 </tbody>
                                 @foreach($invoice->orders  as $order)
                                         {{$sub+=$order->product->price*$order->quantity}}
-
+                                     
                                @endforeach
                                 <tfoot>
                                     <tr>
                                     <td colspan="2">PRICE WITHOUT TVA:</td>
                                         <td colspan="2">{{$sub}}</td>
-
+                                        
                                     </tr>
-
+                                    
                                     <tr>
                                         <td colspan="2">PRICE WITH TV:</td>
                                         <td colspan="2">{{$sub*$order->tva/100+$sub}}</td>
-
+                                       
                                     </tr>
-                                </tfoot>
-
+                                </tfoot> 
+                              
                             </table>
                         </main>
-
+                       
                     </div>
                     <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
                     <div></div>

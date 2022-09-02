@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-
+    
 body{margin-top:20px;
 background:#eee;
 }
@@ -39,7 +39,7 @@ background:#eee;
 	right:auto !important;
 	bottom:auto !important;
 }
-
+	
 .panel.fullscreen .panel-footer {
 	position:absolute;
 	bottom:0;
@@ -86,7 +86,7 @@ background:#eee;
 .panel-clean>.panel-heading {
 	padding: 11px 15px;
 	background:#fff !important;
-	color:#000;
+	color:#000;	
 	border-bottom: #eee 1px solid;
 }
 .panel>.panel-heading .btn {
@@ -168,7 +168,7 @@ background:#eee;
 }
 </style>
 <body>
-
+    
 <div class="container bootstrap snippets bootdey">
 	<div class="panel panel-default">
 		<div class="panel-body">
@@ -176,7 +176,7 @@ background:#eee;
 				<div class="col-md-6 col-sm-6 text-left">
 				<div class="col company-details">
                                     <h2 class="name">
-
+                                       
                                     {{$company->company_name}}
 									</a>
                                     </h2>
@@ -202,7 +202,7 @@ background:#eee;
 							<p><b>Email :</b> {{$invoice->client->email}}</p>
 							<p><b>Address :</b> {{$invoice->client->address}},{{$invoice->client->city}},{{$invoice->client->county}}</p>
 						</div>
-
+					
 
 				</div>
 
@@ -225,18 +225,18 @@ background:#eee;
 											<h3>
                                             {{ $order->product->name}}
                                             </h3>
-                                        <td class="notva">{{$order->product->price}}</th>
+                                        <td class="notva">{{$order->product->price}}</th> 
                                         <td class="qty">{{ $order->quantity}}</td>
                                         <td class="tva">{{$order->tva}}%</th>
                                         <td class="withtva">{{$order->product->price*$order->quantity*$order->tva/100+$order->product->price*$order->quantity}}</th>
-
+							
 						</tr>
-
+					
 						@endforeach
 					</tbody>
 					@foreach($invoice->orders  as $order)
                                         {{$sub+=$order->product->price*$order->quantity}}
-
+                                     
                                @endforeach
 				</table>
 			</div>
@@ -246,7 +246,7 @@ background:#eee;
 				<div class="col-sm-6 text-left">
 					<h4><strong>Date of Invoice:{{$invoice->data_emitere}}</h4>
 					<p class="nomargin nopadding">
-						<strong>Due date:</strong>
+						<strong>Due date:</strong> 
 						{{$invoice->data_scadenta}}
 					</p><br><!-- no P margin for printing - use <br> instead -->
 
@@ -257,8 +257,8 @@ background:#eee;
 					<ul class="list-unstyled">
 						<li><strong>Sub - Total Amount:</strong>{{$sub}}</li>
 						<li><strong>Grand Total:</strong> {{$sub*$order->tva/100+$sub}}</li>
-					</ul>
-
+					</ul>     
+					
 				</div>
 			</div>
 		</div>

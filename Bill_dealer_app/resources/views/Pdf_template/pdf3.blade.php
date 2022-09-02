@@ -77,7 +77,7 @@ margin-top:20px;
 		.receipt-main td p:last-child {
 			margin: 0;
 			padding: 0;
-		}
+		}	
 		.receipt-main td h2 {
 			font-size: 20px;
 			font-weight: 900;
@@ -94,19 +94,19 @@ margin-top:20px;
 			margin: 24px 0;
 			overflow: hidden;
 		}
-
+		
 		#container {
 			background-color: #dcdcdc;
 		}
 </style>
 <body>
-<div class="col-md-12">
+<div class="col-md-12">   
  <div class="row">
         <div class="receipt-main col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
             <div class="row">
     			<div class="receipt-header">
 					<div class="col-xs-6 col-sm-6 col-md-6">
-
+						
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 text-right">
 						<div class="receipt-right">
@@ -120,18 +120,18 @@ margin-top:20px;
 								<p>{{$company->address}} <i class="fa fa-location-arrow"></i></p>
 								<p>{{$company->city }}</p>
 								<p>{{$company->county }}</p>
-
+								
 						</div>
 					</div>
 				</div>
             </div>
-
+			
 			<div class="row">
 				<div class="receipt-header receipt-header-mid">
 					<div class="col-xs-8 col-sm-8 col-md-8 text-left">
 						<div class="receipt-right">
 							<h5>Client</h5>
-							{{$invoice->client->client_name}}
+							{{$invoice->client->client_name}} 
 							<p><b>Mobile :</b> {{$invoice->client->phone}}</p>
 							<p><b>Email :</b> {{$invoice->client->email}}</p>
 							<p><b>Address :</b> {{$invoice->client->address}},{{$invoice->client->city}},{{$invoice->client->county}}</p>
@@ -145,7 +145,7 @@ margin-top:20px;
 					</div>
 				</div>
             </div>
-
+			
             <div>
                 <table class="table table-bordered">
                     <thead>
@@ -155,29 +155,29 @@ margin-top:20px;
 							<th>Quantity</th>
 							<th>TVA</th>
 							<th> Price with TVA</th>
-
+							
                         </tr>
                     </thead>
                     <tbody>
 					@foreach ($invoice->orders  as $order)
                                     <tr>
-
-
+                                       
+                                       
                                             <h3>
                                             {{ $order->product->name}}
                                             </h3>
-                                        <td class="notva">{{$order->product->price}}</th>
+                                        <td class="notva">{{$order->product->price}}</th> 
                                         <td class="qty">{{ $order->quantity}}</td>
                                         <td class="tva">{{$order->tva}}%</th>
                                         <td class="withtva">{{$order->product->price*$order->quantity*$order->tva/100+$order->product->price*$order->quantity}}</th>
-
+                                      
                                     </tr>
-
+                                   
                         @endforeach
                                 </tbody>
                                 @foreach($invoice->orders  as $order)
                                         {{$sub+=$order->product->price*$order->quantity}}
-
+                                     
                                @endforeach
                         <tr>
                             <td class="text-right">
@@ -192,14 +192,14 @@ margin-top:20px;
 							</td>
                         </tr>
                         <tr>
-
+                           
                             <td class="text-right"><h2><strong>Total: </strong></h2></td>
                             <td class="text-left text-danger"><h2><strong><i class="fa fa-inr"></i> {{$sub*$order->tva/100+$sub}}</strong></h2></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
+			
 			<div class="row">
 				<div class="receipt-header receipt-header-mid receipt-footer">
 					<div class="col-xs-8 col-sm-8 col-md-8 text-left">
@@ -207,7 +207,7 @@ margin-top:20px;
 							<p><b>Date of invoice :</b> {{$invoice->data_emitere}}</p>
 							<p><b>Due Date:</b> {{$invoice->data_emitere}}</p>
 							<h5 style="color: rgb(140, 140, 140);">Written by:{{Auth::user()->first_name}}{{Auth::user()->last_name}}</h5>
-
+							
 						</div>
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4">
@@ -217,8 +217,8 @@ margin-top:20px;
 					</div>
 				</div>
             </div>
-
-        </div>
+			
+        </div>    
 	</div>
 </div>
 </body>

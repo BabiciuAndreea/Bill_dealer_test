@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Mail\UpdateMail;
+use App\Mail\NewPassword;
 use Illuminate\Support\Facades\Mail;
 
 class Settings extends Controller
@@ -22,6 +23,11 @@ class Settings extends Controller
          $user=User::find(Auth::user()->id);
          
       }
+      $validated = $request->validate([
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'email' => 'required',
+    ]);
       $user->first_name=$request->input('first_name');
       $user->last_name=$request->input('last_name');
       $user->email=$request->input('email');
@@ -49,6 +55,13 @@ class Settings extends Controller
               
         
           }
+          $mailData = [
+              'title' => 'Mail from ItSolutionStuff.com',
+              'body' => 'This is for testing email using smtp.'
+          ];
+           
+          Mail::to($current_user->email)->send(new NewPassword($mailData));
+             
           return redirect()->route('settings');
 
     }
