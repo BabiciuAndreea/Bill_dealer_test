@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 use App\Models\Client;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\InvoiceExport;
+
 
 class InvoiceController extends Controller
 {
@@ -64,7 +68,7 @@ class InvoiceController extends Controller
         $invoice->serie_factura = $request->get('serie_factura');
         $invoice->nr_factura = $request->get('nr_factura');
         $invoice->id_client = $request->get('client');
-        
+
         $invoice->pay = $request->get('pay');
         $invoice->save();
 
@@ -164,5 +168,19 @@ class InvoiceController extends Controller
 
         return redirect()->route('invoice.index')
             ->with('success', 'Invoice deleted successfully');
+    }
+
+    public function createPdf (){
+        $invoices = Invoice::where('status', 'Unpaid')->orWhere('status', 'Overdue')->get();
+
+        $pdf = PDF::loadview('invoice.pdf_invoice',compact('invoices'));
+        return $pdf->download('unpaid.pdf');
+
+    }
+
+    public function exportExcel(){
+        //$products = Product::select('name', 'price', 'unit', 'quantity', 'type' )->get()->toArray();
+        return Excel::download(new InvoiceExport, 'unpaid.xlsx');
+
     }
 }

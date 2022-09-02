@@ -122,3 +122,7 @@ Route::post('{id}/show_order', [OrderController::class, 'store'])->name('show_or
 Route::get('invoice_client', [ViewsController::class, 'client'])->name('invoice_client');
 
 Route::get('{id}/show.client', [ClientController::class, 'show'])->name('show.client');
+
+Route::get('unpaid_invoices_pdf',[InvoiceController::class,'createPdf'])->name('unpaid_invoices_pdf');
+
+Route::get('invoice_excel',[InvoiceController::class,'exportExcel'])->name('excel_invoice');
