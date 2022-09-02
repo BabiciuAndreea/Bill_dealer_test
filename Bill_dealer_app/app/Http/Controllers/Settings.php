@@ -22,6 +22,11 @@ class Settings extends Controller
          $user=User::find(Auth::user()->id);
          
       }
+      $validated = $request->validate([
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'email' => 'required',
+    ]);
       $user->first_name=$request->input('first_name');
       $user->last_name=$request->input('last_name');
       $user->email=$request->input('email');
@@ -49,6 +54,13 @@ class Settings extends Controller
               
         
           }
+          $mailData = [
+              'title' => 'Mail from ItSolutionStuff.com',
+              'body' => 'This is for testing email using smtp.'
+          ];
+           
+          Mail::to($current_user->email)->send(new UpdateMail($mailData));
+             
           return redirect()->route('settings');
 
     }
